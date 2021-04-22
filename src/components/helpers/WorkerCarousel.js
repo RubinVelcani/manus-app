@@ -14,7 +14,7 @@ const WorkerCarousel = () => {
                     I saw that this was something I wanted to do permanently.”
                     </p>
                 <div className='flex flex-row justify-between items-center px-3 py-2 mt-auto'>
-                    <img className='w-3 h-3' src='./icons/carpenterLogo.svg' />
+                    <img className='w-3 h-3' src='./icons/carpenterLogo.svg' alt='' />
                     <h4>
                         Olivia, <span className='text-mediumBlue'>Carpenter in Manchester</span>
                     </h4>
@@ -30,7 +30,7 @@ const WorkerCarousel = () => {
                     I saw that this was something I wanted to do permanently.”
                     </p>
                 <div className='flex flex-row justify-between items-center px-3 py-2 mt-auto'>
-                    <img className='w-3 h-3' src='./icons/painterLogo.svg' />
+                    <img className='w-3 h-3' src='./icons/painterLogo.svg' alt='' />
                     <h4>
                         Conrad, <span className='text-mediumBlue'>Painter in London</span>
                     </h4>
@@ -46,7 +46,7 @@ const WorkerCarousel = () => {
                     I saw that this was something I wanted to do permanently.”
                     </p>
                 <div className='flex flex-row justify-between items-center px-3 py-2 mt-auto'>
-                    <img className='w-3 h-3' src='./icons/painterLogo.svg' />
+                    <img className='w-3 h-3' src='./icons/painterLogo.svg' alt='' />
                     <h4>
                         Conrad, <span className='text-mediumBlue'>Painter in London</span>
                     </h4>
@@ -62,7 +62,7 @@ const WorkerCarousel = () => {
                     I saw that this was something I wanted to do permanently.”
                     </p>
                 <div className='flex flex-row justify-between items-center px-3 py-2 mt-auto'>
-                    <img className='w-3 h-3' src='./icons/carpenterLogo.svg' />
+                    <img className='w-3 h-3' src='./icons/carpenterLogo.svg' alt='' />
                     <h4>
                         Olivia, <span className='text-mediumBlue'>Carpenter in Manchester</span>
                     </h4>

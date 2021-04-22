@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import MobileMenu from './MobileMenu'
 import PhoneCarousel from '../helpers/PhoneCarousel'
 import WorkerCarousel from '../helpers/WorkerCarousel'
+import style from './Home.module.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const Home = ({ showMobileMenu, toggleMobileMenu }) => {
@@ -65,9 +66,9 @@ const Home = ({ showMobileMenu, toggleMobileMenu }) => {
                         <img className='mb-6' src='./icons/lines/orangeLine.svg' />
                     </div>
                 </div>
-                <img className='absolute w-full' src='./icons/middlePicture.svg' />
-                <div className='relative flex flex-col mx-9 mt-64 items-center text-white text-center'>
-                    <h1 className='text-4xl font-semibold mb-2 top-1/2 left-1/2'>Want extra work?</h1>
+                <img className='w-full max-h-' src='./icons/middlePicture.svg' />
+                <div className={style.middleImage}>
+                    <h1 className='text-4xl font-semibold mb-2 mt-7'>Want extra work?</h1>
                     <p className='mb-5 text-sm leading-5 font-medium'>
                         Are you a tradesperson looking for a work?
                         Let us cinnect you to clients in your area!
@@ -80,7 +81,7 @@ const Home = ({ showMobileMenu, toggleMobileMenu }) => {
                         <img className='ml-auto' src='./icons/lines/smallOrangeDiagonalLine.svg' />
                     </div>
                 </div>
-                <div className='flex flex-col w-4/5 items-center text-center mx-auto mt-20'>
+                <div className='relative flex flex-col w-4/5 items-center text-center mx-auto mt-32'>
                     <h1 className='text-mediumBlue text-4xl font-semibold mb-3'>Make Money When You Want</h1>
                     <p className='text-mediumBlue text-sm leading-5 font-semibold mb-6'>
                         There’s plenty of local work, but finding it is easier said than done.

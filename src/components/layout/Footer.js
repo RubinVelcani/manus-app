@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <footer className='flex flex-row justify-between items-center text-white'>
-            <img className='absolute w-full' src='./icons/footerBackground.svg' />
+            <img className='absolute w-full' src='./icons/footerBackground.svg' alt='' />
             <div className='relative'>
                 <ul className='list-none px-11 text-xxs mt-12'>
                     <li className='border-b border-lightBlue mt-2 pr-52'>
