@@ -7,12 +7,17 @@ module.exports = {
       'lightBlue': '#169CEF',
       'mediumBlue': '#1D91E3',
       'deepBlue': '#0C83D8',
+      'menuBlue': '#3FACF9',
       'gray': '#A7A7A9'
     },
-    fontSize: {
-      'xxs': '0.625rem'
+    fontFamily: {
+      'mainFont': 'Oxygen, sans-serif'
     },
-    extend: {},
+    extend: {
+      fontSize: {
+        'xxs': '0.625rem'
+      },
+    },
   },
   variants: {
     extend: {},

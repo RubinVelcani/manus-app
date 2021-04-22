@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({ showMobileMenu, toggleMobileMenu }) => {
     return (
         <header className='flex flex-row justify-between items-center bg-mediumBlue'>
             <div className='p-4 ml-6'>
@@ -10,7 +10,7 @@ const Header = () => {
                 <div className='p-4'>
                     <img src='./icons/mobileUser.svg' />
                 </div>
-                <div className='p-4 mr-6'>
+                <div className='p-4 mr-6' onClick={toggleMobileMenu}>
                     <img src='./icons/mobileHamburger.svg' />
                 </div>
             </div>

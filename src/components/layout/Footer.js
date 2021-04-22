@@ -3,29 +3,29 @@ import React from 'react'
 const Footer = () => {
     return (
         <footer className='flex flex-row justify-between items-center text-white'>
-            <img className='absolute' src='./icons/footerBackground.svg' />
+            <img className='absolute w-full' src='./icons/footerBackground.svg' />
             <div className='relative'>
                 <ul className='list-none px-11 text-xxs mt-12'>
                     <li className='border-b border-lightBlue mt-2 pr-52'>
                         Our Vision
                     </li>
                     <li className='border-b border-lightBlue mt-2 pr-52'>
-                        Our Vision
+                        How it works
                     </li>
                     <li className='border-b border-lightBlue mt-2 pr-52'>
-                        Our Vision
+                        Contact Us
                     </li>
                     <li className='border-b border-lightBlue mt-2 pr-52'>
-                        Our Vision
+                        Media Enquiries
                     </li>
                     <li className='border-b border-lightBlue mt-2 pr-52'>
-                        Our Vision
+                        terms of Use
                     </li>
                     <li className='border-b border-lightBlue mt-2 pr-52'>
-                        Our Vision
+                        Privacy Policy
                     </li>
                     <li className='border-b border-lightBlue mt-2 pr-52'>
-                        Our Vision
+                        Cookies Policy
                     </li>
                 </ul>
                 <h4 className='text-xxs pl-11 mt-8'>

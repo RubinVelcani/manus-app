@@ -1,0 +1,13 @@
+/* .lineBorder {
+    margin-left: 0.75rem;
+    margin-bottom: 0.75rem;
+    margin-top: -0.25rem;
+    color: #0C83D8;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.lineBorder::before {
+    content: '1';
+    background-image: url('./smallGreenDiagonalLine.svg') 1 4;
+} */

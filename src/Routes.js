@@ -1,13 +1,12 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-import Home from './components/home/Home'
-import Layout from './components/Layout'
+import Home from './components/mobileVersion/Home'
 
-const Routes = () => {
+const Routes = ({ showMobileMenu, toggleMobileMenu }) => {
     return (
         <Switch>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/' component={() => <Home showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />} />
         </Switch>
     )
 }

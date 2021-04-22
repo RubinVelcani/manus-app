@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel'
 const WorkerCarousel = () => {
     return (
         <Carousel autoPlay={false} showThumbs={false} showStatus={false} showArrows={false} centerMode={true} centerSlidePercentage='70' autoFocus={false}>
-            <div className='flex flex-col min-w-min h-4/6 mt-24 mb-12 ml-6 bg-white text-xxs shadow-md'>
+            <div className='flex flex-col min-w-min h-4/6 mt-24 mb-12 ml-6 mr-3 bg-white text-xxs shadow-md'>
                 <img className='w-3/5 h-28' src="./icons/carpenter.jpg" />
                 <p className='px-3 py-2 text-left text-gray'>
                     “I started working with Manus because I regurlarly had gaps in my schedule
@@ -20,7 +20,7 @@ const WorkerCarousel = () => {
                     </h4>
                 </div>
             </div>
-            <div className='flex flex-col h-4/6 mt-24 mb-12 mx-2 bg-white text-xxs shadow-md'>
+            <div className='flex flex-col h-4/6 mt-24 mb-12 mx-3 bg-white text-xxs shadow-md'>
                 <img className='w-3/5 h-28' src="./icons/painter.jpg" />
                 <p className='px-3 py-2 text-left text-gray'>
                     “I started working with Manus because I regurlarly had gaps in my schedule
@@ -36,7 +36,7 @@ const WorkerCarousel = () => {
                     </h4>
                 </div>
             </div>
-            <div className='flex flex-col h-4/6 mt-24 mb-12 mx-2 bg-white text-xxs shadow-md'>
+            <div className='flex flex-col h-4/6 mt-24 mb-12 mx-3 bg-white text-xxs shadow-md'>
                 <img className='w-3/5 h-28' src="./icons/painter.jpg" />
                 <p className='px-3 py-2 text-left text-gray'>
                     “I started working with Manus because I regurlarly had gaps in my schedule
@@ -52,7 +52,7 @@ const WorkerCarousel = () => {
                     </h4>
                 </div>
             </div>
-            <div className='flex flex-col min-w-min h-4/6 mt-24 mb-12 mr-6 bg-white text-xxs shadow-md'>
+            <div className='flex flex-col min-w-min h-4/6 mt-24 mb-12 mr-6 ml-3 bg-white text-xxs shadow-md'>
                 <img className='w-3/5 h-28' src="./icons/carpenter.jpg" />
                 <p className='px-3 py-2 text-left text-gray'>
                     “I started working with Manus because I regurlarly had gaps in my schedule
