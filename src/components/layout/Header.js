@@ -1,17 +1,22 @@
 import React from 'react'
 
+import MobileLogo from '../../icons/mobileLogoImg.png'
+import MobileUser from '../../icons/mobileUser.svg'
+import Hamburger from '../../icons/mobileHamburger.svg'
+
+
 const Header = ({ showMobileMenu, toggleMobileMenu }) => {
     return (
         <header className='flex flex-row justify-between items-center bg-mediumBlue'>
             <div className='p-4 ml-6'>
-                <img src='./icons/mobileLogoImg.png' alt='' />
+                <img src={MobileLogo} alt='' />
             </div>
             <div className='flex flex-row'>
                 <div className='p-4'>
-                    <img src='./icons/mobileUser.svg' alt='' />
+                    <img src={MobileUser} alt='' />
                 </div>
                 <div className='p-4 mr-6' onClick={toggleMobileMenu}>
-                    <img src='./icons/mobileHamburger.svg' alt='' />
+                    <img src={Hamburger} alt='' />
                 </div>
             </div>
         </header>

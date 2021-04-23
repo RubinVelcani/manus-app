@@ -1,0 +1,7 @@
+.carouselBackground {
+    width: 100%;
+    position: absolute;
+    background-image: url(./carouselBackground.svg);
+    background-size: cover;
+    height: 290px;
+}
