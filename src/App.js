@@ -10,7 +10,6 @@ function App() {
 
   function toggleMobileMenu() {
     setShowMobileMenu(!showMobileMenu)
-    console.log(showMobileMenu)
   }
 
   return (

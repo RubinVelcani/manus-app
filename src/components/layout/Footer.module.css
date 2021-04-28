@@ -2,6 +2,7 @@
     padding: 12rem 0 2.8rem 0;
     background-image: url('../../icons/footerBackground.svg');
     background-size: cover;
+    margin-top: -6rem;
     color: white;
     min-height: fit-content;
 }

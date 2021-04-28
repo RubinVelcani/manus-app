@@ -1,0 +1,70 @@
+import React from 'react'
+import MobileMenuHome from './MobileMenuHome'
+import style from './OurVision.module.css'
+
+const HowItWorks = ({ showMobileMenu, toggleMobileMenu }) => {
+
+    function importAll(r) {
+        let images = {}
+        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        return images
+    }
+
+    const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
+
+    return (
+        <main className=''>
+            <aside className={showMobileMenu ? 'block' : 'hidden'}>
+                <MobileMenuHome />
+            </aside>
+            <section className={showMobileMenu ? 'hidden' : 'block'}>
+                <div className='flex flex-col w-4/5 items-center text-center mx-auto'>
+                    <div className='mt-7 pb-4'>
+                        <h1 className='mb-3 ml-3 -mt-1 text-deepBlue text-4xl font-semibold'>How it works</h1>
+                        <h3 className='text-lightBlue font-bold leading-5'>
+                            If you’re looking to get a job done properly,
+                            you want to find a trader you can trust to do a good job for fair price.
+                        </h3>
+                    </div>
+                    <img src={images['greenBlueLines.svg'].default} />
+                    <div className='flex flex-col items-center'>
+                        <img className='mt-10 mb-6' src={images['officeVideoPlayer.jpg'].default} />
+                        <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Immediate Solutions</h1>
+                        <p className='mb-10 text-gray text-sm leading-5 font-medium'>
+                            Manus allows you to quickly find a tradesperson in your area
+                            who can be trusted to provide a high standard of work. Easy!
+                            </p>
+                        <img className='mb-6' src={images['carpenterVideoPlayer.jpg'].default} />
+                        <div>
+                            <img className='absolute right-5' src={images['chatLogo.svg'].default} />
+                        </div>
+                        <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Immediate Solutions</h1>
+                        <p className='text-gray text-sm leading-5 font-medium'>
+                            Get quality work, all year round. Choose where and when you want to work
+                            </p>
+                    </div>
+                </div>
+                <div>
+                    <div className={style.blueShapeHow}>
+                        <h1 className='text-4xl w-4/5 font-semibold mb-2 mt-7'>Here to help</h1>
+                        <p className='mb-5 text-sm w-4/5 leading-5 font-medium'>
+                            We offer fairly-priced home services to homeowners,
+                            tenants and property management companies across the UK,
+                            delivered by professional, local tradespeople.
+                    </p>
+                        <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7'>Let's get started!</button>
+                        <div>
+                            <h4 className='text-xs font-light mt-2'>Register now as a Tradesman on Manus</h4>
+                            <img className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
+                        </div>
+                    </div>
+                    <div className=''>
+                        <img src={images['smilingHow.jpg'].default} />
+                    </div>
+                </div>
+            </section>
+        </main>
+    )
+}
+
+export default HowItWorks

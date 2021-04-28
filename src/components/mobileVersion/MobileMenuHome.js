@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MobileMenu = () => {
+const MobileMenuHome = () => {
     return (
         <div className='bg-mediumBlue h-screen'>
             <ul className='list-none text-white text-xl pb-12'>
@@ -12,4 +12,4 @@ const MobileMenu = () => {
     )
 }
 
-export default MobileMenu
+export default MobileMenuHome

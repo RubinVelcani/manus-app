@@ -8,7 +8,13 @@ module.exports = {
       'mediumBlue': '#1D91E3',
       'deepBlue': '#0C83D8',
       'menuBlue': '#3FACF9',
-      'gray': '#A7A7A9'
+      'gray': '#A7A7A9',
+      'lightGray': '#F7F7F8',
+      'mediumGray': '#C4C4C4',
+      'formGray': '#8D8D92',
+      'darkGray': '#464545',
+      'profileGray': '#F6F3F3'
+
     },
     fontFamily: {
       'mainFont': 'Oxygen, sans-serif'

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import MobileMenu from './MobileMenu'
+import MobileMenuHome from './MobileMenuHome'
 import PhoneCarousel from '../helpers/PhoneCarousel'
 import WorkerCarousel from '../helpers/WorkerCarousel'
 import style from './Home.module.css'
@@ -8,17 +8,17 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"
 const Home = ({ showMobileMenu, toggleMobileMenu }) => {
 
     function importAll(r) {
-        let images = {};
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-        return images;
+        let images = {}
+        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        return images
     }
 
-    const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/));
+    const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
     return (
         <main>
             <aside className={showMobileMenu ? 'block' : 'hidden'}>
-                <MobileMenu />
+                <MobileMenuHome />
             </aside>
             <section className={showMobileMenu ? 'hidden' : 'block'}>
                 <img className='absolute w-full' src={images['mobilePhonesBackground.svg'].default} />
