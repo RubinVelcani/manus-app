@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import MobileMenu from './MobileMenuHome'
-import style from './OurVision.module.css'
+import style from './MobileStyle.module.css'
 
-const JoinManus = ({ showMobileMenu, toggleMobileMenu }) => {
+const MobileJoin = ({ showMobileMenu, toggleMobileMenu }) => {
 
     function importAll(r) {
         let images = {}
@@ -129,4 +129,4 @@ const JoinManus = ({ showMobileMenu, toggleMobileMenu }) => {
         </main>
     )
 }
-export default JoinManus
+export default MobileJoin

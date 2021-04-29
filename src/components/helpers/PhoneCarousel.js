@@ -1,7 +1,7 @@
 import React from 'react'
 import { Carousel } from 'react-responsive-carousel';
 
-import PhoneScreen from '../../icons/phoneScreen1.svg'
+import PhoneScreen from '../../icons/carouselPhone.png'
 
 const PhoneCarousel = () => {
     return (

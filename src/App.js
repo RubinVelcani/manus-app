@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
-import Routes from './Routes'
+import MobileRoutes from './MobileRoutes'
+import DesktopRoutes from './DesktopRoutes'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 
@@ -13,13 +14,16 @@ function App() {
   }
 
   return (
-    <div className="font-fontMain">
+    <Router>
       <Header showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
-      <Router>
-        <Routes showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
-      </Router>
+      <div className='block font-fontMain md:hidden'>
+        <MobileRoutes showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
+      </div>
+      <div className='hidden font-fontMain md:block'>
+        <DesktopRoutes />
+      </div>
       <Footer />
-    </div >
+    </Router>
   );
 }
 

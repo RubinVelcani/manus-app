@@ -1,7 +1,7 @@
 import React from 'react'
 import MobileMenuHome from './MobileMenuHome'
 
-const ContactUs = ({ showMobileMenu, toggleMobileMenu }) => {
+const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
 
     function importAll(r) {
         let images = {}
@@ -34,10 +34,10 @@ const ContactUs = ({ showMobileMenu, toggleMobileMenu }) => {
                             <option value="coconut">Coconut</option>
                             <option value="mango">Mango</option>
                         </select>
-                        <input className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-2 px-4' type="text" value='First name' />
-                        <input className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-2 px-4' type="text" value='Phone' />
-                        <input className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-2 px-4' type="text" value='Last name' />
-                        <input className=' rounded-3xl ring-1 ring-mediumGray mb-8 py-2 px-4' type="text" value='Email' />
+                        <input className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-2 px-4' type="text" placeholder='First name' />
+                        <input className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-2 px-4' type="text" placeholder='Phone' />
+                        <input className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-2 px-4' type="text" placeholder='Last name' />
+                        <input className=' rounded-3xl ring-1 ring-mediumGray mb-8 py-2 px-4' type="text" placeholder='Email' />
                         <input className=' w-3/5 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-3.5 px-4' type="submit" value="Send message" />
                     </form>
                     <div>
@@ -67,4 +67,4 @@ const ContactUs = ({ showMobileMenu, toggleMobileMenu }) => {
     )
 }
 
-export default ContactUs
+export default MobileContact

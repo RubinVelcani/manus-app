@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import MobileMenuHome from './MobileMenuHome'
 import PhoneCarousel from '../helpers/PhoneCarousel'
 import WorkerCarousel from '../helpers/WorkerCarousel'
-import style from './Home.module.css'
+import style from './MobileStyle.module.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
-const Home = ({ showMobileMenu, toggleMobileMenu }) => {
+const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
 
     function importAll(r) {
         let images = {}
@@ -145,4 +145,4 @@ const Home = ({ showMobileMenu, toggleMobileMenu }) => {
     )
 }
 
-export default Home
+export default MobileHome

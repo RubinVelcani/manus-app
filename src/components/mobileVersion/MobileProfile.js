@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import MobileMenuProfile from './MobileMenuProfile';
 
-const TradesmanProfile = ({ showMobileMenu, toggleMobileMenu }) => {
+const MobileProfile = ({ showMobileMenu, toggleMobileMenu }) => {
 
     function importAll(r) {
         let images = {}
@@ -50,9 +50,9 @@ const TradesmanProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                     <h1 className='text-darkGray text-2xl mt-6 mb-2.5'><span className='font-bold'>Kristi</span> Kumria</h1>
                     <img src={images['reviewStars.svg'].default} />
                     <div className='w-full flex flex-row justify-around mt-12'>
-                        <img onClick={toggleAccount} className={showAccount ? 'bg-white p-2' : 'p-2'} src={showAccount ? images['homeActiveLogo.svg'].default : images['homeInactiveLogo.svg'].default} />
-                        <img onClick={togglePayment} className={showPayment ? 'bg-white p-2' : 'p-2'} src={showPayment ? images['creditCardActiveLogo.svg'].default : images['creditCardInactiveLogo.svg'].default} />
-                        <img onClick={toggleProfile} className={showProfile ? 'bg-white p-2' : 'p-2'} src={showProfile ? images['userSmallActiveLogo.svg'].default : images['userSmallInactiveLogo.svg'].default} />
+                        <img onClick={toggleAccount} className={showAccount ? 'bg-white p-2 cursor-pointer' : 'p-2 cursor-pointer'} src={showAccount ? images['homeActiveLogo.svg'].default : images['homeInactiveLogo.svg'].default} />
+                        <img onClick={togglePayment} className={showPayment ? 'bg-white p-2 cursor-pointer' : 'p-2 cursor-pointer'} src={showPayment ? images['creditCardActiveLogo.svg'].default : images['creditCardInactiveLogo.svg'].default} />
+                        <img onClick={toggleProfile} className={showProfile ? 'bg-white p-2 cursor-pointer' : 'p-2 cursor-pointer'} src={showProfile ? images['userSmallActiveLogo.svg'].default : images['userSmallInactiveLogo.svg'].default} />
                     </div>
                 </div>
                 {/* A C C O U N T */}
@@ -116,4 +116,4 @@ const TradesmanProfile = ({ showMobileMenu, toggleMobileMenu }) => {
     )
 }
 
-export default TradesmanProfile
+export default MobileProfile

@@ -1,8 +1,8 @@
 import React from 'react'
 import MobileMenuHome from './MobileMenuHome'
-import style from './OurVision.module.css'
+import style from './MobileStyle.module.css'
 
-const HowItWorks = ({ showMobileMenu, toggleMobileMenu }) => {
+const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
 
     function importAll(r) {
         let images = {}
@@ -67,4 +67,4 @@ const HowItWorks = ({ showMobileMenu, toggleMobileMenu }) => {
     )
 }
 
-export default HowItWorks
+export default MobileHow

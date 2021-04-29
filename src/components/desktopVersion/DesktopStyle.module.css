@@ -1,3 +1,51 @@
+.firstBackground {
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.blueBackground {
+    width: 52%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    padding-top: 3rem;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-color: #1D91E3;
+    clip-path: polygon(0 0, 92% 11%, 100% 83%, 0 100%);
+    z-index: 100;
+}
+
+.diagonalGreen {
+    margin-right: auto;
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 1.75rem;
+}
+
+.diagonalGreen::before {
+    content: url('../../lines/smallGreenDiagonalLine.svg');
+}
+
+.sidewayPhone {
+    margin: 0 auto;
+    height: 500px;
+    z-index: 200;
+}
+
+.smilerImage {
+    width: 52%;
+    max-height: 480px;
+    left: 48%;
+    position: absolute;
+    clip-path: polygon(0 11%, 100% 0, 100% 89%, 0 82%);
+    z-index: 10;
+}
+
 .blueShapeVision {
     display: flex;
     flex-direction: column;
@@ -139,3 +187,32 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+
+.desktopCarpenter {
+    width: 50%;
+    max-height: 347px;
+    position: relative;
+    z-index: 20;
+    clip-path: polygon(0 0, 100% 0, 100% 81%, 0 93%);
+}
+
+.visionBlueShape {
+    width: 53%;
+    position: absolute;
+    height: inherit;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+    max-height: 800px;
+    right: 0;
+    z-index: 50;
+    background-color: #169CEF;
+    clip-path: polygon(5% 0, 100% 0, 100% 93%, 0 82%);
+}
+
+/* 
+@media (min-width: 816) {
+    .visionBlueShape {
+        padding:
+    }
+} */
