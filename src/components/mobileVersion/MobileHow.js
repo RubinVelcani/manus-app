@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import MobileMenuHome from './MobileMenuHome'
 import style from './MobileStyle.module.css'
 
 const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
+
+    // F O O T E R  N E E D S  T O  B E  A B O V E  L A S T  I M A G E
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    })
 
     function importAll(r) {
         let images = {}
@@ -15,7 +21,7 @@ const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
     return (
         <main className=''>
             <aside className={showMobileMenu ? 'block' : 'hidden'}>
-                <MobileMenuHome />
+                <MobileMenuHome showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
             </aside>
             <section className={showMobileMenu ? 'hidden' : 'block'}>
                 <div className='flex flex-col w-4/5 items-center text-center mx-auto'>
@@ -28,13 +34,13 @@ const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
                     </div>
                     <img src={images['greenBlueLines.svg'].default} />
                     <div className='flex flex-col items-center'>
-                        <img className='mt-10 mb-6' src={images['officeVideoPlayer.jpg'].default} />
+                        <img className='mt-10 mb-6' src={images['officePlayer.png'].default} />
                         <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Immediate Solutions</h1>
                         <p className='mb-10 text-gray text-sm leading-5 font-medium'>
                             Manus allows you to quickly find a tradesperson in your area
                             who can be trusted to provide a high standard of work. Easy!
                             </p>
-                        <img className='mb-6' src={images['carpenterVideoPlayer.jpg'].default} />
+                        <img className='mb-6' src={images['carpenterPlayer.png'].default} />
                         <div>
                             <img className='absolute right-5' src={images['chatLogo.svg'].default} />
                         </div>
@@ -58,9 +64,7 @@ const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
                             <img className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
                         </div>
                     </div>
-                    <div className=''>
-                        <img src={images['smilingHow.jpg'].default} />
-                    </div>
+                    <img className='w-full' src={images['mobileHowSmile.jpg'].default} />
                 </div>
             </section>
         </main>

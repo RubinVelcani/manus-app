@@ -17,16 +17,18 @@ const Routes = () => {
             <Route path='/vision'>
                 <DesktopVision />
             </Route>
-            {/* 
+
             <Route path='/how'>
                 <DesktopHow />
             </Route>
+
             <Route path='/contact'>
                 <DesktopContact />
             </Route>
             <Route path='/join'>
                 <DesktopJoin />
             </Route>
+            {/* 
             <Route path='/profile'>
                 <DesktopProfile />
             </Route> */}

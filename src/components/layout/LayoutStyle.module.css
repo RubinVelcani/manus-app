@@ -1,4 +1,10 @@
-.footer {
+.header {
+    position: absolute;
+    top: 0;
+    background: transparent;
+}
+
+.mobileFooter {
     padding: 12rem 0 2.8rem 0;
     background-image: url('../../icons/footerBackground.svg');
     background-size: cover;
@@ -7,13 +13,9 @@
     min-height: fit-content;
 }
 
-.header {
-    position: absolute;
-    top: 0;
-    background: transparent;
-}
-
-.footerDesktop {
+.desktopFooter {
+    width: 100%;
     padding: 4.5rem 0;
     background-image: url('../../icons/desktopFooterBackground.svg');
+    background-size: cover;
 }

@@ -1,7 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useLayoutEffect } from 'react'
 import MobileMenuProfile from './MobileMenuProfile';
 
 const MobileProfile = ({ showMobileMenu, toggleMobileMenu }) => {
+
+    // N E E D  T O  C H A N G E  S T A T E  A F T E R  T O G G L I N G  M O B I L E  M E N U
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    })
 
     function importAll(r) {
         let images = {}
@@ -9,30 +15,35 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu }) => {
         return images
     }
 
+    const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
+
+    React.useEffect = (() => {
+        setShowAccount(showAccount)
+        setShowPayment(showPayment)
+        setShowProfile(showProfile)
+    })
+
     const [showAccount, setShowAccount] = useState(true)
     const [showPayment, setShowPayment] = useState(false)
     const [showProfile, setShowProfile] = useState(false)
 
     function toggleAccount() {
-        setShowAccount(!showAccount)
+        setShowAccount(true)
         setShowPayment(false)
         setShowProfile(false)
     }
 
     function togglePayment() {
         setShowAccount(false)
-        setShowPayment(!showPayment)
+        setShowPayment(true)
         setShowProfile(false)
     }
 
     function toggleProfile() {
         setShowAccount(false)
         setShowPayment(false)
-        setShowProfile(!showProfile)
-        console.log('yay')
+        setShowProfile(true)
     }
-
-    const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
     return (
         <main className='bg-lightGray'>

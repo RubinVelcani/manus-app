@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import MobileMenuHome from './MobileMenuHome'
 import PhoneCarousel from '../helpers/PhoneCarousel'
 import WorkerCarousel from '../helpers/WorkerCarousel'
@@ -6,6 +6,10 @@ import style from './MobileStyle.module.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    })
 
     function importAll(r) {
         let images = {}
@@ -18,7 +22,7 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
     return (
         <main>
             <aside className={showMobileMenu ? 'block' : 'hidden'}>
-                <MobileMenuHome />
+                <MobileMenuHome showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
             </aside>
             <section className={showMobileMenu ? 'hidden' : 'block'}>
                 <img className='absolute w-full' src={images['mobilePhonesBackground.svg'].default} />
@@ -77,13 +81,13 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                 </div>
                 <div>
                     <img className={style.smilerImage} src={images['smiler.jpg'].default} />
-                    <img className='ml-auto mr-10 relative h-2/3 -mt-80 z-50' src={images['sidewayPhone.png'].default} />
+                    <img className='h-72 absolute right-0 mr-10 -mt-72 z-50' src={images['sidewayPhone.png'].default} />
                 </div>
                 <div className={style.middleImage}>
                     <h1 className='text-4xl w-4/5 font-semibold mb-2 mt-7'>Want extra work?</h1>
                     <p className='mb-5 text-sm w-4/5 leading-5 font-medium'>
                         Are you a tradesperson looking for a work?
-                        Let us cinnect you to clients in your area!
+                        Let us connect you to clients in your area!
                         Whether you’re plumber, an electrician,
                         a painter, a carpenter or a roofer, we have jobs for you!
                     </p>
@@ -127,8 +131,8 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                     <h1 className='mt-16 mb-8 text-mediumBlue text-4xl font-semibold'>Meet our Manus Tradesman</h1>
                 </div>
                 <WorkerCarousel />
-                <div className='flex flex-col w-4/5 items-center text-center mx-auto mb-8'>
-                    <h1 className='mb-4 text-mediumBlue text-4xl font-semibold'>It's easy to Get Started</h1>
+                <div className='flex flex-col w-4/5 items-center text-center mx-auto mb-60'>
+                    <h1 className='text-mediumBlue text-4xl font-semibold mt-20 mb-4'>It's easy to Get Started</h1>
                     <p className='mb-8 text-mediumBlue leading-5 font-semibold'>
                         The Manus offering is provided as a two-part mobile app;
                         one for consumers, the other for traders professionals.

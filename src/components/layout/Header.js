@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import style from './LayoutStyle.module.css'
 
 import MobileLogo from '../../icons/mobileLogoImg.png'
@@ -14,11 +15,15 @@ const Header = ({ showMobileMenu, toggleMobileMenu }) => {
             {/* M O B I L E */}
             <div className='flex flex-row justify-between items-center md:hidden'>
                 <div className='p-4 ml-6 cursor-pointer'>
-                    <img src={MobileLogo} alt='' />
+                    <Link to='/'>
+                        <img src={MobileLogo} alt='' />
+                    </Link>
                 </div>
                 <div className='flex flex-row'>
                     <div className='p-4 cursor-pointer'>
-                        <img src={MobileUser} alt='' />
+                        <Link to='/profile'>
+                            <img src={MobileUser} alt='' />
+                        </Link>
                     </div>
                     <div className='p-4 mr-6 cursor-pointer' onClick={toggleMobileMenu}>
                         <img src={Hamburger} alt='' />
@@ -28,15 +33,23 @@ const Header = ({ showMobileMenu, toggleMobileMenu }) => {
             {/* D E S K T O P */}
             <div className='max-w-screen-xl flex-row justify-around items-start text-white py-9 mx-auto hidden md:flex'>
                 <div className='ml-6 cursor-pointer'>
-                    <img src={DesktopLogo} alt='' />
+                    <Link to='/'>
+                        <img src={DesktopLogo} alt='' />
+                    </Link>
                 </div>
                 <div className='flex flex-row items-center text-lg font-semibold'>
-                    <h4 className='mx-5'>Our vision</h4>
-                    <h4 className='mx-5'>How it works</h4>
-                    <div className='flex flex-row bg-white text-lightBlue text-base p-3 mx-5 rounded-full'>
-                        <img className='mr-2' src={DesktopUser} />
-                        <h4>Become a Tradesman</h4>
-                    </div>
+                    <Link to='/vision'>
+                        <h4 className='mx-5'>Our vision</h4>
+                    </Link>
+                    <Link to='/how'>
+                        <h4 className='mx-5'>How it works</h4>
+                    </Link>
+                    <Link to='/join'>
+                        <div className='flex flex-row bg-white text-lightBlue text-base p-3 mx-5 rounded-full'>
+                            <img className='mr-2' src={DesktopUser} />
+                            <h4>Become a Tradesman</h4>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </header>

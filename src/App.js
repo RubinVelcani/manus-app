@@ -15,14 +15,18 @@ function App() {
 
   return (
     <Router>
-      <Header showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
-      <div className='block font-fontMain md:hidden'>
+      <div className='z-50'>
+        <Header showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
+      </div>
+      <div className='z-0 block font-fontMain md:hidden'>
         <MobileRoutes showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
       </div>
-      <div className='hidden font-fontMain md:block'>
+      <div className='z-0 hidden font-fontMain md:block'>
         <DesktopRoutes />
       </div>
-      <Footer />
+      <div className='z-50'>
+        <Footer />
+      </div>
     </Router>
   );
 }

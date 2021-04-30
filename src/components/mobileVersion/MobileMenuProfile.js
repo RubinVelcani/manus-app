@@ -5,15 +5,9 @@ const MobileMenuProfile = ({ toggleMobileMenu, toggleAccount, togglePayment, tog
     return (
         <div className='bg-mediumBlue h-screen'>
             <ul className='list-none text-white text-xl pb-12'>
-                <Link to='/profile' onClick={() => { toggleMobileMenu(); toggleAccount() }}>
-                    <li className='px-10 py-2 hover:bg-menuBlue'>Account Details</li>
-                </Link>
-                <Link to='/profile' onClick={() => { toggleMobileMenu(); togglePayment() }}>
-                    <li className='px-10 py-2 hover:bg-menuBlue'>Payment Information</li>
-                </Link>
-                <Link to='/profile' onClick={() => { toggleProfile(); toggleMobileMenu(); }}>
-                    <li className='px-10 py-2 hover:bg-menuBlue'>Edit Profile</li>
-                </Link>
+                <li className='px-10 py-2 hover:bg-menuBlue' onClick={() => { toggleAccount(); toggleMobileMenu(); }}>Account Details</li>
+                <li className='px-10 py-2 hover:bg-menuBlue' onClick={() => { togglePayment(); toggleMobileMenu(); }}>Payment Information</li>
+                <li className='px-10 py-2 hover:bg-menuBlue' onClick={() => { toggleProfile(); toggleMobileMenu(); }}>Edit Profile</li>
             </ul>
         </div>
     )

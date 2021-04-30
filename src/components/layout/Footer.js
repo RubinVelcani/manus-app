@@ -17,27 +17,41 @@ const Footer = () => {
             <div className='block md:hidden'>
                 <div className={style.mobileFooter}>
                     <ul className='list-none px-11 text-xxs'>
-                        <li className='border-b border-lightBlue mt-2 pr-52'>
-                            Our Vision
-                    </li>
-                        <li className='border-b border-lightBlue mt-2 pr-52'>
-                            How it works
-                    </li>
-                        <li className='border-b border-lightBlue mt-2 pr-52'>
-                            Contact Us
-                    </li>
-                        <li className='border-b border-lightBlue mt-2 pr-52'>
-                            Media Enquiries
-                    </li>
-                        <li className='border-b border-lightBlue mt-2 pr-52'>
-                            terms of Use
-                    </li>
-                        <li className='border-b border-lightBlue mt-2 pr-52'>
-                            Privacy Policy
-                    </li>
-                        <li className='border-b border-lightBlue mt-2 pr-52'>
-                            Cookies Policy
-                    </li>
+                        <li className='w-full border-b border-lightBlue mt-2 pb-1.5'>
+                            <Link to='/vision'>
+                                Our Vision
+                            </Link>
+                        </li>
+                        <li className='w-full border-b border-lightBlue mt-2 pb-1.5'>
+                            <Link to='/how'>
+                                How it works
+                            </Link>
+                        </li>
+                        <li className='w-full border-b border-lightBlue mt-2 pb-1.5'>
+                            <Link to='/contact'>
+                                Contact Us
+                            </Link>
+                        </li>
+                        <li className='w-full border-b border-lightBlue mt-2 pb-1.5'>
+                            <Link to='/'>
+                                Media Enquiries
+                            </Link>
+                        </li>
+                        <li className='w-full border-b border-lightBlue mt-2 pb-1.5'>
+                            <Link to='/'>
+                                terms of Use
+                            </Link>
+                        </li>
+                        <li className='w-full border-b border-lightBlue mt-2 pb-1.5'>
+                            <Link to='/'>
+                                Privacy Policy
+                            </Link>
+                        </li>
+                        <li className='w-full border-b border-lightBlue mt-2 pb-1.5'>
+                            <Link to='/'>
+                                Cookies Policy
+                            </Link>
+                        </li>
                     </ul>
                     <h4 className='text-xxs pl-11 mt-8'>
                         &#169; 2017 MANUS. All rights &amp; Copyrights Reserved
@@ -45,10 +59,10 @@ const Footer = () => {
                 </div>
             </div>
             <div className='hidden md:block'>
-                <div className={style.footerDesktop}>
+                <div className={style.desktopFooter}>
                     <div className=' max-w-screen-lg relative flex flex-col items-center text-white mx-auto'>
                         <img src={images['desktopFooterLogo.png'].default} />
-                        <div className='w-11/12 flex flex-row items-center justify-between mt-9'>
+                        <div className='w-11/12 flex flex-row items-center text-sm justify-between mt-9 2xl:text-base'>
                             <Link to='./vision'>
                                 <h4>Our Vision</h4>
                             </Link>

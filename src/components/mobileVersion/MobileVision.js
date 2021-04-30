@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import MobileMenuHome from './MobileMenuHome'
 import style from './MobileStyle.module.css'
 
 const MobileVision = ({ showMobileMenu, toggleMobileMenu }) => {
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    })
 
     function importAll(r) {
         let images = {}
@@ -15,7 +19,7 @@ const MobileVision = ({ showMobileMenu, toggleMobileMenu }) => {
     return (
         <main className='bg-lightGray'>
             <aside className={showMobileMenu ? 'block' : 'hidden'}>
-                <MobileMenuHome />
+                <MobileMenuHome showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
             </aside>
             <section className={showMobileMenu ? 'hidden' : 'block'}>
                 <div className='bg-white pb-7'>
@@ -71,7 +75,7 @@ const MobileVision = ({ showMobileMenu, toggleMobileMenu }) => {
                         <h1 className='mb-3 mt-8 text-mediumBlue text-4xl font-semibold'>Manus is here to Revolutionise, Innovate and Disrupt the DIY Market.</h1>
                         <button className='w-full mt-16 mb-3
                      py-4 text-white bg-mediumBlue rounded-full font-medium'>Notify me when the app is ready!</button>
-                        <img className='mb-6 w-20 mx-auto' src={images['orangeLine.svg'].default} />
+                        <img className='w-20 mx-auto mb-60' src={images['orangeLine.svg'].default} />
                     </div>
                 </div>
             </section>

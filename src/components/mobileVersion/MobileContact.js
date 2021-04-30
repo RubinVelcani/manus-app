@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import MobileMenuHome from './MobileMenuHome'
 
 const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    })
 
     function importAll(r) {
         let images = {}
@@ -14,7 +18,7 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
     return (
         <main className='bg-lightGray'>
             <aside className={showMobileMenu ? 'block' : 'hidden'}>
-                <MobileMenuHome />
+                <MobileMenuHome showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
             </aside>
             <section className={showMobileMenu ? 'hidden' : 'block'}>
                 <div className='flex flex-col w-4/5 items-center text-center mx-auto pb-36'>
@@ -27,7 +31,7 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
                     </div>
                     <img src={images['greenBlueLines.svg'].default} />
                     <form className='w-full flex flex-col text-sm text-formGray mt-4 mb-16'>
-                        <textarea className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-3 px-6' rows='6' value='Your message...' />
+                        <textarea className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-3 px-6' rows='6' placeholder='Your message...' />
                         <select className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-2 px-4'>
                             <option hidden value="">Tell us about yourself...</option>
                             <option value="lime">Lime</option>

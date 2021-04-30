@@ -13,7 +13,8 @@ module.exports = {
       'mediumGray': '#C4C4C4',
       'formGray': '#8D8D92',
       'darkGray': '#464545',
-      'profileGray': '#F6F3F3'
+      'profileGray': '#F6F3F3',
+      'underscoreBlue': '#A2DCFD'
 
     },
     fontFamily: {

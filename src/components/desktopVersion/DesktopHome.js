@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import PhoneCarousel from '../helpers/PhoneCarousel'
 import WorkerCarousel from '../helpers/WorkerCarousel'
 import style from './DesktopStyle.module.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const DesktopHome = () => {
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    })
 
     function importAll(r) {
         let images = {}
@@ -89,7 +93,7 @@ const DesktopHome = () => {
                                 <h1 className={style.diagonalGreen}>Want extra work?</h1>
                                 <p className='mb-5 text-sm leading-5 font-medium lg:mb-14'>
                                     Are you a tradesperson looking for a work?
-                                    Let us cinnect you to clients in your area!
+                                    Let us connect you to clients in your area!
                                     Whether you’re plumber, an electrician,
                                     a painter, a carpenter or a roofer, we have jobs for you!
                     </p>
@@ -101,7 +105,7 @@ const DesktopHome = () => {
                             </div>
                         </div>
                         <img className={style.sidewayPhone} src={images['sidewayPhone.png'].default} />
-                        <img className={style.smilerImage} src={images['smiler.jpg'].default} />
+                        <img className={style.smilerImageDesktop} src={images['smiler.jpg'].default} />
                     </div>
                     <div className='relative flex flex-col w-4/5 items-center text-center mx-auto mt-16'>
                         <h1 className='text-mediumBlue text-4xl font-semibold mb-3'>Make Money When You Want</h1>
