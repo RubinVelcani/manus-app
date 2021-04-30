@@ -17,26 +17,26 @@ const MobileJoin = ({ showMobileMenu, toggleMobileMenu }) => {
 
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
-    const [pageOne, setPageOne] = useState(false)
+    const [pageOne, setPageOne] = useState(true)
     const [pageTwo, setPageTwo] = useState(false)
     const [pageThree, setPageThree] = useState(false)
 
     function togglePageOne() {
-        setPageOne(!pageOne)
+        setPageOne(true)
         setPageTwo(false)
         setPageThree(false)
     }
 
     function togglePageTwo() {
         setPageOne(false)
-        setPageTwo(!pageTwo)
+        setPageTwo(true)
         setPageThree(false)
     }
 
     function togglePageThree() {
         setPageOne(false)
         setPageTwo(false)
-        setPageThree(!pageThree)
+        setPageThree(true)
     }
 
     return (
@@ -54,7 +54,7 @@ const MobileJoin = ({ showMobileMenu, toggleMobileMenu }) => {
                         </h3>
                     </div>
                     <MobileForm pageOne={pageOne} togglePageOne={togglePageOne} pageTwo={pageTwo} togglePageTwo={togglePageTwo} pageThree={pageThree} togglePageThree={togglePageThree} />
-                    <img src={images['greenBlueLines.svg'].default} />
+                    <img className='mb-40' src={images['greenBlueLines.svg'].default} />
                 </div>
             </section>
         </main>
