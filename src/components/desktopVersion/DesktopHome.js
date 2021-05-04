@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react'
+import { Link } from 'react-router-dom'
 import PhoneCarousel from '../helpers/PhoneCarousel'
 import WorkerCarousel from '../helpers/WorkerCarousel'
 import style from './DesktopStyle.module.css'
@@ -23,8 +24,8 @@ const DesktopHome = () => {
     return (
         <main>
             <section className=''>
-                <img className={style.firstBackground} src={images['mobilePhonesBackground.svg'].default} />
-                <div className='flex flex-row justify-around z-20 text-white mb-20'>
+                <img className='w-full absolute' src={images['mobilePhonesBackground.svg'].default} />
+                <div className='flex flex-row justify-around z-20 text-white pt-36 mb-20'>
                     <img className='w-1/2 relative pt-12' src={images['desktop3Phones.png'].default} />
                     <div className='relative mt-10 ml-8 pb-1 lg:mt-20'>
                         <div className='flex 2xl:w-1/2'>
@@ -56,11 +57,13 @@ const DesktopHome = () => {
                                 meanaing you can choose the right local person for your project with confidence.
                         </p>
                             <div className='flex flex-row items-center'>
-                                <PhoneCarousel />
+                                <div className='w-1/2'>
+                                    <PhoneCarousel />
+                                </div>
                                 <div className='w-1/2 flex flex-col items-start text-left'>
-                                    <div>
-                                        <img className='absolute right-20' src={images['chatLogo.svg'].default} />
-                                    </div>
+                                    <Link to='/contact'>
+                                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                                    </Link>
                                     <div className='mb-3.5'>
                                         <img className='w-7 inline-block' src={images['magnifyingGlassLogo.svg'].default} />
                                         <h1 className='inline-block text-mediumBlue text-2xl font-bold ml-4'>Find a Tradesman</h1>
@@ -88,7 +91,7 @@ const DesktopHome = () => {
                         </div>
                     </div>
                     <div className='w-full flex flex-row items-center mt-20'>
-                        <div className={style.blueBackground}>
+                        <div className='w-7/12 z-50 absolute flex flex-col items-center text-white text-center bg-mediumBlue h-96 pt-12' style={{ clipPath: "polygon(0 0, 92% 11%, 100% 83%, 0 100%)" }}>
                             <div className='w-1/2 flex flex-col text-left'>
                                 <h1 className={style.diagonalGreen}>Want extra work?</h1>
                                 <p className='mb-5 text-sm leading-5 font-medium lg:mb-14'>
@@ -148,8 +151,10 @@ const DesktopHome = () => {
                         <img src={images['orangeLine.svg'].default} />
                         <h1 className='mt-16 mb-8 text-mediumBlue text-4xl font-semibold'>Meet our Manus Tradesman</h1>
                     </div>
-                    <WorkerCarousel />
-                    <div className='flex flex-col w-4/5 items-center text-center mx-auto mt-36 mb-8'>
+                    <div className='w-full'>
+                        <WorkerCarousel />
+                    </div>
+                    <div className='flex flex-col w-4/5 items-center text-center mx-auto mt-36 mb-20'>
                         <h1 className='mb-4 text-mediumBlue text-4xl font-semibold'>It's easy to Get Started</h1>
                         <p className='w-2/3 mb-10 text-gray leading-5 font-semibold'>
                             The Manus offering is provided as a two-part mobile app;

@@ -79,7 +79,7 @@ const DesktopStep3 = ({ pageOne, pageTwo, pageThree, togglePageOne, togglePageTw
                 </div>
             </div>
             <label className='tracking-wide mr-auto mb-5 mt-0.5'>Please provide a copy of your driver’s license</label>
-            <input className='pl-6 mb-4' type="file" />
+            <input className='pl-6 mb-7' type="file" />
 
             <label className='tracking-wide mb-5 mr-auto'>Please provide a copy of the details page of your passport</label>
             <input className='pl-6 mb-9' type="file" />
@@ -94,8 +94,8 @@ const DesktopStep3 = ({ pageOne, pageTwo, pageThree, togglePageOne, togglePageTw
             </div>
 
             <div className='flex flex-row'>
-                <input className=' w-1/4 rounded-3xl bg-white text-mediumBlue font-semibold ring-2 ring-mediumBlue mr-5 p-2' type="submit" value="Save it for later" />
-                <input className=' w-1/4 rounded-3xl bg-mediumBlue text-white ring-2 ring-mediumBlue p-2' type="submit" value="Continue" />
+                <button className=' w-1/4 rounded-3xl bg-white text-mediumBlue font-semibold ring-2 ring-mediumBlue mr-5 p-2'>Save it for later</button>
+                <button className=' w-1/4 rounded-3xl bg-mediumBlue text-white ring-2 ring-mediumBlue p-2'>Continue</button>
             </div>
         </div>
     )

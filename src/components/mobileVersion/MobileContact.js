@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from 'react'
+import { Link } from 'react-router-dom'
 import MobileMenuHome from './MobileMenuHome'
 
 const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
@@ -44,9 +45,9 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
                         <input className=' rounded-3xl ring-1 ring-mediumGray mb-8 py-2 px-4' type="text" placeholder='Email' />
                         <input className=' w-3/5 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-3.5 px-4' type="submit" value="Send message" />
                     </form>
-                    <div>
-                        <img className='absolute right-5' src={images['chatLogo.svg'].default} />
-                    </div>
+                    <Link to='/contact'>
+                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                    </Link>
                     <div className='flex flex-col items-center text-center'>
                         <h1 className='mb-4 text-mediumBlue text-2xl font-bold'>Immediate Solutions</h1>
                         <p className='text-gray leading-5 font-medium mb-2.5'>

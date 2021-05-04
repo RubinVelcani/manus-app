@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import style from './LayoutStyle.module.css'
 
 const Footer = () => {
 
@@ -15,7 +14,7 @@ const Footer = () => {
     return (
         <footer>
             <div className='block md:hidden'>
-                <div className={style.mobileFooter}>
+                <div className='pt-48 pb-11 -mt-24 text-white bg-mobile-footer bg-cover'>
                     <ul className='list-none px-11 text-xxs'>
                         <li className='w-full border-b border-lightBlue mt-2 pb-1.5'>
                             <Link to='/vision'>
@@ -59,8 +58,8 @@ const Footer = () => {
                 </div>
             </div>
             <div className='hidden md:block'>
-                <div className={style.desktopFooter}>
-                    <div className=' max-w-screen-lg relative flex flex-col items-center text-white mx-auto'>
+                <div className='w-full pt-5 pb-4 bg-desktop-footer bg-cover'>
+                    <div className='max-w-screen-lg h-60 relative flex flex-col items-center justify-center text-white mx-auto'>
                         <img src={images['desktopFooterLogo.png'].default} />
                         <div className='w-11/12 flex flex-row items-center text-sm justify-between mt-9 2xl:text-base'>
                             <Link to='./vision'>

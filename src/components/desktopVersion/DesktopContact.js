@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const DesktopContact = ({ showMobileMenu, toggleMobileMenu }) => {
 
@@ -17,6 +18,7 @@ const DesktopContact = ({ showMobileMenu, toggleMobileMenu }) => {
     return (
         <main className='bg-lightGray'>
             <section className=''>
+                <div className='h-28 pb-1.5 bg-mediumBlue'></div>
                 <div className='flex flex-col w-4/5 items-center text-center mx-auto pb-36'>
                     <div className='mt-20'>
                         <h1 className='mb-6 ml-3 text-mediumBlue text-4xl font-semibold'>Contact us</h1>
@@ -40,9 +42,6 @@ const DesktopContact = ({ showMobileMenu, toggleMobileMenu }) => {
                                 <img src={images['emailLogo.svg'].default} />
                                 <span className='text-mediumBlue ml-2'>help@manusapp.com</span>
                             </div>
-                        </div>
-                        <div>
-                            <img className='absolute right-5' src={images['chatLogo.svg'].default} />
                         </div>
                         <form className='w-1/2 flex flex-col items-start text-sm text-formGray pl-6 mt-1'>
                             <textarea className='w-full rounded-3xl ring-1 ring-mediumGray mb-16 py-10 px-6 outline-none focus-within:ring-mediumBlue' rows='6' placeholder='Your message...' />

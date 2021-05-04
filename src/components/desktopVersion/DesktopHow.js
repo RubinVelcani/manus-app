@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from 'react'
+import { Link } from 'react-router-dom'
 import style from './DesktopStyle.module.css'
 
 const DesktopHow = ({ }) => {
@@ -18,6 +19,7 @@ const DesktopHow = ({ }) => {
     return (
         <main className=''>
             <section className=''>
+                <div className='h-28 pb-1.5 bg-mediumBlue'></div>
                 <div className='flex flex-col w-4/5 items-center text-center mx-auto mt-28'>
                     <div className='mb-12'>
                         <h1 className='mb-5 ml-3 -mt-1 text-mediumBlue text-4xl font-semibold'>How it works</h1>
@@ -26,9 +28,9 @@ const DesktopHow = ({ }) => {
                             you want to find a trader you can trust to do a good job for fair price.
                         </h3>
                     </div>
-                    <div>
-                        <img className='absolute right-5' src={images['chatLogo.svg'].default} />
-                    </div>
+                    <Link to='/contact'>
+                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                    </Link>
                     <img className='w-36' src={images['greenBlueLines.svg'].default} />
                     <div className='flex flex-row items-start justify-between mb-10 mt-4'>
                         <div className='w-1/2 flex flex-col'>

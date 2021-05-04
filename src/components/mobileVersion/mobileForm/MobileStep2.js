@@ -12,7 +12,7 @@ const MobileStep2 = ({ pageOne, togglePageOne, pageTwo, togglePageTwo, pageThree
     const images = importAll(require.context('../../../icons', false, /\.(png|jpe?g|svg)$/))
 
     return (
-        <section className='w-11/12 flex flex-col items-center text-xs text-gray rounded-3xl bg-white mx-auto py-8'>
+        <section className='w-11/12 flex flex-col items-center text-xs text-gray mx-auto py-8'>
             <div className='w-4/5 flex flex-col text-formGray mt-4 mb-16 mx-auto'>
                 <div className='flex flex-row justify-between mb-4'>
                     <h3>Gender</h3>
@@ -69,9 +69,6 @@ const MobileStep2 = ({ pageOne, togglePageOne, pageTwo, togglePageTwo, pageThree
                     <input className=' w-5/12 rounded-3xl bg-white text-lightBlue ring-1 ring-mediumGray mx-auto p-2' type="submit" value="Save it for later" />
                     <input className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2' type="submit" value="Continue" />
                 </div>
-            </div>
-            <div>
-                <img className='absolute right-5' src={images['chatLogo.svg'].default} />
             </div>
         </section>
     )

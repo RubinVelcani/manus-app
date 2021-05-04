@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from 'react'
+import { Link } from 'react-router-dom'
 import MobileMenuHome from './MobileMenuHome'
 import style from './MobileStyle.module.css'
 
@@ -46,9 +47,9 @@ const MobileVision = ({ showMobileMenu, toggleMobileMenu }) => {
                                 and limitations within the traditionals trades industry.
                         </h3>
                         </div>
-                        <div>
-                            <img className='absolute right-5' src={images['chatLogo.svg'].default} />
-                        </div>
+                        <Link to='/contact'>
+                            <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                        </Link>
                         <div className='flex flex-col items-center'>
                             <img className='mt-10 mb-6' src={images['visionPhone1.jpg'].default} />
                             <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Immediate Solutions</h1>

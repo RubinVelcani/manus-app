@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react'
+import { Link } from 'react-router-dom'
 import MobileMenuHome from './MobileMenuHome'
 import PhoneCarousel from '../helpers/PhoneCarousel'
 import WorkerCarousel from '../helpers/WorkerCarousel'
@@ -25,9 +26,9 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                 <MobileMenuHome showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
             </aside>
             <section className={showMobileMenu ? 'hidden' : 'block'}>
-                <img className='absolute w-full' src={images['mobilePhonesBackground.svg'].default} />
-                <img className='relative w-full pt-12' src={images['mobile3Phones.png'].default} />
-                <div className='flex flex-col w-4/5 items-center text-center mx-auto'>
+                <img className='w-full absolute' src={images['mobilePhonesBackground.svg'].default} />
+                <img className='w-full relative pt-12' src={images['mobile3Phones.png'].default} />
+                <div className='w-4/5 flex flex-col items-center text-center mx-auto'>
                     <div className='flex mt-5'>
                         <img src={images['mobileAppleLogo.svg'].default} />
                         <span className='ml-2 text-lightBlue text-xxs font-bold'>Comming soon on the Apple Store</span>
@@ -48,9 +49,9 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                     <button className='mt-20 mb-3
                             py-4 px-20 text-white bg-lightBlue font-bold rounded-full'>Send</button>
                     <img src={images['smallOrangeLine.svg'].default} />
-                    <div>
-                        <img className='absolute right-5' src={images['chatLogo.svg'].default} />
-                    </div>
+                    <Link to='/contact'>
+                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                    </Link>
                     <div className='flex flex-col items-center'>
                         <h1 className='mb-5 text-deepBlue text-4xl font-semibold mt-8'>Well qualified &amp; Vetted Tradesmen</h1>
                         <p className='text-lightBlue font-bold leading-5'>

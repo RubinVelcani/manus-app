@@ -16,31 +16,10 @@ const DesktopJoin = ({ showMobileMenu, toggleMobileMenu }) => {
 
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
-    const [pageOne, setPageOne] = useState(true)
-    const [pageTwo, setPageTwo] = useState(false)
-    const [pageThree, setPageThree] = useState(false)
-
-    function togglePageOne() {
-        setPageOne(true)
-        setPageTwo(false)
-        setPageThree(false)
-    }
-
-    function togglePageTwo() {
-        setPageOne(false)
-        setPageTwo(true)
-        setPageThree(false)
-    }
-
-    function togglePageThree() {
-        setPageOne(false)
-        setPageTwo(false)
-        setPageThree(true)
-    }
-
     return (
         <main className='bg-lightGray'>
             <section className=''>
+                <div className='h-28 pb-1.5 bg-mediumBlue'></div>
                 <div className='flex flex-col w-4/5 items-center text-center mx-auto mb-36'>
                     <div className='text-center mt-16'>
                         <h1 className='text-mediumBlue text-5xl font-bold mb-7 ml-3'>Become a Manus tradesman</h1>
@@ -51,7 +30,7 @@ const DesktopJoin = ({ showMobileMenu, toggleMobileMenu }) => {
                     </div>
                 </div>
                 <div className='w-2/3 flex flex-col items-center text-xs text-gray rounded-3xl bg-white mx-auto py-8'>
-                    <DesktopForm pageOne={pageOne} togglePageOne={togglePageOne} pageTwo={pageTwo} togglePageTwo={togglePageTwo} pageThree={pageThree} togglePageThree={togglePageThree} />
+                    <DesktopForm />
                 </div>
             </section>
         </main >

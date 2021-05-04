@@ -1,4 +1,5 @@
 import React, { useState, useLayoutEffect } from 'react'
+import { Link } from 'react-router-dom'
 import MobileForm from './mobileForm/MobileForm'
 import MobileMenu from './MobileMenuHome'
 import style from './MobileStyle.module.css'
@@ -17,43 +18,21 @@ const MobileJoin = ({ showMobileMenu, toggleMobileMenu }) => {
 
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
-    const [pageOne, setPageOne] = useState(true)
-    const [pageTwo, setPageTwo] = useState(false)
-    const [pageThree, setPageThree] = useState(false)
-
-    function togglePageOne() {
-        setPageOne(true)
-        setPageTwo(false)
-        setPageThree(false)
-    }
-
-    function togglePageTwo() {
-        setPageOne(false)
-        setPageTwo(true)
-        setPageThree(false)
-    }
-
-    function togglePageThree() {
-        setPageOne(false)
-        setPageTwo(false)
-        setPageThree(true)
-    }
-
     return (
         <main className='bg-lightGray'>
+            <aside className={showMobileMenu ? 'block' : 'hidden'}>
+                <MobileMenu showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
+            </aside>
             <section className={showMobileMenu ? 'hidden' : 'block'}>
-                <aside className={showMobileMenu ? 'block' : 'hidden'}>
-                    <MobileMenu />
-                </aside>
                 <div className='flex flex-col w-4/5 items-center text-center mx-auto mb-6'>
                     <div className='mt-7 pb-4'>
-                        <h1 className='mb-3 ml-3 -mt-1 text-deepBlue text-4xl font-semibold'>Become a Manus tradesman</h1>
+                        <h1 className='mb-5 ml-3 -mt-1 text-deepBlue text-4xl font-semibold'>Become a Manus tradesman</h1>
                         <h3 className='text-lightBlue font-bold leading-5'>
                             Register online now providing the informations requested below.
                             We”ll get in touch with you shortly with the next steps
                         </h3>
                     </div>
-                    <MobileForm pageOne={pageOne} togglePageOne={togglePageOne} pageTwo={pageTwo} togglePageTwo={togglePageTwo} pageThree={pageThree} togglePageThree={togglePageThree} />
+                    <MobileForm />
                     <img className='mb-40' src={images['greenBlueLines.svg'].default} />
                 </div>
             </section>

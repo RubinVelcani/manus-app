@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import MobileStep1 from './MobileStep1'
 import MobileStep2 from './MobileStep2'
 import MobileStep3 from './MobileStep3'
 import style from '../MobileStyle.module.css'
 
-const MobileForm = ({ pageOne, togglePageOne, pageTwo, togglePageTwo, pageThree, togglePageThree }) => {
+const MobileForm = () => {
 
     function importAll(r) {
         let images = {}
@@ -14,10 +15,37 @@ const MobileForm = ({ pageOne, togglePageOne, pageTwo, togglePageTwo, pageThree,
 
     const images = importAll(require.context('../../../icons', false, /\.(png|jpe?g|svg)$/))
 
+    const [pageOne, setPageOne] = useState(true)
+    const [pageTwo, setPageTwo] = useState(false)
+    const [pageThree, setPageThree] = useState(false)
+
+    function togglePageOne() {
+        setPageOne(true)
+        setPageTwo(false)
+        setPageThree(false)
+    }
+
+    function togglePageTwo() {
+        setPageOne(false)
+        setPageTwo(true)
+        setPageThree(false)
+    }
+
+    function togglePageThree() {
+        setPageOne(false)
+        setPageTwo(false)
+        setPageThree(true)
+    }
+
     return (
-        <form className='mb-8'>
-            <h2 className='font-bold tracking-tight text-darkGray uppercase mx-auto mb-5'>Personal information</h2>
-            <div className='w-20 flex flex-row items-center justify-around mb-12 mx-auto'>
+        <form className='rounded-3xl bg-white mt-5 mb-8'>
+            <h2 className={pageOne ? 'block font-bold tracking-tight text-darkGray uppercase mx-auto my-5' : 'font-bold tracking-tight text-darkGray uppercase mx-auto my-5 hidden'}>Personal information</h2>
+            <h2 className={pageTwo ? 'block font-bold tracking-tight text-darkGray uppercase mx-auto my-5' : 'font-bold tracking-tight text-darkGray uppercase mx-auto my-5 hidden'}>Professional</h2>
+            <h2 className={pageThree ? 'block font-bold tracking-tight text-darkGray uppercase mx-auto my-5' : 'font-bold tracking-tight text-darkGray uppercase mx-auto my-5 hidden'}>Declarations</h2>
+            <Link to='/contact'>
+                <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+            </Link>
+            <div className='w-20 flex flex-row items-center justify-around mx-auto'>
                 <span onClick={togglePageOne} className={pageOne ? style.formDotSelected_border : style.formDotUnSelected_border}>
                     <span className={pageOne ? style.formDotSelected : style.formDot} />
                 </span>

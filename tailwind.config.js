@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     colors: {
       'white': '#ffffff',
+      'black': '#000000',
       'lightBlue': '#169CEF',
       'mediumBlue': '#1D91E3',
       'deepBlue': '#0C83D8',
@@ -15,7 +16,10 @@ module.exports = {
       'darkGray': '#464545',
       'profileGray': '#F6F3F3',
       'underscoreBlue': '#A2DCFD'
-
+    },
+    backgroundImage: {
+      'mobile-footer': "url('/src/icons/footerBackground.svg')",
+      'desktop-footer': "url('/src/icons/desktopFooterBackground.svg')",
     },
     fontFamily: {
       'mainFont': 'Oxygen, sans-serif'

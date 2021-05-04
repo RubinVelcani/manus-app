@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
+import { Link } from 'react-router-dom'
 import MobileMenuProfile from './MobileMenuProfile';
 
 const MobileProfile = ({ showMobileMenu, toggleMobileMenu }) => {
@@ -16,12 +17,6 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu }) => {
     }
 
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
-
-    React.useEffect = (() => {
-        setShowAccount(showAccount)
-        setShowPayment(showPayment)
-        setShowProfile(showProfile)
-    })
 
     const [showAccount, setShowAccount] = useState(true)
     const [showPayment, setShowPayment] = useState(false)
@@ -68,14 +63,18 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                 </div>
                 {/* A C C O U N T */}
                 <div className={showAccount ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
-                    <img className='absolute right-5' src={images['chatLogo.svg'].default} />
+                    <Link to='/contact'>
+                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                    </Link>
                     <div className='w-full flex flex-col items-center mb-12'>
                         <h3 className='py-12'><strong>Account</strong> Details</h3>
                     </div>
                 </div>
                 {/* P A Y M E N T */}
                 <div className={showPayment ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
-                    <img className='absolute right-5' src={images['chatLogo.svg'].default} />
+                    <Link to='/contact'>
+                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                    </Link>
                     <div className='w-full flex flex-col items-center mb-12'>
                         <h3 className='py-12'><strong>Payment</strong> Information</h3>
                         <div className='w-4/5 text-center text-white bg-lightBlue py-4'>
@@ -85,14 +84,16 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                                 <p className='text-sm mb-6'>
                                     You will not be able to take any jobs without connecting
                         </p>
-                                <input className=' w-5/12 rounded-3xl bg-white text-lightBlue font-medium mx-auto p-2' type="submit" value="Connect" />
+                                <button className=' w-5/12 rounded-3xl bg-white text-lightBlue font-medium mx-auto p-2'>Connect</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 {/* P R O F I L E */}
                 <div className={showProfile ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
-                    <img className='absolute right-5' src={images['chatLogo.svg'].default} />
+                    <Link to='/contact'>
+                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                    </Link>
                     <div className='w-full flex flex-col items-center mb-12'>
                         <h3 className='py-12'><strong>Edit</strong> Profile</h3>
                         <form className='w-11/12 flex flex-col items-start'>
