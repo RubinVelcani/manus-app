@@ -24,6 +24,9 @@ module.exports = {
     fontFamily: {
       'mainFont': 'Oxygen, sans-serif'
     },
+    height: {
+      'sideway-phone': '31.25rem'
+    },
     extend: {
       fontSize: {
         'xxs': '0.625rem'

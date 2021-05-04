@@ -1,21 +1,3 @@
-.diagonalGreen {
-    margin-right: auto;
-    font-size: 2.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    margin-top: 1.75rem;
-}
-
-.diagonalGreen::before {
-    content: url('../../lines/smallGreenDiagonalLine.svg');
-}
-
-.sidewayPhone {
-    margin: 0 auto;
-    height: 500px;
-    z-index: 200;
-}
-
 .smilerImageDesktop {
     width: 52%;
     max-height: 480px;

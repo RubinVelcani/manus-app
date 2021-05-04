@@ -91,9 +91,12 @@ const DesktopHome = () => {
                         </div>
                     </div>
                     <div className='w-full flex flex-row items-center mt-20'>
-                        <div className='w-7/12 z-50 absolute flex flex-col items-center text-white text-center bg-mediumBlue h-96 pt-12' style={{ clipPath: "polygon(0 0, 92% 11%, 100% 83%, 0 100%)" }}>
+                        <div className='w-1/2 h-sideway-phone z-30 absolute flex flex-col items-center text-white text-center bg-mediumBlue h-96 pt-12' style={{ clipPath: "polygon(0 0, 92% 11%, 100% 83%, 0 100%)" }}>
                             <div className='w-1/2 flex flex-col text-left'>
-                                <h1 className={style.diagonalGreen}>Want extra work?</h1>
+                                <div className=''>
+                                    <img src={images['smallGreenDiagonalLine.svg'].default} />
+                                    <h1 className='text-4xl font-semibold mb-2 mt-7 mr-auto'>Want extra work?</h1>
+                                </div>
                                 <p className='mb-5 text-sm leading-5 font-medium lg:mb-14'>
                                     Are you a tradesperson looking for a work?
                                     Let us connect you to clients in your area!
@@ -107,7 +110,7 @@ const DesktopHome = () => {
                                 </div>
                             </div>
                         </div>
-                        <img className={style.sidewayPhone} src={images['sidewayPhone.png'].default} />
+                        <img className='h-sideway-phone z-40 mx-auto' src={images['sidewayPhone.png'].default} />
                         <img className={style.smilerImageDesktop} src={images['smiler.jpg'].default} />
                     </div>
                     <div className='relative flex flex-col w-4/5 items-center text-center mx-auto mt-16'>
