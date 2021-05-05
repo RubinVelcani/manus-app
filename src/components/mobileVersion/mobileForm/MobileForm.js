@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import MobileStep1 from './MobileStep1'
 import MobileStep2 from './MobileStep2'
 import MobileStep3 from './MobileStep3'
-import style from '../MobileStyle.module.css'
 
 const MobileForm = () => {
 
@@ -46,14 +45,14 @@ const MobileForm = () => {
                 <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
             </Link>
             <div className='w-20 flex flex-row items-center justify-around mx-auto'>
-                <span onClick={togglePageOne} className={pageOne ? style.formDotSelected_border : style.formDotUnSelected_border}>
-                    <span className={pageOne ? style.formDotSelected : style.formDot} />
+                <span onClick={togglePageOne} className={pageOne ? 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-mediumGray' : 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-white'}>
+                    <span className={pageOne ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                 </span>
-                <span onClick={togglePageTwo} className={pageTwo ? style.formDotSelected_border : style.formDotUnSelected_border}>
-                    <span className={pageTwo ? style.formDotSelected : style.formDot} />
+                <span onClick={togglePageTwo} className={pageTwo ? 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-mediumGray' : 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-white'}>
+                    <span className={pageTwo ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                 </span>
-                <span onClick={togglePageThree} className={pageThree ? style.formDotSelected_border : style.formDotUnSelected_border}>
-                    <span className={pageThree ? style.formDotSelected : style.formDot} />
+                <span onClick={togglePageThree} className={pageThree ? 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-mediumGray' : 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-white'}>
+                    <span className={pageThree ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                 </span>
             </div>
             <div className={pageOne ? 'block' : 'hidden'}>

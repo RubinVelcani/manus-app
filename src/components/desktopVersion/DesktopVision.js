@@ -1,6 +1,5 @@
 import React, { useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
-import style from './DesktopStyle.module.css'
 
 const DesktopVision = () => {
 
@@ -22,9 +21,9 @@ const DesktopVision = () => {
                 <div className='bg-white'>
                     <div className='h-28 pb-1.5 bg-mediumBlue'></div>
                     <div className='flex flex-row'>
-                        <img className={style.desktopCarpenter} src={images['visionCarpenter.jpg'].default} />
-                        <div className={style.blueShapeVision}>
-                            <div className='relative flex flex-col text-white'>
+                        <img className='w-7/12 z-30 max-h-shape' style={{ clipPath: 'polygon(0 0, 100% 0, 90% 85%, 0% 100%)' }} src={images['visionCarpenter.jpg'].default} />
+                        <div className='w-3/5 max-h-shape z-20 bg-lightBlue p-4 pl-32 pb-16 -mt-px -ml-28' style={{ clipPath: 'polygon(5% 0, 100% 0, 100% 93%, 0 82%)' }}>
+                            <div className='relative flex flex-col text-white xl:w-4/5'>
                                 <div className='flex xl:mt-4 2xl:w-1/2'>
                                     <img className='absolute h-10' src={images['smallGreenDiagonalLine.svg'].default} />
                                     <h1 className='w-4/5 mb-6 ml-6 -mt-1 text-4xl font-semibold lg:mb-12'>
@@ -38,7 +37,9 @@ const DesktopVision = () => {
                                     </p>
                             </div>
                             <div className='w-4/5'>
-                                <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7'>Let's get started!</button>
+                                <Link to='/join'>
+                                    <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7 focus:outline-none'>Let's get started!</button>
+                                </Link>
                                 <div className=' w-max'>
                                     <h4 className='text-xs text-underscoreBlue font-light mt-2'>Register now as a Tradesman on Manus</h4>
                                     <img className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
@@ -91,7 +92,7 @@ const DesktopVision = () => {
                     <div className='w-3/5 flex flex-col mx-auto text-center pt-14'>
                         <h1 className='mb-3 text-mediumBlue text-4xl font-semibold'>Manus is here to Revolutionise, Innovate and Disrupt the DIY Market.</h1>
                         <button className='w-1/2 mt-16 mb-3 mx-auto
-                     py-4 text-white bg-mediumBlue rounded-full font-medium'>Notify me when the app is ready!</button>
+                     py-4 text-white bg-mediumBlue rounded-full font-medium focus:outline-none cursor-pointer'>Notify me when the app is ready!</button>
                         <img className='mb-6 w-20 mx-auto' src={images['orangeLine.svg'].default} />
                     </div>
                 </div>

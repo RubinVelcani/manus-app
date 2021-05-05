@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import MobileMenuHome from './MobileMenuHome'
 import PhoneCarousel from '../helpers/PhoneCarousel'
 import WorkerCarousel from '../helpers/WorkerCarousel'
-import style from './MobileStyle.module.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
@@ -35,10 +34,10 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                     </div>
                     <img className='mt-5' src={images['greenBlueLines.svg'].default} />
                     <div className='mt-7 pb-1'>
-                        <div className='flex'>
-                            <h1 className='mb-3 ml-3 -mt-1 text-deepBlue text-4xl font-semibold'>
-                                <img className='absolute' src={images['smallGreenDiagonalLine.svg'].default} />
-                            On-Demand Local Tradesment
+                        <div className=''>
+                            <h1 className='flex flex-row mb-3 ml-3 text-deepBlue text-4xl font-semibold'>
+                                <img className='h-full' src={images['smallGreenDiagonalLine.svg'].default} />
+                                On-Demand Local Tradesment
                             </h1>
                         </div>
                         <h3 className='text-lightBlue font-bold leading-5'>
@@ -81,10 +80,10 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                     </div>
                 </div>
                 <div>
-                    <img className={style.smilerImage} src={images['smiler.jpg'].default} />
+                    <img className='w-full relative' style={{ clipPath: 'polygon(0 16%, 100% 5%, 100% 95%, 0 84%)' }} src={images['smiler.jpg'].default} />
                     <img className='h-72 absolute right-0 mr-10 -mt-72 z-50' src={images['sidewayPhone.png'].default} />
                 </div>
-                <div className={style.middleImage}>
+                <div className='w-full flex flex-col h-96 -mt-24 pt-12 items-center text-white bg-mediumBlue' style={{ clipPath: 'polygon(0 5%, 100% 16%, 100% 84%, 0 95%)' }}>
                     <h1 className='text-4xl w-4/5 font-semibold mb-2 mt-7'>Want extra work?</h1>
                     <p className='mb-5 text-sm w-4/5 leading-5 font-medium'>
                         Are you a tradesperson looking for a work?
@@ -127,11 +126,15 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                         This is like a mini website that makes your business really shine.
                         It appears in Google searches too, so it is a great way to advertise yourself.
                     </p>
-                    <button className='mb-3 py-4 px-6 text-white bg-mediumBlue rounded-full'>Become a Manus Tradesman</button>
+                    <Link to='/join'>
+                        <button className='mb-3 py-4 px-6 text-white bg-mediumBlue rounded-full'>Become a Manus Tradesman</button>
+                    </Link>
                     <img src={images['orangeLine.svg'].default} />
                     <h1 className='mt-16 mb-8 text-mediumBlue text-4xl font-semibold'>Meet our Manus Tradesman</h1>
                 </div>
-                <WorkerCarousel />
+                <div className='w-full bg-carousel-background bg-cover pt-10'>
+                    <WorkerCarousel />
+                </div>
                 <div className='flex flex-col w-4/5 items-center text-center mx-auto mb-60'>
                     <h1 className='text-mediumBlue text-4xl font-semibold mt-20 mb-4'>It's easy to Get Started</h1>
                     <p className='mb-8 text-mediumBlue leading-5 font-semibold'>

@@ -1,5 +1,4 @@
 import React from 'react'
-import style from '../DesktopStyle.module.css'
 
 const DesktopStep2 = ({ pageOne, pageTwo, pageThree, togglePageOne, togglePageTwo, togglePageThree }) => {
 
@@ -31,11 +30,11 @@ const DesktopStep2 = ({ pageOne, pageTwo, pageThree, togglePageOne, togglePageTw
             <div className='w-full flex flex-row justify-between mt-0.5 mb-7'>
                 <div className='w-5/12 flex flex-col'>
                     <label className='mb-5'>First Name</label>
-                    <input className=' rounded-3xl ring-1 ring-mediumGray mb-4 py-2 px-4' type="text" />
+                    <input className=' rounded-3xl ring-1 ring-mediumGray mb-4 py-2 px-4 outline-none focus-within:ring-mediumBlue' type="text" />
                 </div>
                 <div className='w-5/12 flex flex-col'>
                     <label className='mb-5'>Surname</label>
-                    <input className=' rounded-3xl ring-1 ring-mediumGray mb-4 py-2 px-4' type="text" />
+                    <input className=' rounded-3xl ring-1 ring-mediumGray mb-4 py-2 px-4 outline-none focus-within:ring-mediumBlue' type="text" />
                 </div>
             </div>
             <p className='font-normal mt-0.5 mb-9'>
@@ -44,48 +43,48 @@ const DesktopStep2 = ({ pageOne, pageTwo, pageThree, togglePageOne, togglePageTw
                         Max siwe 500KB (Ideal Dimensions 500x500 px).
                     </p>
             <div className='flex flex-row justify-between items-baseline mb-11 mt-0.5'>
-                <input className='rounded-3xl ring-1 ring-mediumGray mr-2 py-2 px-4' type="file" />
+                <input className='rounded-3xl ring-1 ring-mediumGray mr-2 py-2 px-4 outline-none focus-within:ring-mediumBlue' type="file" />
             </div>
             <div className='w-full flex flex-col mt-0.5'>
                 <div className='w-full flex flex-row justify-between mb-5'>
                     <div className='w-5/12 flex flex-col'>
                         <label className='mr-auto mb-5'>Home Address</label>
-                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4' type="text" />
+                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4 outline-none focus-within:ring-mediumBlue' type="text" />
                     </div>
                     <div className='w-5/12 flex flex-col'>
                         <label className='mr-auto mb-5'>Mobile Number</label>
-                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4' type="text" />
+                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4 outline-none focus-within:ring-mediumBlue' type="text" />
                     </div>
                 </div>
                 <div className='w-full flex flex-row justify-between mb-5'>
                     <div className='w-5/12 flex flex-col'>
                         <label className='mr-auto mb-5'>Date of Birth</label>
-                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4' type="text" />
+                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4 outline-none focus-within:ring-mediumBlue' type="text" />
                     </div>
                     <div className='w-5/12 flex flex-col'>
                         <label className='mr-auto mb-5'>Postcode</label>
-                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4' type="text" />
+                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4 outline-none focus-within:ring-mediumBlue' type="text" />
                     </div>
                 </div>
                 <div className='w-full flex flex-row justify-between mb-7'>
                     <div className='w-5/12 flex flex-col'>
                         <label className='mr-auto mb-5'>Place of Birth</label>
-                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4' type="text" />
+                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4 outline-none focus-within:ring-mediumBlue' type="text" />
                     </div>
                     <div className='w-5/12 flex flex-col'>
                         <label className='mr-auto mb-5'>Place of Birth</label>
-                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4' type="text" />
+                        <input className=' rounded-3xl ring-1 ring-mediumGray py-2 px-4 outline-none focus-within:ring-mediumBlue' type="text" />
                     </div>
                 </div>
             </div>
             <label className='tracking-wide mr-auto mb-5 mt-0.5'>Please provide a copy of your driver’s license</label>
-            <input className='pl-6 mb-7' type="file" />
+            <input className='pl-6 mb-7 outline-none focus-within:ring-mediumBlue' type="file" />
 
             <label className='tracking-wide mb-5 mr-auto'>Please provide a copy of the details page of your passport</label>
-            <input className='pl-6 mb-9' type="file" />
+            <input className='pl-6 mb-9 outline-none focus-within:ring-mediumBlue' type="file" />
             <div className='flex flex-col mt-0.5'>
                 <label className='tracking-wide mr-auto mb-5'>Nationality</label>
-                <select className='w-5/12 rounded-3xl ring-1 ring-mediumGray mt-2 mb-9 py-2 px-4 outline-none'>
+                <select className='w-5/12 rounded-3xl ring-1 ring-mediumGray mt-2 mb-9 py-2 px-4 outline-none focus-within:ring-mediumBlue'>
                     <option hidden value="">Select your nationality</option>
                     <option value="lime">Lime</option>
                     <option value="coconut">Coconut</option>
@@ -93,9 +92,9 @@ const DesktopStep2 = ({ pageOne, pageTwo, pageThree, togglePageOne, togglePageTw
                 </select>
             </div>
 
-            <div className='flex flex-row'>
-                <button className=' w-1/4 rounded-3xl bg-white text-mediumBlue font-semibold ring-2 ring-mediumBlue mr-5 p-2'>Save it for later</button>
-                <button onClick={togglePageThree} className=' w-1/4 rounded-3xl bg-mediumBlue text-white ring-2 ring-mediumBlue p-2'>Continue</button>
+            <div className='flex flex-row mt-10'>
+                <button className=' w-1/4 rounded-3xl bg-white text-mediumBlue font-semibold ring-2 ring-mediumBlue mr-5 p-2 outline-none'>Save it for later</button>
+                <button onClick={togglePageThree} className=' w-1/4 rounded-3xl bg-mediumBlue text-white ring-2 ring-mediumBlue p-2 outline-none'>Continue</button>
             </div>
         </div>
     )

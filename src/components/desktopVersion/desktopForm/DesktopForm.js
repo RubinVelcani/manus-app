@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import DesktopStep1 from './DesktopStep1'
 import DesktopStep2 from './DesktopStep2'
 import DesktopStep3 from './DesktopStep3'
-import style from '../DesktopStyle.module.css'
 
 const DesktopForm = () => {
 
@@ -48,24 +47,24 @@ const DesktopForm = () => {
                     <Link to='/contact'>
                         <img className='absolute right-5' src={images['chatLogo.svg'].default} />
                     </Link>
-                    <span className={pageOne ? style.formDotSelected_border : style.formDotUnSelected_border}>
-                        <span className={pageOne ? style.formDotSelected : style.formDot} />
+                    <span className={pageOne ? 'flex items-center justify-center w-4 h-4 rounded-full border-2 border-mediumGray' : 'flex items-center justify-center w-4 h-4 border-2 rounded-full border-white'}>
+                        <span className={pageOne ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                     </span>
                 </div>
                 <div onClick={togglePageTwo} className='w-36 flex flex-col items-center'>
                     <h4 className={pageTwo ? 'uppercase text-black font-bold mb-2.5' : 'uppercase mb-2.5'}>
                         Professional
                         </h4>
-                    <span className={pageTwo ? style.formDotSelected_border : style.formDotUnSelected_border}>
-                        <span className={pageTwo ? style.formDotSelected : style.formDot} />
+                    <span className={pageTwo ? 'flex items-center justify-center w-4 h-4 rounded-full border-2 border-mediumGray' : 'flex items-center justify-center w-4 h-4 border-2 rounded-full border-white'}>
+                        <span className={pageTwo ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                     </span>
                 </div>
                 <div onClick={togglePageThree} className='w-36 flex flex-col items-center'>
                     <h4 className={pageThree ? 'uppercase text-black font-bold mb-2.5' : 'uppercase mb-2.5'}>
                         Declarations
                         </h4>
-                    <span className={pageThree ? style.formDotSelected_border : style.formDotUnSelected_border}>
-                        <span className={pageThree ? style.formDotSelected : style.formDot} />
+                    <span className={pageThree ? 'flex items-center justify-center w-4 h-4 rounded-full border-2 border-mediumGray' : 'flex items-center justify-center w-4 h-4 border-2 rounded-full border-white'}>
+                        <span className={pageThree ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                     </span>
                 </div>
             </div>

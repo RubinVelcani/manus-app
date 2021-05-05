@@ -1,12 +1,9 @@
 import React, { useState, useLayoutEffect } from 'react'
 import DesktopForm from './desktopForm/DesktopForm'
-import style from './DesktopStyle.module.css'
 
 const DesktopJoin = ({ showMobileMenu, toggleMobileMenu }) => {
 
     // H E A D E R  B U T T O N  S H O U L D  C H A N G E  I N  T H I S  P A G E
-
-
 
     function importAll(r) {
         let images = {}

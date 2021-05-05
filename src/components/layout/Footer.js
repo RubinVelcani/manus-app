@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='hidden md:block'>
-                <div className='w-full pt-5 pb-4 bg-desktop-footer bg-cover'>
+                <div className='w-full relative z-50 pt-5 pb-4 bg-desktop-footer bg-cover'>
                     <div className='max-w-screen-lg h-60 relative flex flex-col items-center justify-center text-white mx-auto'>
                         <img src={images['desktopFooterLogo.png'].default} />
                         <div className='w-11/12 flex flex-row items-center text-sm justify-between mt-9 2xl:text-base'>

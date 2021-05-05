@@ -2,7 +2,6 @@ import React, { useState, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
 import MobileForm from './mobileForm/MobileForm'
 import MobileMenu from './MobileMenuHome'
-import style from './MobileStyle.module.css'
 
 const MobileJoin = ({ showMobileMenu, toggleMobileMenu }) => {
 

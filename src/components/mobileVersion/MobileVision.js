@@ -1,7 +1,6 @@
 import React, { useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
 import MobileMenuHome from './MobileMenuHome'
-import style from './MobileStyle.module.css'
 
 const MobileVision = ({ showMobileMenu, toggleMobileMenu }) => {
 
@@ -25,7 +24,7 @@ const MobileVision = ({ showMobileMenu, toggleMobileMenu }) => {
             <section className={showMobileMenu ? 'hidden' : 'block'}>
                 <div className='bg-white pb-7'>
                     <img className='w-full' src={images['visionCarpenter.jpg'].default} />
-                    <div className={style.blueShapeVision}>
+                    <div className='w-full flex flex-col h-96 -mt-24 pt-12 items-center text-center text-white bg-mediumBlue' style={{ clipPath: 'polygon(0 16%, 100% 5%, 100% 95%, 0 84%)' }}>
                         <h1 className='text-4xl w-4/5 font-semibold mb-2 mt-7'>Here to help</h1>
                         <p className='mb-5 text-sm w-4/5 leading-5 font-medium'>
                             We offer fairly-priced home services to homeowners,

@@ -20,16 +20,28 @@ module.exports = {
     backgroundImage: {
       'mobile-footer': "url('/src/icons/footerBackground.svg')",
       'desktop-footer': "url('/src/icons/desktopFooterBackground.svg')",
+      'carousel-background': "url('/src/icons/carouselBackground.svg')",
     },
     fontFamily: {
       'mainFont': 'Oxygen, sans-serif'
     },
-    height: {
-      'sideway-phone': '31.25rem'
+    minHeight: {
+      'smiler': '30rem'
+    },
+    maxHeight: {
+      'smiler': '32rem',
+      'shape': '21.875rem',
+      'how': '24rem'
     },
     extend: {
       fontSize: {
-        'xxs': '0.625rem'
+        'xxs': '0.625rem',
+      },
+      height: {
+        'sideway-phone': '31.25rem'
+      },
+      inset: {
+        '2/5': '40%'
       },
     },
   },

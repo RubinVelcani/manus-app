@@ -13,7 +13,7 @@ SwiperCore.use([Pagination, Autoplay]);
 
 const PhoneCarousel = () => {
     return (
-        <div className='max-w-sm mx-auto'>
+        <div className='max-w-sm mx-auto md:mr-10'>
             <Swiper
                 spaceBetween={1}
                 slidesPerView={1}

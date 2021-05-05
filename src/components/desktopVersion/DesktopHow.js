@@ -1,6 +1,5 @@
 import React, { useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
-import style from './DesktopStyle.module.css'
 
 const DesktopHow = ({ }) => {
 
@@ -50,9 +49,9 @@ const DesktopHow = ({ }) => {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-row items-end'>
-                    <div className={style.blueShapeHow}>
-                        <div className='w-1/2 text-white pb-3 ml-8 mt-4 lg:ml-16 lg:w-2/5 xl:ml-24 xl:w-1/3'>
+                <div className='flex flex-row items-end -mb-24'>
+                    <div className='w-3/4 h-96 z-20 -mr-32 pl-12 p-4 pb-12 bg-lightBlue' style={{ clipPath: 'polygon(0 0, 81% 16%, 100% 100%, 0% 100%)' }}>
+                        <div className='w-2/3 text-white pb-3 ml-8 mt-8 lg:ml-16 lg:pr-40 xl:w-1/2 xl:mx-auto'>
                             <div className='flex '>
                                 <img className='absolute h-10' src={images['smallGreenDiagonalLine.svg'].default} />
                                 <h1 className='mb-4 -mt-1 ml-4 text-4xl font-semibold'>
@@ -64,14 +63,16 @@ const DesktopHow = ({ }) => {
                                 work in and the type of work you do.
                                 We’ll get in touch with you shortly with the next steps.
                     </p>
-                            <button className='w-1/2 bg-white rounded-full text-lightBlue font-semibold py-2 px-7 ml-4'>Register Online</button>
+                            <Link to='/join'>
+                                <button className='w-1/2 bg-white rounded-full text-lightBlue font-semibold py-2 px-7 ml-4 focus:outline-none'>Register Online</button>
+                            </Link>
                             <div className='w-max ml-4'>
                                 <h4 className='text-xs text-underscoreBlue font-light mt-2'>Register now as a Tradesman on Manus</h4>
                                 <img className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
                             </div>
                         </div>
                     </div>
-                    <img className={style.howMechanic} src={images['desktopHowSmile.png'].default} />
+                    <img className='w-1/2 max-h-how z-30 absolute right-0' src={images['desktopHowSmile.png'].default} />
                 </div>
             </section>
         </main>

@@ -2,7 +2,6 @@ import React, { useState, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
 import PhoneCarousel from '../helpers/PhoneCarousel'
 import WorkerCarousel from '../helpers/WorkerCarousel'
-import style from './DesktopStyle.module.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const DesktopHome = () => {
@@ -19,35 +18,33 @@ const DesktopHome = () => {
 
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
-    // DESKTOP HEADER IS TRANSPARENT SO THE WHOLE LAYOUT NEEDS TO BE REVAMPED
-
     return (
         <main>
             <section className=''>
                 <img className='w-full absolute' src={images['mobilePhonesBackground.svg'].default} />
-                <div className='flex flex-row justify-around z-20 text-white pt-36 mb-20'>
+                <div className='max-w-screen-xl flex flex-row justify-around z-20 text-white pt-36 mb-20 mx-auto'>
                     <img className='w-1/2 relative pt-12' src={images['desktop3Phones.png'].default} />
-                    <div className='relative mt-10 ml-8 pb-1 lg:mt-20'>
-                        <div className='flex 2xl:w-1/2'>
-                            <img className='absolute h-24' src={images['smallGreenDiagonalLine.svg'].default} />
-                            <h1 className='mb-6 ml-12 -mt-1 text-5xl font-semibold lg:mb-12'>
+                    <div className='w-1/2 relative mt-10 ml-8 pb-1 lg:mt-20'>
+                        <div className='flex'>
+                            <img className='h-20' src={images['smallGreenDiagonalLine.svg'].default} />
+                            <h1 className='mb-2 ml-5 -mt-1 text-3xl font-semibold lg:mb-12 lg:text-5xl'>
                                 On-Demand Local Tradesmen
                             </h1>
                         </div>
-                        <h3 className='w-2/3 mb-10 ml-12 font-semibold text-lg leading-5 lg:mb-20'>
+                        <h3 className='w-4/5 mb-5 ml-5 font-semibold text-lg leading-5 lg:w-2/3 lg:mb-20'>
                             Get those everyday jobs done fast. One tap and a tradesman comes directly to you.
                             From broken boilers and burst pipes, to leaks and blocked drains...
                         </h3>
-                        <input className='w-2/3 rounded-3xl ring-1 ring-mediumGray ml-12 mb-4 py-2 px-4 lg:mb-8' type="text" placeholder='Notify me when the app is ready!' />
-                        <div className='w-2/3 flex flex-row items-center mb-10 ml-12 lg:mb-20'>
+                        <input className='w-2/3 rounded-3xl ring-1 ring-mediumGray ml-5 mb-4 py-2 px-4 lg:mb-8' type="text" placeholder='Notify me when the app is ready!' />
+                        <div className='flex flex-row justify-evenly items-center ml-5 mb-10 lg:w-2/3 lg:justify-around lg:mb-20'>
                             <h4 className='font-semibold'>Coming soon</h4>
-                            <img className='ml-10 mr-5' src={images['comingApple.svg'].default} />
+                            <img className='' src={images['comingApple.svg'].default} />
                             <img src={images['comingGoogle.svg'].default} />
                         </div>
                     </div>
                 </div>
                 <div className='w-full relative bg-white'>
-                    <div className='w-4/5 flex flex-col z-10 items-center text-center pt-20 mt-15 mx-auto lg:mt-30 xl:mt-40'>
+                    <div className='w-4/5 max-w-screen-xl flex flex-col z-10 items-center text-center pt-20 mt-15 mx-auto lg:mt-30 xl:mt-40'>
                         <img className='w-56' src={images['greenBlueLines.svg'].default} />
                         <div className='flex flex-col items-center'>
                             <h1 className='mb-5 text-mediumBlue text-5xl font-semibold mt-14'>Well qualified &amp; Vetted Tradesmen</h1>
@@ -56,11 +53,11 @@ const DesktopHome = () => {
                                 Manus on-demand platform offers fully vetted tradesmen within your vocal vicinity,
                                 meanaing you can choose the right local person for your project with confidence.
                         </p>
-                            <div className='flex flex-row items-center'>
-                                <div className='w-1/2'>
+                            <div className='w-full flex flex-row items-center'>
+                                <div className='w-1/2 '>
                                     <PhoneCarousel />
                                 </div>
-                                <div className='w-1/2 flex flex-col items-start text-left'>
+                                <div className='w-1/2 flex flex-col items-start text-left ml-10'>
                                     <Link to='/contact'>
                                         <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
                                     </Link>
@@ -68,54 +65,58 @@ const DesktopHome = () => {
                                         <img className='w-7 inline-block' src={images['magnifyingGlassLogo.svg'].default} />
                                         <h1 className='inline-block text-mediumBlue text-2xl font-bold ml-4'>Find a Tradesman</h1>
                                     </div>
-                                    <p className='mb-14 text-gray text-sm leading-5 font-medium'>
+                                    <p className='mb-14 text-gray text-sm leading-5 font-medium lg:w-96'>
                                         Find a tradesmen for every job. From light fittings and loft conversions,
                                         to leaky taps and a lick of paint. Choose from local tradespeople available in your area.
                                         Contact details are shared only when you send a request.
                             </p>
-                                    <div className='mb-3.5'>
+                                    <div className='mb-3.5 lg:w-96'>
                                         <img className='w-7 inline-block -mt-2' src={images['starLogo.svg'].default} />
                                         <h1 className='inline-block text-mediumBlue text-2xl font-bold ml-4'>Rate and Review</h1>
                                     </div>
-                                    <p className='text-gray text-sm leading-5 font-medium'>
+                                    <p className='text-gray text-sm leading-5 font-medium lg:w-96'>
                                         After your project is successfully completed,
                                         you can leave a review for your tradesmen to let others know the quality of work done by the trader.
                                         This review helps you and future Manu’s users.
                                         It also encourages a continued high standard and helps others to find tradespeople they can trust.
                             </p>
-                                    <button className='w-full mt-16 mb-3
-                                py-4 text-white bg-mediumBlue rounded-full font-medium'>Notify me when the app is ready!</button>
-                                    <img className='mb-6 mx-auto' src={images['orangeLine.svg'].default} />
+                                    <div className='w-full lg:w-96'>
+                                        <button className='w-full mt-16 mb-3
+                                py-4 text-white bg-mediumBlue rounded-full font-medium focus:outline-none cursor-pointer'>Notify me when the app is ready!</button>
+                                        <img className='mb-6 mx-auto' src={images['orangeLine.svg'].default} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className='w-full flex flex-row items-center mt-20'>
-                        <div className='w-1/2 h-sideway-phone z-30 absolute flex flex-col items-center text-white text-center bg-mediumBlue h-96 pt-12' style={{ clipPath: "polygon(0 0, 92% 11%, 100% 83%, 0 100%)" }}>
-                            <div className='w-1/2 flex flex-col text-left'>
-                                <div className=''>
-                                    <img src={images['smallGreenDiagonalLine.svg'].default} />
-                                    <h1 className='text-4xl font-semibold mb-2 mt-7 mr-auto'>Want extra work?</h1>
+                        <div className='w-4/5 h-sideway-phone z-30 flex flex-col items-center text-white text-center bg-mediumBlue pt-12 -mr-28 2xl:z-20' style={{ clipPath: "polygon(0 0, 92% 11%, 100% 83%, 0 100%)" }}>
+                            <div className='w-3/4 flex flex-col text-left xl:w-1/2'>
+                                <div className='flex flex-row items-start mt-7'>
+                                    <img className='h-16' src={images['smallGreenDiagonalLine.svg'].default} />
+                                    <h1 className='text-4xl font-semibold mb-2 ml-2 mr-auto xl:mb-8'>Want extra work?</h1>
                                 </div>
-                                <p className='mb-5 text-sm leading-5 font-medium lg:mb-14'>
+                                <p className='mb-5 text-sm leading-5 font-medium ml-2 lg:mb-14'>
                                     Are you a tradesperson looking for a work?
                                     Let us connect you to clients in your area!
                                     Whether you’re plumber, an electrician,
                                     a painter, a carpenter or a roofer, we have jobs for you!
                     </p>
-                                <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7 mr-auto'>Let's get started!</button>
+                                <Link to='/join'>
+                                    <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7 mr-auto focus:outline-none'>Let's get started!</button>
+                                </Link>
                                 <div className='mr-auto'>
                                     <h4 className='text-xs font-light mt-2'>Register now as a Tradesman on Manus</h4>
                                     <img className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
                                 </div>
                             </div>
                         </div>
-                        <img className='h-sideway-phone z-40 mx-auto' src={images['sidewayPhone.png'].default} />
-                        <img className={style.smilerImageDesktop} src={images['smiler.jpg'].default} />
+                        <img className='w-1/5 min-w-max absolute h-sideway-phone z-40 inset-x-1/3 xl:inset-x-2/5' src={images['sidewayPhone.png'].default} />
+                        <img className='w-7/12 min-h-smiler max-h-smiler z-20 2xl:z-30 2xl:w-3/4' src={images['smiler.jpg'].default} style={{ clipPath: "polygon(0 11%, 100% 0, 100% 89%, 0 82%)" }} />
                     </div>
-                    <div className='relative flex flex-col w-4/5 items-center text-center mx-auto mt-16'>
-                        <h1 className='text-mediumBlue text-4xl font-semibold mb-3'>Make Money When You Want</h1>
-                        <p className='w-2/3 text-gray text-xl leading-5 font-semibold mb-6'>
+                    <div className='w-10/12 max-w-screen-xl relative flex flex-col items-center text-center mx-auto mt-16'>
+                        <h1 className='text-mediumBlue text-4xl font-semibold mb-8'>Make Money When You Want</h1>
+                        <p className='w-2/3 text-gray text-xl leading-5 font-semibold mb-20'>
                             There’s plenty of local work, but finding it is easier said than done.
                             On Manus, you set a custom working area
                             so every lead you receive is exatly where you want to work
@@ -150,11 +151,12 @@ const DesktopHome = () => {
                     </p>
                             </div>
                         </div>
-                        <button className='mb-3 py-4 px-6 text-white bg-mediumBlue rounded-full'>Become a Manus Tradesman</button>
+                        <Link to='/join'>
+                            <button className='mb-3 py-4 px-6 text-white bg-mediumBlue rounded-full focus:outline-none'>Become a Manus Tradesman</button>
+                        </Link>
                         <img src={images['orangeLine.svg'].default} />
-                        <h1 className='mt-16 mb-8 text-mediumBlue text-4xl font-semibold'>Meet our Manus Tradesman</h1>
                     </div>
-                    <div className='w-full'>
+                    <div className='w-full bg-carousel-background bg-cover pt-10'>
                         <WorkerCarousel />
                     </div>
                     <div className='flex flex-col w-4/5 items-center text-center mx-auto mt-36 mb-20'>
@@ -166,8 +168,10 @@ const DesktopHome = () => {
                             we simplify and bridge the gap between availability of tradesman
                             and urgency of consumer’s DIY tasks, 24/7 and 365 years
                         </p>
-                        <button className=' mb-3
-                     py-4 px-10 text-white bg-mediumBlue rounded-full font-semibold'>Register online now</button>
+                        <Link to='/join'>
+                            <button className=' mb-3
+                     py-4 px-10 text-white bg-mediumBlue rounded-full font-semibold focus:outline-none'>Register online now</button>
+                        </Link>
                         <img src={images['orangeLine.svg'].default} />
                     </div>
                 </div>
