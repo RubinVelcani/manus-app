@@ -16,7 +16,7 @@ const DesktopContact = ({ showMobileMenu, toggleMobileMenu }) => {
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
     return (
-        <main className='bg-lightGray'>
+        <main className='bg-lightGray -mb-32 pb-32'>
             <section className=''>
                 <div className='h-28 pb-1.5 bg-mediumBlue'></div>
                 <div className='flex flex-col w-4/5 items-center text-center mx-auto pb-36'>
@@ -34,18 +34,18 @@ const DesktopContact = ({ showMobileMenu, toggleMobileMenu }) => {
                             <h3 className='text-gray mb-2'>For any general enquiries</h3>
                             <div className='flex flex-row'>
                                 <img src={images['emailLogo.svg'].default} />
-                                <span className='text-mediumBlue ml-2'>hello@manusapp.com</span>
+                                <span className='text-mediumBlue ml-2 cursor-pointer'>hello@manusapp.com</span>
                             </div>
                             <h1 className='text-mediumBlue text-3xl mt-7 mb-5'>Help</h1>
                             <h3 className='text-gray mb-2'>For support please contact</h3>
                             <div className='flex flex-row'>
                                 <img src={images['emailLogo.svg'].default} />
-                                <span className='text-mediumBlue ml-2'>help@manusapp.com</span>
+                                <span className='text-mediumBlue ml-2 cursor-pointer'>help@manusapp.com</span>
                             </div>
                         </div>
                         <form className='w-1/2 flex flex-col items-start text-sm text-formGray pl-6 mt-1'>
                             <textarea className='w-full rounded-3xl ring-1 ring-mediumGray mb-16 py-10 px-6 outline-none focus-within:ring-mediumBlue' rows='6' placeholder='Your message...' />
-                            <select className='w-full rounded-3xl ring-1 ring-mediumGray mt-2 mb-9 py-2 px-4 outline-none'>
+                            <select className='w-full rounded-3xl ring-1 ring-mediumGray mt-2 mb-9 py-2 px-4 outline-none focus-within:ring-mediumBlue'>
                                 <option hidden value="">Tell us about yourself...</option>
                                 <option value="lime">Lime</option>
                                 <option value="coconut">Coconut</option>
@@ -59,7 +59,7 @@ const DesktopContact = ({ showMobileMenu, toggleMobileMenu }) => {
                                 <input className='w-5/12 rounded-3xl ring-1 ring-mediumGray py-2 px-4 outline-none focus-within:ring-mediumBlue' type="text" placeholder='Email' />
                                 <input className='w-5/12 rounded-3xl ring-1 ring-mediumGray py-2 px-4 outline-none focus-within:ring-mediumBlue' type="text" placeholder='Phone' />
                             </div>
-                            <input className='w-2/5 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray p-3.5 px-4' type="submit" value="Send message" />
+                            <button className='w-2/5 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray p-3.5 px-4'>Send message</button>
                         </form>
                     </div>
                 </div>

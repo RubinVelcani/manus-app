@@ -18,7 +18,7 @@ const MobileJoin = ({ showMobileMenu, toggleMobileMenu }) => {
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
     return (
-        <main className='bg-lightGray'>
+        <main className='bg-lightGray -mb-20 pb-20'>
             <aside className={showMobileMenu ? 'block' : 'hidden'}>
                 <MobileMenu showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
             </aside>

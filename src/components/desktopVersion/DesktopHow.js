@@ -64,7 +64,7 @@ const DesktopHow = ({ }) => {
                                 We’ll get in touch with you shortly with the next steps.
                     </p>
                             <Link to='/join'>
-                                <button className='w-1/2 bg-white rounded-full text-lightBlue font-semibold py-2 px-7 ml-4 focus:outline-none'>Register Online</button>
+                                <button className='w-2/3 bg-white rounded-full text-lightBlue font-semibold py-2 px-7 ml-4 focus:outline-none'>Register Online</button>
                             </Link>
                             <div className='w-max ml-4'>
                                 <h4 className='text-xs text-underscoreBlue font-light mt-2'>Register now as a Tradesman on Manus</h4>

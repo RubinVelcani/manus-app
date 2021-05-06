@@ -45,13 +45,13 @@ const MobileForm = () => {
                 <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
             </Link>
             <div className='w-20 flex flex-row items-center justify-around mx-auto'>
-                <span onClick={togglePageOne} className={pageOne ? 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-mediumGray' : 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-white'}>
+                <span onClick={togglePageOne} className={pageOne ? 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-mediumGray cursor-pointer' : 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-white cursor-pointer'}>
                     <span className={pageOne ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                 </span>
-                <span onClick={togglePageTwo} className={pageTwo ? 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-mediumGray' : 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-white'}>
+                <span onClick={togglePageTwo} className={pageTwo ? 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-mediumGray cursor-pointer' : 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-white cursor-pointer'}>
                     <span className={pageTwo ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                 </span>
-                <span onClick={togglePageThree} className={pageThree ? 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-mediumGray' : 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-white'}>
+                <span onClick={togglePageThree} className={pageThree ? 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-mediumGray cursor-pointer' : 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-white cursor-pointer'}>
                     <span className={pageThree ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                 </span>
             </div>

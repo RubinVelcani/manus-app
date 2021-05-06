@@ -47,7 +47,7 @@ const DesktopForm = () => {
                     <Link to='/contact'>
                         <img className='absolute right-5' src={images['chatLogo.svg'].default} />
                     </Link>
-                    <span className={pageOne ? 'flex items-center justify-center w-4 h-4 rounded-full border-2 border-mediumGray' : 'flex items-center justify-center w-4 h-4 border-2 rounded-full border-white'}>
+                    <span className={pageOne ? 'flex items-center justify-center w-4 h-4 rounded-full border-2 border-mediumGray cursor-pointer' : 'flex items-center justify-center w-4 h-4 border-2 rounded-full border-white cursor-pointer'}>
                         <span className={pageOne ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                     </span>
                 </div>
@@ -55,7 +55,7 @@ const DesktopForm = () => {
                     <h4 className={pageTwo ? 'uppercase text-black font-bold mb-2.5' : 'uppercase mb-2.5'}>
                         Professional
                         </h4>
-                    <span className={pageTwo ? 'flex items-center justify-center w-4 h-4 rounded-full border-2 border-mediumGray' : 'flex items-center justify-center w-4 h-4 border-2 rounded-full border-white'}>
+                    <span className={pageTwo ? 'flex items-center justify-center w-4 h-4 rounded-full border-2 border-mediumGray cursor-pointer' : 'flex items-center justify-center w-4 h-4 border-2 rounded-full border-white cursor-pointer'}>
                         <span className={pageTwo ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                     </span>
                 </div>
@@ -63,7 +63,7 @@ const DesktopForm = () => {
                     <h4 className={pageThree ? 'uppercase text-black font-bold mb-2.5' : 'uppercase mb-2.5'}>
                         Declarations
                         </h4>
-                    <span className={pageThree ? 'flex items-center justify-center w-4 h-4 rounded-full border-2 border-mediumGray' : 'flex items-center justify-center w-4 h-4 border-2 rounded-full border-white'}>
+                    <span className={pageThree ? 'flex items-center justify-center w-4 h-4 rounded-full border-2 border-mediumGray cursor-pointer' : 'flex items-center justify-center w-4 h-4 border-2 rounded-full border-white cursor-pointer'}>
                         <span className={pageThree ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                     </span>
                 </div>

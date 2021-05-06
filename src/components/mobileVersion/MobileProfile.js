@@ -48,7 +48,7 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu }) => {
             <section className={showMobileMenu ? 'hidden' : 'block'}>
                 <div className='w-4/5 flex flex-col items-center mx-auto pt-16'>
                     <h1 className='mb-3 text-mediumBlue text-2xl font-semibold'>Welcome back, Kristi</h1>
-                    <h3 className='text-mediumBlue text-sm font-medium mb-10'>
+                    <h3 className='text-mediumBlue text-sm text-center font-medium mb-10'>
                         This is your personal space. Here you can edit your profile,
                         update your payment details and also review the details of your registration form.
                         </h3>
@@ -106,20 +106,20 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                         Top Skills
                         <div className='flex flex-row mt-3'>
                                 <div className='relative'>
-                                    <img className='absolute right-3 -top-3.5' src={images['skillRemover.svg'].default} />
+                                    <img className='absolute right-3 -top-3.5 cursor-pointer' src={images['skillRemover.svg'].default} />
                                     <h3 className='ring-2 ring-mediumBlue text-mediumBlue font-semibold rounded-full py-2 px-4 mr-3'>Waterworks</h3>
                                 </div>
                                 <div className='relative'>
-                                    <img className='absolute right-3 -top-3.5' src={images['skillRemover.svg'].default} />
+                                    <img className='absolute right-3 -top-3.5 cursor-pointer' src={images['skillRemover.svg'].default} />
                                     <h3 className='ring-2 ring-mediumBlue text-mediumBlue font-semibold rounded-full py-2 px-4 mr-3'>Pipes</h3>
                                 </div>
                                 <div className='relative'>
-                                    <img className='absolute right-3 -top-3.5' src={images['skillRemover.svg'].default} />
+                                    <img className='absolute right-3 -top-3.5 cursor-pointer' src={images['skillRemover.svg'].default} />
                                     <h3 className='ring-2 ring-mediumBlue text-mediumBlue font-semibold rounded-full py-2 px-4'>Pressure Tests</h3>
                                 </div>
                             </div>
                             <input className='w-full rounded-3xl bg-profileGray py-4 px-8 my-4 mb-10' type='text' placeholder='Enter Top Skill...' />
-                            <input className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2' type="submit" value="Update" />
+                            <button className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2'>Update</button>
                         </form>
                     </div>
                 </div>

@@ -27,7 +27,7 @@ const WorkerCarousel = () => {
             <div className='flex flex-row items-start ml-6 mt-28'>
                 <img className='h-14' src={images['smallGreenDiagonalLine.svg'].default} />
                 <h1 className='ml-2 text-white text-4xl font-semibold'>Meet our Manus Tradesmen</h1>
-                <img className='ml-auto mr-20' src={images['carouselNextLogo.svg'].default} />
+                <img className='ml-auto mr-20 cursor-pointer' src={images['carouselNextLogo.svg'].default} />
             </div>
             <div className='block sm:hidden'>
                 <Swiper

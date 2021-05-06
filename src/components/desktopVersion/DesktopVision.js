@@ -18,7 +18,7 @@ const DesktopVision = () => {
     return (
         <main>
             <section className=''>
-                <div className='bg-white'>
+                <div className='bg-white -mb-32 pb-32'>
                     <div className='h-28 pb-1.5 bg-mediumBlue'></div>
                     <div className='flex flex-row'>
                         <img className='w-7/12 z-30 max-h-shape' style={{ clipPath: 'polygon(0 0, 100% 0, 90% 85%, 0% 100%)' }} src={images['visionCarpenter.jpg'].default} />
@@ -88,7 +88,7 @@ const DesktopVision = () => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-lightGray'>
+                <div className='bg-lightGray pb-20 -mb-20'>
                     <div className='w-3/5 flex flex-col mx-auto text-center pt-14'>
                         <h1 className='mb-3 text-mediumBlue text-4xl font-semibold'>Manus is here to Revolutionise, Innovate and Disrupt the DIY Market.</h1>
                         <button className='w-1/2 mt-16 mb-3 mx-auto

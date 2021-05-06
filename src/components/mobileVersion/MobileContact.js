@@ -43,7 +43,7 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
                         <input className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-2 px-4' type="text" placeholder='Phone' />
                         <input className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-2 px-4' type="text" placeholder='Last name' />
                         <input className=' rounded-3xl ring-1 ring-mediumGray mb-8 py-2 px-4' type="text" placeholder='Email' />
-                        <input className=' w-3/5 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-3.5 px-4' type="submit" value="Send message" />
+                        <button className=' w-3/5 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-3.5 px-4'>Send message</button>
                     </form>
                     <Link to='/contact'>
                         <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
@@ -55,7 +55,7 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
                             </p>
                         <div className='flex flex-row mb-10'>
                             <img src={images['emailLogo.svg'].default} />
-                            <span className='text-mediumBlue ml-2'>hello@manusapp.com</span>
+                            <span className='text-mediumBlue ml-2 cursor-pointer'>hello@manusapp.com</span>
                         </div>
                         <h1 className='mb-4 text-mediumBlue text-2xl font-bold'>Help</h1>
                         <p className='text-gray leading-5 font-medium mb-2.5'>
@@ -63,7 +63,7 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
                             </p>
                         <div className='flex flex-row'>
                             <img src={images['emailLogo.svg'].default} />
-                            <span className='text-mediumBlue ml-2'>help@manusapp.com</span>
+                            <span className='text-mediumBlue ml-2 cursor-pointer'>help@manusapp.com</span>
                         </div>
                     </div>
                 </div>

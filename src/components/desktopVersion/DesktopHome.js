@@ -20,7 +20,7 @@ const DesktopHome = () => {
 
     return (
         <main>
-            <section className=''>
+            <section className='-mb-32 pb-32'>
                 <img className='w-full absolute' src={images['mobilePhonesBackground.svg'].default} />
                 <div className='max-w-screen-xl flex flex-row justify-around z-20 text-white pt-36 mb-20 mx-auto'>
                     <img className='w-1/2 relative pt-12' src={images['desktop3Phones.png'].default} />
@@ -38,8 +38,8 @@ const DesktopHome = () => {
                         <input className='w-2/3 rounded-3xl ring-1 ring-mediumGray ml-5 mb-4 py-2 px-4 lg:mb-8' type="text" placeholder='Notify me when the app is ready!' />
                         <div className='flex flex-row justify-evenly items-center ml-5 mb-10 lg:w-2/3 lg:justify-around lg:mb-20'>
                             <h4 className='font-semibold'>Coming soon</h4>
-                            <img className='' src={images['comingApple.svg'].default} />
-                            <img src={images['comingGoogle.svg'].default} />
+                            <img className='cursor-pointer' src={images['comingApple.svg'].default} />
+                            <img className='cursor-pointer' src={images['comingGoogle.svg'].default} />
                         </div>
                     </div>
                 </div>

@@ -42,7 +42,7 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
     return (
         <main>
             <div className='h-28 pb-1.5 bg-mediumBlue'></div>
-            <div className='flex flex-row bg-lightGray'>
+            <div className='flex flex-row bg-lightGray -mb-32'>
                 <div className='w-2/5 pt-20'>
                     <div className='w-full flex flex-col items-center mx-auto lg:w-max lg:ml-auto lg:mr-0 lg:pr-5'>
                         <img src={images['userLogo.svg'].default} />
@@ -64,7 +64,7 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                         </div>
                     </div>
                 </div>
-                <div className='w-3/5 bg-white pt-20'>
+                <div className='w-3/5 bg-white pt-20 pb-32'>
                     <div className='w-4/5 flex flex-col mx-auto'>
                         <h1 className='mb-3 text-mediumBlue text-5xl font-semibold'>Welcome back, Kristi</h1>
                         <h3 className='text-gray text-sm font-medium border-b border-mediumGray pb-16'>
@@ -94,7 +94,7 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                                         <p className='text-sm mb-6'>
                                             You will not be able to take any jobs without connecting
                         </p>
-                                        <input className=' w-5/12 rounded-3xl bg-white text-lightBlue font-medium mx-auto p-2' type="submit" value="Connect" />
+                                        <button className=' w-5/12 rounded-3xl bg-white text-lightBlue font-medium mx-auto p-2'>Connect</button>np[]
                                     </div>
                                 </div>
                             </div>
@@ -116,20 +116,20 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                         Top Skills
                         <div className='flex flex-row my-6'>
                                         <div className='relative'>
-                                            <img className='absolute right-3 -top-3.5' src={images['skillRemover.svg'].default} />
+                                            <img className='absolute right-3 -top-3.5 cursor-pointer' src={images['skillRemover.svg'].default} />
                                             <h3 className='ring-2 ring-mediumBlue text-mediumBlue font-semibold rounded-full py-2 px-4 mr-6'>Waterworks</h3>
                                         </div>
                                         <div className='relative'>
-                                            <img className='absolute right-3 -top-3.5' src={images['skillRemover.svg'].default} />
+                                            <img className='absolute right-3 -top-3.5 cursor-pointer' src={images['skillRemover.svg'].default} />
                                             <h3 className='ring-2 ring-mediumBlue text-mediumBlue font-semibold rounded-full py-2 px-4 mr-6'>Pipes</h3>
                                         </div>
                                         <div className='relative'>
-                                            <img className='absolute right-3 -top-3.5' src={images['skillRemover.svg'].default} />
+                                            <img className='absolute right-3 -top-3.5 cursor-pointer' src={images['skillRemover.svg'].default} />
                                             <h3 className='ring-2 ring-mediumBlue text-mediumBlue font-semibold rounded-full py-2 px-4'>Pressure Tests</h3>
                                         </div>
                                     </div>
                                     <input className='w-full rounded-3xl bg-profileGray py-4 px-8 my-4 mb-10' type='text' placeholder='Enter Top Skill...' />
-                                    <input className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2' type="submit" value="Update" />
+                                    <button className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2'>Update</button>
                                 </form>
                             </div>
                         </div>

@@ -14,7 +14,7 @@ const DesktopJoin = ({ showMobileMenu, toggleMobileMenu }) => {
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
     return (
-        <main className='bg-lightGray'>
+        <main className='bg-lightGray pb-32 -mb-32'>
             <section className=''>
                 <div className='h-28 pb-1.5 bg-mediumBlue'></div>
                 <div className='flex flex-col w-4/5 items-center text-center mx-auto mb-36'>
@@ -26,7 +26,7 @@ const DesktopJoin = ({ showMobileMenu, toggleMobileMenu }) => {
                         </h3>
                     </div>
                 </div>
-                <div className='w-2/3 flex flex-col items-center text-xs text-gray rounded-3xl bg-white mx-auto py-8'>
+                <div className='w-2/3 flex flex-col items-center text-xs text-gray rounded-3xl bg-white py-8 mx-auto'>
                     <DesktopForm />
                 </div>
             </section>

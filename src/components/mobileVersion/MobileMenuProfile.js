@@ -20,9 +20,9 @@ const MobileMenuProfile = ({ toggleMobileMenu, toggleAccount, togglePayment, tog
     return (
         <div className='bg-mediumBlue h-screen'>
             <ul className='list-none text-white text-xl pb-12'>
-                <li className='px-10 py-2 hover:bg-menuBlue' onClick={accountHandler}>Account Details</li>
-                <li className='px-10 py-2 hover:bg-menuBlue' onClick={paymentHandler}>Payment Information</li>
-                <li className='px-10 py-2 hover:bg-menuBlue' onClick={profileHandler}>Edit Profile</li>
+                <li className='px-10 py-2 hover:bg-menuBlue cursor-pointer' onClick={accountHandler}>Account Details</li>
+                <li className='px-10 py-2 hover:bg-menuBlue cursor-pointer' onClick={paymentHandler}>Payment Information</li>
+                <li className='px-10 py-2 hover:bg-menuBlue cursor-pointer' onClick={profileHandler}>Edit Profile</li>
             </ul>
         </div>
     )

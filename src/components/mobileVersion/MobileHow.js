@@ -51,7 +51,7 @@ const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
                     </div>
                 </div>
                 <div>
-                    <div className='w-full flex flex-col h-96 -mb-20 pt-12 items-center text-center text-white bg-mediumBlue' style={{ clipPath: 'polygon(0 16%, 100% 5%, 100% 95%, 0 84%)' }}>
+                    <div className='w-full relative z-40 flex flex-col h-96 -mb-28 pt-12 items-center text-center text-white bg-mediumBlue' style={{ clipPath: 'polygon(0 16%, 100% 5%, 100% 95%, 0 84%)' }}>
                         <h1 className='text-4xl w-4/5 font-semibold mb-2 mt-7'>Here to help</h1>
                         <p className='mb-5 text-sm w-4/5 leading-5 font-medium'>
                             We offer fairly-priced home services to homeowners,
@@ -64,7 +64,7 @@ const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
                             <img className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
                         </div>
                     </div>
-                    <img className='w-full' src={images['mobileHowSmile.jpg'].default} />
+                    <img className='w-full z-30 relative -mb-10' src={images['mobileHowSmile.jpg'].default} />
                 </div>
             </section>
         </main>

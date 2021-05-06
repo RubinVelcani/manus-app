@@ -65,8 +65,8 @@ const MobileStep1 = ({ pageOne, togglePageOne, pageTwo, togglePageTwo, pageThree
                 <input className='mb-4 mr-2 py-2 px-4 outline-none focus-within:ring-mediumBlue' type="file" />
 
                 <div className='flex flex-row justify-around'>
-                    <input className=' w-5/12 rounded-3xl bg-white text-lightBlue ring-1 ring-mediumGray mx-auto p-2 outline-none focus-within:ring-mediumBlue' type="submit" value="Save it for later" />
-                    <input className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2 outline-none focus-within:ring-mediumBlue' type="submit" value="Continue" />
+                    <button className=' w-5/12 rounded-3xl bg-white text-lightBlue ring-1 ring-mediumGray mx-auto p-2 outline-none focus-within:ring-mediumBlue'>Save it for later</button>
+                    <button className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2 outline-none focus-within:ring-mediumBlue'>Continue</button>
                 </div>
             </div>
         </section>
