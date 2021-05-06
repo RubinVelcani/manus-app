@@ -115,10 +115,10 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
                                 <SkillUnit skillName='Pipes' />
                                 <SkillUnit skillName='Pressure tests' />
                             </div>
-                            <input className='w-full rounded-3xl bg-profileGray py-4 px-8 my-4 mb-10 ring-1 ring-mediumGray outline-none focus-within:ring-mediumBlue' {...register("skills", { required: true, pattern: { value: /^[a-zA-Z ]+$/ } })} placeholder='Enter Top Skill...' />
+                            <input className='w-full rounded-3xl bg-profileGray py-4 px-8 my-4 mb-10 ring-1 ring-mediumGray outline-none focus-within:ring-mediumBlue' {...register("skills", { pattern: { value: /^[a-zA-Z ]+$/ } })} placeholder='Enter Top Skill...' />
                             <div className='w-full flex flex-row justify-between'>
                                 <button className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray outline-none text-center p-2 cursor-pointer'>Add skill</button>
-                                <input className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2 cursor-pointer' type='submit' value='Update' />
+                                <input onClick={onSubmit()} className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2 cursor-pointer' type='submit' value='Update' />
                             </div>
                         </form>
                     </div>
