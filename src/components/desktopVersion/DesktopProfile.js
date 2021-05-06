@@ -1,5 +1,6 @@
 import React, { useState, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useForm } from "react-hook-form";
 
 const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
 
@@ -16,6 +17,9 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
     }
 
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
+
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => console.log(data);
 
     const [showAccount, setShowAccount] = useState(true)
     const [showPayment, setShowPayment] = useState(false)
@@ -93,8 +97,8 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                                         <h1 className='bold text-2xl my-2'>Stripe is not connected</h1>
                                         <p className='text-sm mb-6'>
                                             You will not be able to take any jobs without connecting
-                        </p>
-                                        <button className=' w-5/12 rounded-3xl bg-white text-lightBlue font-medium mx-auto p-2'>Connect</button>np[]
+                                        </p>
+                                        <button className=' w-5/12 rounded-3xl bg-white text-lightBlue font-medium mx-auto p-2'>Connect</button>
                                     </div>
                                 </div>
                             </div>
@@ -106,15 +110,15 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                             </Link>
                             <div className='w-full flex flex-col mb-12'>
                                 <h3 className='py-12'><strong>Edit</strong> Profile</h3>
-                                <form className='w-11/12 flex flex-col items-start'>
+                                <form className='w-11/12 flex flex-col items-start' onSubmit={handleSubmit(onSubmit)}>
                                     Description
-                        <textarea className='w-full rounded-3xl bg-profileGray my-6 py-3 px-6' rows='6'
+                                    <textarea className='w-full rounded-3xl bg-profileGray my-6 py-3 px-6 ring-1 ring-mediumGray outline-none focus-within:ring-mediumBlue' {...register("description")} rows='6'
                                         placeholder='I am an experienced domestic plumber, gas engineer. Fast, clean and reliable. 
-                        I can find solutions for your plumbing issues. I am based in Fitzrovia, London but work everywhere in North London' />
-                        Based in
-                        <input className='w-full rounded-3xl bg-profileGray py-4 px-8 my-6' type='text' placeholder='Fitzovia, London' />
-                        Top Skills
-                        <div className='flex flex-row my-6'>
+                                        I can find solutions for your plumbing issues. I am based in Fitzrovia, London but work everywhere in North London' />
+                                    Based in
+                                    <input className='w-full rounded-3xl bg-profileGray py-4 px-8 my-6 ring-1 ring-mediumGray outline-none focus-within:ring-mediumBlue'{...register("location")} placeholder='Fitzovia, London' />
+                                    Top Skills
+                                    <div className='flex flex-row my-6'>
                                         <div className='relative'>
                                             <img className='absolute right-3 -top-3.5 cursor-pointer' src={images['skillRemover.svg'].default} />
                                             <h3 className='ring-2 ring-mediumBlue text-mediumBlue font-semibold rounded-full py-2 px-4 mr-6'>Waterworks</h3>
@@ -128,8 +132,8 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                                             <h3 className='ring-2 ring-mediumBlue text-mediumBlue font-semibold rounded-full py-2 px-4'>Pressure Tests</h3>
                                         </div>
                                     </div>
-                                    <input className='w-full rounded-3xl bg-profileGray py-4 px-8 my-4 mb-10' type='text' placeholder='Enter Top Skill...' />
-                                    <button className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2'>Update</button>
+                                    <input className='w-full rounded-3xl bg-profileGray py-4 px-8 my-4 mb-10 ring-1 ring-mediumGray outline-none focus-within:ring-mediumBlue' {...register("skills")} placeholder='Enter Top Skill...' />
+                                    <input className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2 cursor-pointer' type='submit' value='Update' />
                                 </form>
                             </div>
                         </div>

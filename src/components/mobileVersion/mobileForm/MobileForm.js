@@ -37,7 +37,7 @@ const MobileForm = () => {
     }
 
     return (
-        <form className='rounded-3xl bg-white mt-5 mb-8'>
+        <div className='rounded-3xl bg-white mt-5 mb-8'>
             <h2 className={pageOne ? 'block font-bold tracking-tight text-darkGray uppercase mx-auto my-5' : 'font-bold tracking-tight text-darkGray uppercase mx-auto my-5 hidden'}>Personal information</h2>
             <h2 className={pageTwo ? 'block font-bold tracking-tight text-darkGray uppercase mx-auto my-5' : 'font-bold tracking-tight text-darkGray uppercase mx-auto my-5 hidden'}>Professional</h2>
             <h2 className={pageThree ? 'block font-bold tracking-tight text-darkGray uppercase mx-auto my-5' : 'font-bold tracking-tight text-darkGray uppercase mx-auto my-5 hidden'}>Declarations</h2>
@@ -56,15 +56,15 @@ const MobileForm = () => {
                 </span>
             </div>
             <div className={pageOne ? 'block' : 'hidden'}>
-                <MobileStep1 pageOne={pageOne} pageTwo={pageTwo} pageThree={pageThree} togglePageOne={togglePageOne} togglePageTwo={togglePageTwo} togglePageThree={togglePageThree} />
+                <MobileStep1 togglePageTwo={togglePageTwo} />
             </div>
             <div className={pageTwo ? 'block' : 'hidden'}>
-                <MobileStep2 pageOne={pageOne} pageTwo={pageTwo} pageThree={pageThree} togglePageOne={togglePageOne} togglePageTwo={togglePageTwo} togglePageThree={togglePageThree} />
+                <MobileStep2 togglePageThree={togglePageThree} />
             </div>
             <div className={pageThree ? 'block' : 'hidden'}>
-                <MobileStep3 pageOne={pageOne} pageTwo={pageTwo} pageThree={pageThree} togglePageOne={togglePageOne} togglePageTwo={togglePageTwo} togglePageThree={togglePageThree} />
+                <MobileStep3 />
             </div>
-        </form >
+        </div >
     )
 }
 

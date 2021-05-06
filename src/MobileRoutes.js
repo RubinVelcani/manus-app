@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
 import MobileHome from './components/mobileVersion/MobileHome'
@@ -9,6 +9,9 @@ import MobileJoin from './components/mobileVersion/MobileJoin'
 import MobileProfile from './components/mobileVersion/MobileProfile'
 
 const Routes = ({ showMobileMenu, toggleMobileMenu }) => {
+
+    const [profileMenuSelect, setProfileMenuSelect] = useState(null)
+
     return (
         <Switch>
             <Route exact path='/' component={() => <MobileHome showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />} />
@@ -16,7 +19,7 @@ const Routes = ({ showMobileMenu, toggleMobileMenu }) => {
             <Route path='/how' component={() => <MobileHow showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />} />
             <Route path='/contact' component={() => <MobileContact showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />} />
             <Route path='/join' component={() => <MobileJoin showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />} />
-            <Route path='/profile' component={() => <MobileProfile showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />} />
+            <Route path='/profile' component={() => <MobileProfile showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} profileMenuSelect={profileMenuSelect} setProfileMenuSelect={setProfileMenuSelect} />} />
         </Switch>
     )
 }
