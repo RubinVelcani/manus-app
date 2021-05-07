@@ -33,8 +33,7 @@ const WorkerCarousel = () => {
                 <Swiper
                     spaceBetween={1}
                     slidesPerView={1.5}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
+                    scrollbar={{ draggable: true, dragSize: 50 }}
                 >
                     <SwiperSlide>
                         <div className='w-4/5 flex flex-col h-4/6 mt-24 mb-12 mx-auto bg-white text-xxs shadow-md'>
@@ -186,8 +185,7 @@ const WorkerCarousel = () => {
                 <Swiper
                     spaceBetween={1}
                     slidesPerView={2.5}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
+                    scrollbar={{ draggable: true, dragSize: 50 }}
                 >
                     <SwiperSlide>
                         <div className='w-4/5 flex flex-col h-4/6 mt-24 mb-12 mx-auto bg-white text-xxs shadow-md'>
@@ -339,8 +337,6 @@ const WorkerCarousel = () => {
                 <Swiper
                     spaceBetween={1}
                     slidesPerView={3}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
                 >
                     <SwiperSlide>
                         <div className='w-4/5 flex flex-col h-4/6 mt-24 mb-12 mx-auto bg-white text-xxs shadow-md'>

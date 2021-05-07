@@ -38,7 +38,7 @@ const Footer = () => {
                         </li>
                         <li className='w-full border-b border-lightBlue mt-2 pb-1.5'>
                             <Link to='/'>
-                                terms of Use
+                                Terms of Use
                             </Link>
                         </li>
                         <li className='w-full border-b border-lightBlue mt-2 pb-1.5'>

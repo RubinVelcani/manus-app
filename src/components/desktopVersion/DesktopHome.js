@@ -4,6 +4,16 @@ import PhoneCarousel from '../helpers/PhoneCarousel'
 import WorkerCarousel from '../helpers/WorkerCarousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
+// TO-DO list
+//  Profile form to store the data inside the fields
+//  Registration form to store the data inside the Account Details component
+//  On both Homepages, the arrow button should slide the swiper 1 page to the right
+//  
+//
+//
+//
+//
+
 const DesktopHome = () => {
 
     useLayoutEffect(() => {

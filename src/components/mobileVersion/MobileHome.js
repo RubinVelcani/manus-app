@@ -26,7 +26,7 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
             </aside>
             <section className={showMobileMenu ? 'hidden' : 'block'}>
                 <img className='w-full absolute' src={images['mobilePhonesBackground.svg'].default} />
-                <img className='w-full relative pt-12' src={images['mobile3Phones.png'].default} />
+                <img className='w-full relative pt-12' src={images['desktop3Phones.png'].default} />
                 <div className='w-4/5 flex flex-col items-center text-center mx-auto'>
                     <div className='flex mt-5'>
                         <img src={images['mobileAppleLogo.svg'].default} />
