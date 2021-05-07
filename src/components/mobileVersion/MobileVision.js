@@ -31,7 +31,9 @@ const MobileVision = ({ showMobileMenu, toggleMobileMenu }) => {
                             tenants and property management companies across the UK,
                             delivered by professional, local tradespeople.
                     </p>
-                        <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7'>Let's get started!</button>
+                        <Link to='/join'>
+                            <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7 focus:outline-none'>Let's get started!</button>
+                        </Link>
                         <div>
                             <h4 className='text-xs font-light mt-2'>Register now as a Tradesman on Manus</h4>
                             <img alt='' className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />

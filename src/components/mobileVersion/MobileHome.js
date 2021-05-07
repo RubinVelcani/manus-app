@@ -37,7 +37,7 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                         <div className=''>
                             <h1 className='flex flex-row mb-3 ml-3 text-deepBlue text-4xl font-semibold'>
                                 <img alt='' className='h-full' src={images['smallGreenDiagonalLine.svg'].default} />
-                                On-Demand Local Tradesment
+                                On-Demand Local Tradesmen
                             </h1>
                         </div>
                         <h3 className='text-lightBlue font-bold leading-5'>
@@ -45,8 +45,10 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                             From broken boilers and burst pipes, to leaks and blocked drains...
                         </h3>
                     </div>
-                    <button className='mt-20 mb-3
-                            py-4 px-20 text-white bg-lightBlue font-bold rounded-full'>Send</button>
+                    <Link to='/contact'>
+                        <button className='mt-20 mb-3
+                            py-4 px-20 text-white bg-lightBlue font-bold rounded-full focus:outline-none'>Contact</button>
+                    </Link>
                     <img alt='' src={images['smallOrangeLine.svg'].default} />
                     <Link to='/contact'>
                         <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
@@ -75,7 +77,7 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                             It also encourages a continued high standard and helps others to find tradespeople they can trust.
                             </p>
                         <button className='w-full mt-16 mb-3
-                     py-4 text-white bg-mediumBlue rounded-full font-medium'>Notify me when the app is ready!</button>
+                     py-4 text-white bg-mediumBlue rounded-full font-medium focus:outline-none'>Notify me when the app is ready!</button>
                         <img alt='' className='mb-6' src={images['orangeLine.svg'].default} />
                     </div>
                 </div>
@@ -91,7 +93,9 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                         Whether you’re plumber, an electrician,
                         a painter, a carpenter or a roofer, we have jobs for you!
                     </p>
-                    <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7'>Let's get started!</button>
+                    <Link to='/join'>
+                        <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7 focus:outline-none'>Let's get started!</button>
+                    </Link>
                     <div>
                         <h4 className='text-xs font-light mt-2'>Register now as a Tradesman on Manus</h4>
                         <img alt='' className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
@@ -144,8 +148,10 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                         we simplify and bridge the gap between availability of tradesman
                         and urgency of consumer’s DIY tasks, 24/7 and 365 years
                         </p>
-                    <button className=' mb-3
-                     py-4 px-10 text-white bg-mediumBlue rounded-full font-semibold'>Register online now</button>
+                    <Link to='/join'>
+                        <button className=' mb-3
+                     py-4 px-10 text-white bg-mediumBlue rounded-full font-semibold focus:outline-none'>Register online now</button>
+                    </Link>
                     <img alt='' src={images['orangeLine.svg'].default} />
                 </div>
             </section>

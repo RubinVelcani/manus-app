@@ -93,7 +93,7 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
                                 <p className='text-sm mb-6'>
                                     You will not be able to take any jobs without connecting
                         </p>
-                                <button className=' w-5/12 rounded-3xl bg-white text-lightBlue font-medium mx-auto p-2'>Connect</button>
+                                <button className=' w-5/12 rounded-3xl bg-white text-lightBlue font-medium mx-auto p-2 focus:outline-none'>Connect</button>
                             </div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
                             </div>
                             <input className='w-full rounded-3xl bg-profileGray py-4 px-8 my-4 mb-10 ring-1 ring-mediumGray outline-none focus-within:ring-mediumBlue' {...register("skills", { pattern: { value: /^[a-zA-Z ]+$/ } })} placeholder='Enter Top Skill...' />
                             <div className='w-full flex flex-row justify-between'>
-                                <button className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray outline-none text-center p-2 cursor-pointer'>Add skill</button>
+                                <button className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray focus:outline-none text-center p-2 cursor-pointer'>Add skill</button>
                                 <input onClick={onSubmit} className=' w-5/12 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-2 cursor-pointer' type='submit' value='Update' />
                             </div>
                         </form>

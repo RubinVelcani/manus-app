@@ -98,7 +98,7 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                                         <p className='text-sm mb-6'>
                                             You will not be able to take any jobs without connecting
                                         </p>
-                                        <button className=' w-5/12 rounded-3xl bg-white text-lightBlue font-medium mx-auto p-2'>Connect</button>
+                                        <button className=' w-5/12 rounded-3xl bg-white text-lightBlue font-medium mx-auto p-2 focus:outline-none'>Connect</button>
                                     </div>
                                 </div>
                             </div>
