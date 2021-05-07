@@ -4,14 +4,6 @@ import { useForm } from "react-hook-form";
 
 const MobileStep1 = ({ togglePageTwo }) => {
 
-    function importAll(r) {
-        let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
-        return images
-    }
-
-    const images = importAll(require.context('../../../icons', false, /\.(png|jpe?g|svg)$/))
-
     const { register, handleSubmit, formState: { errors } } = useForm()
     const onSubmit = data => console.log(data)
 
@@ -60,11 +52,11 @@ const MobileStep1 = ({ togglePageTwo }) => {
                     {errors.phoneNumber && <h3 className='text-mediumBlue border-b border-mediumBlue mb-10'>This field is required</h3>}
 
                     <label className='text-lg mr-auto mb-5'>Date of Birth</label>
-                    <input className=' rounded-3xl ring-1 ring-mediumGray mb-4 py-2 px-4 outline-none focus-within:ring-mediumBlue' {...register("birthday", { required: true, pattern: { value: /(^(((0[1-9]|1[0-9]|2[0-8])[\/](0[1-9]|1[012]))|((29|30|31)[\/](0[13578]|1[02]))|((29|30)[\/](0[4,6,9]|11)))[\/](19|[2-9][0-9])\d\d$)|(^29[\/]02[\/](19|[2-9][0-9])(00|04|08|12|16|20|24|28|32|36|40|44|48|52|56|60|64|68|72|76|80|84|88|92|96)$)/ } })} />
+                    <input className=' rounded-3xl ring-1 ring-mediumGray mb-4 py-2 px-4 outline-none focus-within:ring-mediumBlue' {...register("birthday", { required: true, pattern: { value: /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/ } })} />
                     {errors.birthDay && <h3 className='text-mediumBlue border-b border-mediumBlue mb-10'>This field is required</h3>}
 
                     <label className='text-lg mr-auto mb-5'>Postcode</label>
-                    <input className=' rounded-3xl ring-1 ring-mediumGray mb-4 py-2 px-4 outline-none focus-within:ring-mediumBlue' {...register("postCode", { required: true, pattern: { value: /^([0-9]{5})([\-]{1}[0-9]{4})?$/ } })} />
+                    <input className=' rounded-3xl ring-1 ring-mediumGray mb-4 py-2 px-4 outline-none focus-within:ring-mediumBlue' {...register("postCode", { required: true, pattern: { value: /^([0-9]{5})([-]{1}[0-9]{4})?$/ } })} />
                     {errors.postCode && <h3 className='text-mediumBlue border-b border-mediumBlue mb-10'>This field is required</h3>}
 
                     <label className='text-lg mr-auto mb-5'>Place of Birth</label>

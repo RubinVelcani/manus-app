@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useForm } from "react-hook-form";
 
 import DesktopStep1 from './DesktopStep1'
 import DesktopStep2 from './DesktopStep2'
@@ -15,9 +14,6 @@ const DesktopForm = () => {
     }
 
     const images = importAll(require.context('../../../icons', false, /\.(png|jpe?g|svg)$/))
-
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
 
     const [pageOne, setPageOne] = useState(true)
     const [pageTwo, setPageTwo] = useState(false)

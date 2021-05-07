@@ -52,7 +52,7 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
                         {errors.lastName && <h3 className='text-mediumBlue mb-10'>This field is required</h3>}
                         <input className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-2 px-4 outline-none focus-within:ring-mediumBlue' {...register("phoneNumber", { required: true, pattern: { value: /^[+]*[0-9]{1,4}[0-9]{7}$/ } })} placeholder='Phone' />
                         {errors.phoneNumber && <h3 className='text-mediumBlue mb-10'>This field is required</h3>}
-                        <input className=' rounded-3xl ring-1 ring-mediumGray mb-8 py-2 px-4 outline-none focus-within:ring-mediumBlue' {...register("email", { required: true, pattern: { value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ } })} placeholder='Email' />
+                        <input className=' rounded-3xl ring-1 ring-mediumGray mb-8 py-2 px-4 outline-none focus-within:ring-mediumBlue' {...register("email", { required: true, pattern: { value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ } })} placeholder='Email' />
                         {errors.email && <h3 className='text-mediumBlue mb-10'>This field is required</h3>}
                         <input className=' w-3/5 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-3.5 px-4 cursor-pointer' type='submit' value='Send message' />
                     </form>

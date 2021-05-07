@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
 import MobileMenuHome from './MobileMenuHome'
 import PhoneCarousel from '../helpers/PhoneCarousel'

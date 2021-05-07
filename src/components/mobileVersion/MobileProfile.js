@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useForm } from "react-hook-form";
 
@@ -21,7 +21,7 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
 
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit } = useForm()
 
     const onSubmit = data => {
         console.log(data)

@@ -1,11 +1,7 @@
-import React, { useLayoutEffect } from 'react'
+import React from 'react'
 import { useForm } from "react-hook-form";
 
 const DesktopContact = ({ showMobileMenu, toggleMobileMenu }) => {
-
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0)
-    })
 
     function importAll(r) {
         let images = {}
@@ -69,7 +65,7 @@ const DesktopContact = ({ showMobileMenu, toggleMobileMenu }) => {
                             </div>
                             <div className='w-full flex flex-row justify-between mt-4'>
                                 <div className='w-5/12  flex flex-col'>
-                                    <input className='rounded-3xl ring-1 ring-mediumGray py-2 px-4 mb-4 outline-none focus-within:ring-mediumBlue' {...register("email", { required: true, pattern: { value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ } })} placeholder='Email' />
+                                    <input className='rounded-3xl ring-1 ring-mediumGray py-2 px-4 mb-4 outline-none focus-within:ring-mediumBlue' {...register("email", { required: true, pattern: { value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ } })} placeholder='Email' />
                                     {errors.email && <h3 className='text-mediumBlue'>Email address not valid</h3>}
                                 </div>
                                 <div className='w-5/12 flex flex-col'>

@@ -1,17 +1,7 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React from 'react'
 import DesktopForm from './desktopForm/DesktopForm'
 
 const DesktopJoin = ({ showMobileMenu, toggleMobileMenu }) => {
-
-    // H E A D E R  B U T T O N  S H O U L D  C H A N G E  I N  T H I S  P A G E
-
-    function importAll(r) {
-        let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
-        return images
-    }
-
-    const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
     return (
         <main className='bg-lightGray pb-32 -mb-32'>

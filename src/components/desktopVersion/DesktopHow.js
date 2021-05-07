@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-const DesktopHow = ({ }) => {
+const DesktopHow = () => {
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0)
