@@ -15,17 +15,17 @@ const Header = ({ showMobileMenu, toggleMobileMenu }) => {
             <div className='flex flex-row justify-between items-center bg-mediumBlue md:hidden'>
                 < div className='p-4 ml-6 cursor-pointer' >
                     <Link to='/'>
-                        <img src={MobileLogo} alt='' />
+                        <img alt='' src={MobileLogo} />
                     </Link>
                 </div >
                 <div className='flex flex-row'>
                     <div className='p-4 cursor-pointer'>
                         <Link to='/profile'>
-                            <img src={MobileUser} alt='' />
+                            <img alt='' src={MobileUser} />
                         </Link>
                     </div>
                     <div className='p-4 mr-6 cursor-pointer' onClick={toggleMobileMenu}>
-                        <img src={Hamburger} alt='' />
+                        <img alt='' src={Hamburger} />
                     </div>
                 </div>
             </div >
@@ -34,7 +34,7 @@ const Header = ({ showMobileMenu, toggleMobileMenu }) => {
                 < div className='max-w-screen-xl flex flex-row justify-around items-start text-white py-7 mx-auto' >
                     <div className='ml-6 cursor-pointer'>
                         <Link to='/'>
-                            <img src={DesktopLogo} alt='' />
+                            <img alt='' src={DesktopLogo} />
                         </Link>
                     </div>
                     <div className='flex flex-row items-center text-lg font-semibold'>
@@ -46,7 +46,7 @@ const Header = ({ showMobileMenu, toggleMobileMenu }) => {
                         </Link>
                         <Link to='/join'>
                             <div className='flex flex-row bg-white text-lightBlue text-base p-3 mx-5 rounded-full'>
-                                <img className='mr-2' src={DesktopUser} />
+                                <img alt='' className='mr-2' src={DesktopUser} />
                                 <h4>Become a Tradesman</h4>
                             </div>
                         </Link>

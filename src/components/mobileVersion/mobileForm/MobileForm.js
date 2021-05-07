@@ -8,7 +8,7 @@ const MobileForm = () => {
 
     function importAll(r) {
         let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
         return images
     }
 
@@ -42,7 +42,7 @@ const MobileForm = () => {
             <h2 className={pageTwo ? 'block font-bold tracking-tight text-darkGray uppercase mx-auto my-5' : 'font-bold tracking-tight text-darkGray uppercase mx-auto my-5 hidden'}>Professional</h2>
             <h2 className={pageThree ? 'block font-bold tracking-tight text-darkGray uppercase mx-auto my-5' : 'font-bold tracking-tight text-darkGray uppercase mx-auto my-5 hidden'}>Declarations</h2>
             <Link to='/contact'>
-                <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
             </Link>
             <div className='w-20 flex flex-row items-center justify-around mx-auto'>
                 <span onClick={togglePageOne} className={pageOne ? 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-mediumGray cursor-pointer' : 'w-4 h-4 flex items-center justify-center rounded-full border-2 border-white cursor-pointer'}>

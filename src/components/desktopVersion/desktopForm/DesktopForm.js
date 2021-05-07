@@ -9,7 +9,7 @@ const DesktopForm = () => {
 
     function importAll(r) {
         let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
         return images
     }
 
@@ -45,7 +45,7 @@ const DesktopForm = () => {
                         Personal Information
                         </h4>
                     <Link to='/contact'>
-                        <img className='absolute right-5' src={images['chatLogo.svg'].default} />
+                        <img alt='' className='absolute right-5' src={images['chatLogo.svg'].default} />
                     </Link>
                     <span className={pageOne ? 'flex items-center justify-center w-4 h-4 rounded-full border-2 border-mediumGray cursor-pointer' : 'flex items-center justify-center w-4 h-4 border-2 rounded-full border-white cursor-pointer'}>
                         <span className={pageOne ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />

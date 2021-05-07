@@ -10,7 +10,7 @@ const MobileJoin = ({ showMobileMenu, toggleMobileMenu }) => {
 
     function importAll(r) {
         let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
         return images
     }
 
@@ -31,7 +31,7 @@ const MobileJoin = ({ showMobileMenu, toggleMobileMenu }) => {
                         </h3>
                     </div>
                     <MobileForm />
-                    <img className='mb-40' src={images['greenBlueLines.svg'].default} />
+                    <img alt='' className='mb-40' src={images['greenBlueLines.svg'].default} />
                 </div>
             </section>
         </main>

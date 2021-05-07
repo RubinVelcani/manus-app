@@ -12,7 +12,7 @@ const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
 
     function importAll(r) {
         let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
         return images
     }
 
@@ -32,17 +32,17 @@ const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
                             you want to find a trader you can trust to do a good job for fair price.
                         </h3>
                     </div>
-                    <img src={images['greenBlueLines.svg'].default} />
+                    <img alt='' src={images['greenBlueLines.svg'].default} />
                     <div className='flex flex-col items-center'>
-                        <img className='mt-10 mb-6' src={images['officePlayer.png'].default} />
+                        <img alt='' className='mt-10 mb-6' src={images['officePlayer.png'].default} />
                         <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Immediate Solutions</h1>
                         <p className='mb-10 text-gray text-sm leading-5 font-medium'>
                             Manus allows you to quickly find a tradesperson in your area
                             who can be trusted to provide a high standard of work. Easy!
                             </p>
-                        <img className='mb-6' src={images['carpenterPlayer.png'].default} />
+                        <img alt='' className='mb-6' src={images['carpenterPlayer.png'].default} />
                         <Link to='/contact'>
-                            <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                            <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
                         </Link>
                         <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Immediate Solutions</h1>
                         <p className='text-gray text-sm leading-5 font-medium'>
@@ -61,10 +61,10 @@ const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
                         <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7'>Let's get started!</button>
                         <div>
                             <h4 className='text-xs font-light mt-2'>Register now as a Tradesman on Manus</h4>
-                            <img className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
+                            <img alt='' className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
                         </div>
                     </div>
-                    <img className='w-full z-30 relative -mb-10' src={images['mobileHowSmile.jpg'].default} />
+                    <img alt='' className='w-full z-30 relative -mb-10' src={images['mobileHowSmile.jpg'].default} />
                 </div>
             </section>
         </main>

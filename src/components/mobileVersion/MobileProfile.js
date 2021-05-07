@@ -1,9 +1,9 @@
 import React, { useEffect, useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"
 
-import MobileMenuProfile from './MobileMenuProfile';
-import SkillUnit from '../helpers/SkillUnit';
+import MobileMenuProfile from './MobileMenuProfile'
+import SkillUnit from '../helpers/SkillUnit'
 
 const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, setProfileMenuSelect }) => {
 
@@ -15,7 +15,7 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
 
     function importAll(r) {
         let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
         return images
     }
 
@@ -61,19 +61,19 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
                         This is your personal space. Here you can edit your profile,
                         update your payment details and also review the details of your registration form.
                         </h3>
-                    <img src={images['userLogo.svg'].default} />
+                    <img alt='' src={images['userLogo.svg'].default} />
                     <h1 className='text-darkGray text-2xl mt-6 mb-2.5'><span className='font-bold'>Kristi</span> Kumria</h1>
-                    <img src={images['reviewStars.svg'].default} />
+                    <img alt='' src={images['reviewStars.svg'].default} />
                     <div className='w-full flex flex-row justify-around mt-12'>
-                        <img onClick={() => { setProfileMenuSelect('account'); }} className={profileMenuSelect === 'account' ? 'bg-white p-2 cursor-pointer' : 'p-2 cursor-pointer'} src={profileMenuSelect === 'account' ? images['homeActiveLogo.svg'].default : images['homeInactiveLogo.svg'].default} />
-                        <img onClick={() => { setProfileMenuSelect('payment'); }} className={profileMenuSelect === 'payment' ? 'bg-white p-2 cursor-pointer' : 'p-2 cursor-pointer'} src={profileMenuSelect === 'payment' ? images['creditCardActiveLogo.svg'].default : images['creditCardInactiveLogo.svg'].default} />
-                        <img onClick={() => { setProfileMenuSelect('profile'); }} className={profileMenuSelect === 'profile' ? 'bg-white p-2 cursor-pointer' : 'p-2 cursor-pointer'} src={profileMenuSelect === 'profile' ? images['userSmallActiveLogo.svg'].default : images['userSmallInactiveLogo.svg'].default} />
+                        <img alt='' onClick={() => { setProfileMenuSelect('account'); }} className={profileMenuSelect === 'account' ? 'bg-white p-2 cursor-pointer' : 'p-2 cursor-pointer'} src={profileMenuSelect === 'account' ? images['homeActiveLogo.svg'].default : images['homeInactiveLogo.svg'].default} />
+                        <img alt='' onClick={() => { setProfileMenuSelect('payment'); }} className={profileMenuSelect === 'payment' ? 'bg-white p-2 cursor-pointer' : 'p-2 cursor-pointer'} src={profileMenuSelect === 'payment' ? images['creditCardActiveLogo.svg'].default : images['creditCardInactiveLogo.svg'].default} />
+                        <img alt='' onClick={() => { setProfileMenuSelect('profile'); }} className={profileMenuSelect === 'profile' ? 'bg-white p-2 cursor-pointer' : 'p-2 cursor-pointer'} src={profileMenuSelect === 'profile' ? images['userSmallActiveLogo.svg'].default : images['userSmallInactiveLogo.svg'].default} />
                     </div>
                 </div>
                 {/* A C C O U N T */}
                 <div className={profileMenuSelect === 'account' ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
                     <Link to='/contact'>
-                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
                     </Link>
                     <div className='w-full flex flex-col items-center mb-12'>
                         <h3 className='py-12'><strong>Account</strong> Details</h3>
@@ -82,13 +82,13 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
                 {/* P A Y M E N T */}
                 <div className={profileMenuSelect === 'payment' ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
                     <Link to='/contact'>
-                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
                     </Link>
                     <div className='w-full flex flex-col items-center mb-12'>
                         <h3 className='py-12'><strong>Payment</strong> Information</h3>
                         <div className='w-4/5 text-center text-white bg-lightBlue py-4'>
                             <div className='w-4/5 flex flex-col items-center mx-auto'>
-                                <img src={images['creditCardWhite.svg'].default} />
+                                <img alt='' src={images['creditCardWhite.svg'].default} />
                                 <h1 className='bold text-2xl my-2'>Stripe is not connected</h1>
                                 <p className='text-sm mb-6'>
                                     You will not be able to take any jobs without connecting
@@ -101,7 +101,7 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
                 {/* P R O F I L E */}
                 <div className={profileMenuSelect === 'profile' ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
                     <Link to='/contact'>
-                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
                     </Link>
                     <div className='w-full flex flex-col items-center mb-12'>
                         <h3 className='py-12'><strong>Edit</strong> Profile</h3>

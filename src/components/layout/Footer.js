@@ -5,7 +5,7 @@ const Footer = () => {
 
     function importAll(r) {
         let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
         return images
     }
 
@@ -60,32 +60,32 @@ const Footer = () => {
             <div className='hidden md:block'>
                 <div className='w-full relative z-50 pt-5 pb-4 bg-desktop-footer bg-cover'>
                     <div className='max-w-screen-lg h-60 relative flex flex-col items-center justify-center text-white mx-auto'>
-                        <img src={images['desktopFooterLogo.png'].default} />
+                        <img alt='' src={images['desktopFooterLogo.png'].default} />
                         <div className='w-11/12 flex flex-row items-center text-sm justify-between mt-9 2xl:text-base'>
                             <Link to='./vision'>
                                 <h4>Our Vision</h4>
                             </Link>
-                            <img src={images['desktopFooterCircle.svg'].default} />
+                            <img alt='' src={images['desktopFooterCircle.svg'].default} />
                             <Link to='./how'>
                                 <h4>How it works</h4>
                             </Link>
-                            <img src={images['desktopFooterCircle.svg'].default} />
+                            <img alt='' src={images['desktopFooterCircle.svg'].default} />
                             <Link to='./contact'>
                                 <h4>Contact US</h4>
                             </Link>
-                            <img src={images['desktopFooterCircle.svg'].default} />
+                            <img alt='' src={images['desktopFooterCircle.svg'].default} />
                             <Link to='./'>
                                 <h4>Media Enquiries</h4>
                             </Link>
-                            <img src={images['desktopFooterCircle.svg'].default} />
+                            <img alt='' src={images['desktopFooterCircle.svg'].default} />
                             <Link to='./'>
                                 <h4>Terms of Use</h4>
                             </Link>
-                            <img src={images['desktopFooterCircle.svg'].default} />
+                            <img alt='' src={images['desktopFooterCircle.svg'].default} />
                             <Link to='./'>
                                 <h4>Privacy Policy</h4>
                             </Link>
-                            <img src={images['desktopFooterCircle.svg'].default} />
+                            <img alt='' src={images['desktopFooterCircle.svg'].default} />
                             <Link to='./'>
                                 <h4>Cookies Privacy</h4>
                             </Link>

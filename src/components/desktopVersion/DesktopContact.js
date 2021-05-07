@@ -1,18 +1,18 @@
 import React from 'react'
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"
 
 const DesktopContact = ({ showMobileMenu, toggleMobileMenu }) => {
 
     function importAll(r) {
         let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
         return images
     }
 
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit, formState: { errors } } = useForm()
+    const onSubmit = data => console.log(data)
 
     return (
         <main className='bg-lightGray -mb-32 pb-32'>
@@ -26,19 +26,19 @@ const DesktopContact = ({ showMobileMenu, toggleMobileMenu }) => {
                             we’re happy to hear from you.
                         </h3>
                     </div>
-                    <img className='w-56 h-3 mb-14' src={images['greenBlueLines.svg'].default} />
+                    <img alt='' className='w-56 h-3 mb-14' src={images['greenBlueLines.svg'].default} />
                     <div className='w-full flex flex-row'>
                         <div className='w-1/2 flex flex-col items-end pr-6 border-r border-mediumGray'>
                             <h1 className='text-mediumBlue text-3xl my-5'>General Enquiries</h1>
                             <h3 className='text-gray mb-2'>For any general enquiries</h3>
                             <div className='flex flex-row'>
-                                <img src={images['emailLogo.svg'].default} />
+                                <img alt='' src={images['emailLogo.svg'].default} />
                                 <span className='text-mediumBlue ml-2 cursor-pointer'>hello@manusapp.com</span>
                             </div>
                             <h1 className='text-mediumBlue text-3xl mt-7 mb-5'>Help</h1>
                             <h3 className='text-gray mb-2'>For support please contact</h3>
                             <div className='flex flex-row'>
-                                <img src={images['emailLogo.svg'].default} />
+                                <img alt='' src={images['emailLogo.svg'].default} />
                                 <span className='text-mediumBlue ml-2 cursor-pointer'>help@manusapp.com</span>
                             </div>
                         </div>

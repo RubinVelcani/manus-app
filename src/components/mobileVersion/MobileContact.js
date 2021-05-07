@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"
 
 import MobileMenuHome from './MobileMenuHome'
 
@@ -12,14 +12,14 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
 
     function importAll(r) {
         let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
         return images
     }
 
     const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit, formState: { errors } } = useForm()
+    const onSubmit = data => console.log(data)
 
     return (
         <main className='bg-lightGray'>
@@ -35,7 +35,7 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
                             we’re happy to hear from you.
                         </h3>
                     </div>
-                    <img src={images['greenBlueLines.svg'].default} />
+                    <img alt='' src={images['greenBlueLines.svg'].default} />
                     <form className='w-full flex flex-col text-left text-sm text-formGray mt-4 mb-16' onSubmit={handleSubmit(onSubmit)}>
                         <textarea className=' rounded-3xl ring-1 ring-mediumGray mb-5 py-3 px-6 outline-none focus-within:ring-mediumBlue' {...register("message", { required: true })} rows='6' placeholder='Your message...' />
                         {errors.message && <h3 className='text-mediumBlue mb-10'>This field is required</h3>}
@@ -57,7 +57,7 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
                         <input className=' w-3/5 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-3.5 px-4 cursor-pointer' type='submit' value='Send message' />
                     </form>
                     <Link to='/contact'>
-                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
                     </Link>
                     <div className='flex flex-col items-center text-center'>
                         <h1 className='mb-4 text-mediumBlue text-2xl font-bold'>Immediate Solutions</h1>
@@ -65,7 +65,7 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
                             For any general enquiries
                             </p>
                         <div className='flex flex-row mb-10'>
-                            <img src={images['emailLogo.svg'].default} />
+                            <img alt='' src={images['emailLogo.svg'].default} />
                             <span className='text-mediumBlue ml-2 cursor-pointer'>hello@manusapp.com</span>
                         </div>
                         <h1 className='mb-4 text-mediumBlue text-2xl font-bold'>Help</h1>
@@ -73,7 +73,7 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
                             For support please contact
                             </p>
                         <div className='flex flex-row'>
-                            <img src={images['emailLogo.svg'].default} />
+                            <img alt='' src={images['emailLogo.svg'].default} />
                             <span className='text-mediumBlue ml-2 cursor-pointer'>help@manusapp.com</span>
                         </div>
                     </div>

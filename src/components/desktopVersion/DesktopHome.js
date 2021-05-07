@@ -22,7 +22,7 @@ const DesktopHome = () => {
 
     function importAll(r) {
         let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
         return images
     }
 
@@ -31,12 +31,12 @@ const DesktopHome = () => {
     return (
         <main>
             <section className='-mb-32 pb-32'>
-                <img className='w-full absolute' src={images['mobilePhonesBackground.svg'].default} />
+                <img alt='' className='w-full absolute' src={images['mobilePhonesBackground.svg'].default} />
                 <div className='max-w-screen-xl flex flex-row justify-around z-20 text-white pt-36 mb-20 mx-auto'>
-                    <img className='w-1/2 relative pt-12' src={images['desktop3Phones.png'].default} />
+                    <img alt='' className='w-1/2 relative pt-12' src={images['desktop3Phones.png'].default} />
                     <div className='w-1/2 relative mt-10 ml-8 pb-1 lg:mt-20'>
                         <div className='flex'>
-                            <img className='h-20' src={images['smallGreenDiagonalLine.svg'].default} />
+                            <img alt='' className='h-20' src={images['smallGreenDiagonalLine.svg'].default} />
                             <h1 className='mb-2 ml-5 -mt-1 text-3xl font-semibold lg:mb-12 lg:text-5xl'>
                                 On-Demand Local Tradesmen
                             </h1>
@@ -48,14 +48,14 @@ const DesktopHome = () => {
                         <input className='w-2/3 rounded-3xl ring-1 ring-mediumGray ml-5 mb-4 py-2 px-4 lg:mb-8' type="text" placeholder='Notify me when the app is ready!' />
                         <div className='flex flex-row justify-evenly items-center ml-5 mb-10 lg:w-2/3 lg:justify-around lg:mb-20'>
                             <h4 className='font-semibold'>Coming soon</h4>
-                            <img className='cursor-pointer' src={images['comingApple.svg'].default} />
-                            <img className='cursor-pointer' src={images['comingGoogle.svg'].default} />
+                            <img alt='' className='cursor-pointer' src={images['comingApple.svg'].default} />
+                            <img alt='' className='cursor-pointer' src={images['comingGoogle.svg'].default} />
                         </div>
                     </div>
                 </div>
                 <div className='w-full relative bg-white'>
                     <div className='w-4/5 max-w-screen-xl flex flex-col z-10 items-center text-center pt-20 mt-15 mx-auto lg:mt-30 xl:mt-40'>
-                        <img className='w-56' src={images['greenBlueLines.svg'].default} />
+                        <img alt='' className='w-56' src={images['greenBlueLines.svg'].default} />
                         <div className='flex flex-col items-center'>
                             <h1 className='mb-5 text-mediumBlue text-5xl font-semibold mt-14'>Well qualified &amp; Vetted Tradesmen</h1>
                             <p className='text-gray font-semibold leading-5 w-4/5'>
@@ -69,10 +69,10 @@ const DesktopHome = () => {
                                 </div>
                                 <div className='w-1/2 flex flex-col items-start text-left ml-10'>
                                     <Link to='/contact'>
-                                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
                                     </Link>
                                     <div className='mb-3.5'>
-                                        <img className='w-7 inline-block' src={images['magnifyingGlassLogo.svg'].default} />
+                                        <img alt='' className='w-7 inline-block' src={images['magnifyingGlassLogo.svg'].default} />
                                         <h1 className='inline-block text-mediumBlue text-2xl font-bold ml-4'>Find a Tradesman</h1>
                                     </div>
                                     <p className='mb-14 text-gray text-sm leading-5 font-medium lg:w-96'>
@@ -81,7 +81,7 @@ const DesktopHome = () => {
                                         Contact details are shared only when you send a request.
                             </p>
                                     <div className='mb-3.5 lg:w-96'>
-                                        <img className='w-7 inline-block -mt-2' src={images['starLogo.svg'].default} />
+                                        <img alt='' className='w-7 inline-block -mt-2' src={images['starLogo.svg'].default} />
                                         <h1 className='inline-block text-mediumBlue text-2xl font-bold ml-4'>Rate and Review</h1>
                                     </div>
                                     <p className='text-gray text-sm leading-5 font-medium lg:w-96'>
@@ -93,7 +93,7 @@ const DesktopHome = () => {
                                     <div className='w-full lg:w-96'>
                                         <button className='w-full mt-16 mb-3
                                 py-4 text-white bg-mediumBlue rounded-full font-medium focus:outline-none cursor-pointer'>Notify me when the app is ready!</button>
-                                        <img className='mb-6 mx-auto' src={images['orangeLine.svg'].default} />
+                                        <img alt='' className='mb-6 mx-auto' src={images['orangeLine.svg'].default} />
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@ const DesktopHome = () => {
                         <div className='w-4/5 h-sideway-phone z-30 flex flex-col items-center text-white text-center bg-mediumBlue pt-12 -mr-28 2xl:z-20' style={{ clipPath: "polygon(0 0, 92% 11%, 100% 83%, 0 100%)" }}>
                             <div className='w-3/4 flex flex-col text-left xl:w-1/2'>
                                 <div className='flex flex-row items-start mt-7'>
-                                    <img className='h-16' src={images['smallGreenDiagonalLine.svg'].default} />
+                                    <img alt='' className='h-16' src={images['smallGreenDiagonalLine.svg'].default} />
                                     <h1 className='text-4xl font-semibold mb-2 ml-2 mr-auto xl:mb-8'>Want extra work?</h1>
                                 </div>
                                 <p className='mb-5 text-sm leading-5 font-medium ml-2 lg:mb-14'>
@@ -117,12 +117,12 @@ const DesktopHome = () => {
                                 </Link>
                                 <div className='mr-auto'>
                                     <h4 className='text-xs font-light mt-2'>Register now as a Tradesman on Manus</h4>
-                                    <img className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
+                                    <img alt='' className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
                                 </div>
                             </div>
                         </div>
-                        <img className='w-1/5 min-w-max absolute h-sideway-phone z-40 inset-x-1/3 xl:inset-x-2/5' src={images['sidewayPhone.png'].default} />
-                        <img className='w-7/12 min-h-smiler max-h-smiler z-20 2xl:z-30 2xl:w-3/4' src={images['smiler.jpg'].default} style={{ clipPath: "polygon(0 11%, 100% 0, 100% 89%, 0 82%)" }} />
+                        <img alt='' className='w-1/5 min-w-max absolute h-sideway-phone z-40 inset-x-1/3 xl:inset-x-2/5' src={images['sidewayPhone.png'].default} />
+                        <img alt='' className='w-7/12 min-h-smiler max-h-smiler z-20 2xl:z-30 2xl:w-3/4' src={images['smiler.jpg'].default} style={{ clipPath: "polygon(0 11%, 100% 0, 100% 89%, 0 82%)" }} />
                     </div>
                     <div className='w-10/12 max-w-screen-xl relative flex flex-col items-center text-center mx-auto mt-16'>
                         <h1 className='text-mediumBlue text-4xl font-semibold mb-8'>Make Money When You Want</h1>
@@ -133,7 +133,7 @@ const DesktopHome = () => {
                     </p>
                         <div className='flex flex-row justify-around text-mediumBlue text-xl font-semibold mb-32'>
                             <div className='w-1/4 flex flex-col items-center'>
-                                <img src={images['scheduleLogo.svg'].default} />
+                                <img alt='' src={images['scheduleLogo.svg'].default} />
                                 <h1 className=''>Set your own schedule</h1>
                                 <p className='text-gray  text-sm leading-5 font-medium mt-3'>
                                     Excellent to fill the gaps between jobs or because of cancellations.
@@ -142,7 +142,7 @@ const DesktopHome = () => {
                     </p>
                             </div>
                             <div className='w-1/4 flex flex-col items-center'>
-                                <img src={images['moneyLogo.svg'].default} />
+                                <img alt='' src={images['moneyLogo.svg'].default} />
                                 <h1 className=''>Make money on your terms</h1>
                                 <p className='text-gray text-sm leading-5 font-medium mt-3'>
                                     Find homeowners in your local area that are looking for a tradesman.
@@ -152,7 +152,7 @@ const DesktopHome = () => {
                     </p>
                             </div>
                             <div className='w-1/4 flex flex-col items-center'>
-                                <img src={images['businessLogo.svg'].default} />
+                                <img alt='' src={images['businessLogo.svg'].default} />
                                 <h1 className=''>Make your business shine</h1>
                                 <p className='text-gray text-sm leading-5 font-medium mt-3'>
                                     Get your own profile page where you can showcase your business, skills and all the reviews you get.
@@ -164,7 +164,7 @@ const DesktopHome = () => {
                         <Link to='/join'>
                             <button className='mb-3 py-4 px-6 text-white bg-mediumBlue rounded-full focus:outline-none'>Become a Manus Tradesman</button>
                         </Link>
-                        <img src={images['orangeLine.svg'].default} />
+                        <img alt='' src={images['orangeLine.svg'].default} />
                     </div>
                     <div className='w-full bg-carousel-background bg-cover pt-10'>
                         <WorkerCarousel />
@@ -182,7 +182,7 @@ const DesktopHome = () => {
                             <button className=' mb-3
                      py-4 px-10 text-white bg-mediumBlue rounded-full font-semibold focus:outline-none'>Register online now</button>
                         </Link>
-                        <img src={images['orangeLine.svg'].default} />
+                        <img alt='' src={images['orangeLine.svg'].default} />
                     </div>
                 </div>
             </section>

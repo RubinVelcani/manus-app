@@ -13,7 +13,7 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
 
     function importAll(r) {
         let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
         return images
     }
 
@@ -25,18 +25,18 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                 <MobileMenuHome showMobileMenu={showMobileMenu} toggleMobileMenu={toggleMobileMenu} />
             </aside>
             <section className={showMobileMenu ? 'hidden' : 'block'}>
-                <img className='w-full absolute' src={images['mobilePhonesBackground.svg'].default} />
-                <img className='w-full relative pt-12' src={images['desktop3Phones.png'].default} />
+                <img alt='' className='w-full absolute' src={images['mobilePhonesBackground.svg'].default} />
+                <img alt='' className='w-full relative pt-12' src={images['desktop3Phones.png'].default} />
                 <div className='w-4/5 flex flex-col items-center text-center mx-auto'>
                     <div className='flex mt-5'>
-                        <img src={images['mobileAppleLogo.svg'].default} />
+                        <img alt='' src={images['mobileAppleLogo.svg'].default} />
                         <span className='ml-2 text-lightBlue text-xxs font-bold'>Comming soon on the Apple Store</span>
                     </div>
-                    <img className='mt-5' src={images['greenBlueLines.svg'].default} />
+                    <img alt='' className='mt-5' src={images['greenBlueLines.svg'].default} />
                     <div className='mt-7 pb-1'>
                         <div className=''>
                             <h1 className='flex flex-row mb-3 ml-3 text-deepBlue text-4xl font-semibold'>
-                                <img className='h-full' src={images['smallGreenDiagonalLine.svg'].default} />
+                                <img alt='' className='h-full' src={images['smallGreenDiagonalLine.svg'].default} />
                                 On-Demand Local Tradesment
                             </h1>
                         </div>
@@ -47,9 +47,9 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                     </div>
                     <button className='mt-20 mb-3
                             py-4 px-20 text-white bg-lightBlue font-bold rounded-full'>Send</button>
-                    <img src={images['smallOrangeLine.svg'].default} />
+                    <img alt='' src={images['smallOrangeLine.svg'].default} />
                     <Link to='/contact'>
-                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
                     </Link>
                     <div className='flex flex-col items-center'>
                         <h1 className='mb-5 text-deepBlue text-4xl font-semibold mt-8'>Well qualified &amp; Vetted Tradesmen</h1>
@@ -59,14 +59,14 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                             meanaing you can choose the right local person for your project with confidence.
                         </p>
                         <PhoneCarousel />
-                        <img className='mt-10 mb-6' src={images['magnifyingGlassLogo.svg'].default} />
+                        <img alt='' className='mt-10 mb-6' src={images['magnifyingGlassLogo.svg'].default} />
                         <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Find a Tradesman</h1>
                         <p className='mb-10 text-gray text-sm leading-5 font-medium'>
                             Find a tradesmen for every job. From light fittings and loft conversions,
                             to leaky taps and a lick of paint. Choose from local tradespeople available in your area.
                             Contact details are shared only when you send a request.
                             </p>
-                        <img className='mb-6' src={images['starLogo.svg'].default} />
+                        <img alt='' className='mb-6' src={images['starLogo.svg'].default} />
                         <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Rate and Review</h1>
                         <p className='text-gray text-sm leading-5 font-medium'>
                             After your project is successfully completed,
@@ -76,12 +76,12 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                             </p>
                         <button className='w-full mt-16 mb-3
                      py-4 text-white bg-mediumBlue rounded-full font-medium'>Notify me when the app is ready!</button>
-                        <img className='mb-6' src={images['orangeLine.svg'].default} />
+                        <img alt='' className='mb-6' src={images['orangeLine.svg'].default} />
                     </div>
                 </div>
                 <div>
-                    <img className='w-full relative' style={{ clipPath: 'polygon(0 16%, 100% 5%, 100% 95%, 0 84%)' }} src={images['smiler.jpg'].default} />
-                    <img className='h-72 absolute right-0 mr-10 -mt-72 z-50' src={images['sidewayPhone.png'].default} />
+                    <img alt='' className='w-full relative' style={{ clipPath: 'polygon(0 16%, 100% 5%, 100% 95%, 0 84%)' }} src={images['smiler.jpg'].default} />
+                    <img alt='' className='h-72 absolute right-0 mr-10 -mt-72 z-50' src={images['sidewayPhone.png'].default} />
                 </div>
                 <div className='w-full flex flex-col h-96 -mt-24 pt-12 items-center text-white bg-mediumBlue' style={{ clipPath: 'polygon(0 5%, 100% 16%, 100% 84%, 0 95%)' }}>
                     <h1 className='text-4xl w-4/5 font-semibold mb-2 mt-7'>Want extra work?</h1>
@@ -94,7 +94,7 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                     <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7'>Let's get started!</button>
                     <div>
                         <h4 className='text-xs font-light mt-2'>Register now as a Tradesman on Manus</h4>
-                        <img className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
+                        <img alt='' className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
                     </div>
                 </div>
                 <div className='relative flex flex-col w-4/5 items-center text-center mx-auto mt-16'>
@@ -104,14 +104,14 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                         On Manus, you set a custom working area
                         so every lead you receive is exatly where you want to work
                     </p>
-                    <img src={images['scheduleLogo.svg'].default} />
+                    <img alt='' src={images['scheduleLogo.svg'].default} />
                     <h1 className='mb-3 text-mediumBlue text-xl font-semibold'>Set your own schedule</h1>
                     <p className='mb-10 text-gray text-sm leading-5 font-medium'>
                         Excellent to fill the gaps between jobs or because of cancellations.
                         You work on the Manus app anytime, day or night.
                         You’ve got complete flexibility to set your schedule around your life.
                     </p>
-                    <img src={images['moneyLogo.svg'].default} />
+                    <img alt='' src={images['moneyLogo.svg'].default} />
                     <h1 className='mb-3 text-mediumBlue text-xl font-semibold'>Make money on your terms</h1>
                     <p className='mb-10 text-gray text-sm leading-5 font-medium'>
                         Find homeowners in your local area that are looking for a tradesman.
@@ -119,7 +119,7 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                         Once it’s all complete, the homeowner can rate you on quality, reliability and value.
                         Get some reviews under your belt to grow the reputation you need to win bigger projects.
                     </p>
-                    <img src={images['businessLogo.svg'].default} />
+                    <img alt='' src={images['businessLogo.svg'].default} />
                     <h1 className='mb-3 text-mediumBlue text-xl font-semibold'>Make your business shine</h1>
                     <p className='mb-12 text-gray text-sm leading-5 font-medium'>
                         Get your own profile page where you can showcase your business, skills and all the reviews you get.
@@ -129,7 +129,7 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                     <Link to='/join'>
                         <button className='mb-3 py-4 px-6 text-white bg-mediumBlue rounded-full'>Become a Manus Tradesman</button>
                     </Link>
-                    <img src={images['orangeLine.svg'].default} />
+                    <img alt='' src={images['orangeLine.svg'].default} />
                     <h1 className='mt-16 mb-8 text-mediumBlue text-4xl font-semibold'>Meet our Manus Tradesman</h1>
                 </div>
                 <div className='w-full bg-carousel-background bg-cover pt-10'>
@@ -146,7 +146,7 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                         </p>
                     <button className=' mb-3
                      py-4 px-10 text-white bg-mediumBlue rounded-full font-semibold'>Register online now</button>
-                    <img src={images['orangeLine.svg'].default} />
+                    <img alt='' src={images['orangeLine.svg'].default} />
                 </div>
             </section>
         </main>

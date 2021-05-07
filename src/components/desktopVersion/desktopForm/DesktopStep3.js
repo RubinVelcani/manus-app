@@ -1,11 +1,11 @@
 import React from 'react'
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"
 
 
 const DesktopStep3 = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit, formState: { errors } } = useForm()
+    const onSubmit = data => console.log(data)
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>

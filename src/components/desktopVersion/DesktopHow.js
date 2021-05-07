@@ -9,7 +9,7 @@ const DesktopHow = () => {
 
     function importAll(r) {
         let images = {}
-        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); })
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
         return images
     }
 
@@ -28,12 +28,12 @@ const DesktopHow = () => {
                         </h3>
                     </div>
                     <Link to='/contact'>
-                        <img className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
                     </Link>
-                    <img className='w-36' src={images['greenBlueLines.svg'].default} />
+                    <img alt='' className='w-36' src={images['greenBlueLines.svg'].default} />
                     <div className='flex flex-row items-start justify-between mb-10 mt-4'>
                         <div className='w-1/2 flex flex-col'>
-                            <img className='mb-6' src={images['officePlayer.png'].default} />
+                            <img alt='' className='mb-6' src={images['officePlayer.png'].default} />
                             <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Immediate Solutions</h1>
                             <p className='text-gray text-sm leading-5 font-medium'>
                                 Manus allows you to quickly find a tradesperson in your area
@@ -41,7 +41,7 @@ const DesktopHow = () => {
                             </p>
                         </div>
                         <div className='w-1/2 flex flex-col'>
-                            <img className='mb-6' src={images['carpenterPlayer.png'].default} />
+                            <img alt='' className='mb-6' src={images['carpenterPlayer.png'].default} />
                             <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Immediate Solutions</h1>
                             <p className='text-gray text-sm leading-5 font-medium'>
                                 Get quality work, all year round. Choose where and when you want to work
@@ -53,7 +53,7 @@ const DesktopHow = () => {
                     <div className='w-3/4 h-96 z-20 -mr-32 pl-12 p-4 pb-12 bg-lightBlue' style={{ clipPath: 'polygon(0 0, 81% 16%, 100% 100%, 0% 100%)' }}>
                         <div className='w-2/3 text-white pb-3 ml-8 mt-8 lg:ml-16 lg:pr-40 xl:w-1/2 xl:mx-auto'>
                             <div className='flex '>
-                                <img className='absolute h-10' src={images['smallGreenDiagonalLine.svg'].default} />
+                                <img alt='' className='absolute h-10' src={images['smallGreenDiagonalLine.svg'].default} />
                                 <h1 className='mb-4 -mt-1 ml-4 text-4xl font-semibold'>
                                     Get started now!
                                     </h1>
@@ -68,11 +68,11 @@ const DesktopHow = () => {
                             </Link>
                             <div className='w-max ml-4'>
                                 <h4 className='text-xs text-underscoreBlue font-light mt-2'>Register now as a Tradesman on Manus</h4>
-                                <img className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
+                                <img alt='' className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
                             </div>
                         </div>
                     </div>
-                    <img className='w-1/2 max-h-how z-30 absolute right-0' src={images['desktopHowSmile.png'].default} />
+                    <img alt='' className='w-1/2 max-h-how z-30 absolute right-0' src={images['desktopHowSmile.png'].default} />
                 </div>
             </section>
         </main>
