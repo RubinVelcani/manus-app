@@ -64,6 +64,11 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
                     <img alt='' src={images['userLogo.svg'].default} />
                     <h1 className='text-darkGray text-2xl mt-6 mb-2.5'><span className='font-bold'>Kristi</span> Kumria</h1>
                     <img alt='' src={images['reviewStars.svg'].default} />
+                    <div className='flex flex-row'>
+                        <Link to='/contact'>
+                        <img alt='' className='absolute right-10 cursor-pointer' src={images['chatLogo.svg'].default} />
+                        </Link>
+                        </div>                    
                     <div className='w-full flex flex-row justify-around mt-12'>
                         <img alt='' onClick={() => { setProfileMenuSelect('account'); }} className={profileMenuSelect === 'account' ? 'bg-white p-2 cursor-pointer' : 'p-2 cursor-pointer'} src={profileMenuSelect === 'account' ? images['homeActiveLogo.svg'].default : images['homeInactiveLogo.svg'].default} />
                         <img alt='' onClick={() => { setProfileMenuSelect('payment'); }} className={profileMenuSelect === 'payment' ? 'bg-white p-2 cursor-pointer' : 'p-2 cursor-pointer'} src={profileMenuSelect === 'payment' ? images['creditCardActiveLogo.svg'].default : images['creditCardInactiveLogo.svg'].default} />
@@ -72,18 +77,12 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
                 </div>
                 {/* A C C O U N T */}
                 <div className={profileMenuSelect === 'account' ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
-                    <Link to='/contact'>
-                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
-                    </Link>
                     <div className='w-full flex flex-col items-center mb-12'>
                         <h3 className='py-12'><strong>Account</strong> Details</h3>
                     </div>
                 </div>
                 {/* P A Y M E N T */}
                 <div className={profileMenuSelect === 'payment' ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
-                    <Link to='/contact'>
-                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
-                    </Link>
                     <div className='w-full flex flex-col items-center mb-12'>
                         <h3 className='py-12'><strong>Payment</strong> Information</h3>
                         <div className='w-4/5 text-center text-white bg-lightBlue py-4'>
@@ -100,9 +99,6 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
                 </div>
                 {/* P R O F I L E */}
                 <div className={profileMenuSelect === 'profile' ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
-                    <Link to='/contact'>
-                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
-                    </Link>
                     <div className='w-full flex flex-col items-center mb-12'>
                         <h3 className='py-12'><strong>Edit</strong> Profile</h3>
                         <form className='w-11/12 flex flex-col items-start' onSubmit={handleSubmit(onSubmit)}>

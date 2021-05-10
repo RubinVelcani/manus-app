@@ -32,7 +32,12 @@ const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
                             you want to find a trader you can trust to do a good job for fair price.
                         </h3>
                     </div>
+                    <div className='flex flex-row'>
                     <img alt='' src={images['greenBlueLines.svg'].default} />
+                    <Link to='/contact'>
+                            <img alt='' className='absolute right-10 cursor-pointer -mt-5' src={images['chatLogo.svg'].default} />
+                        </Link>
+                        </div>
                     <div className='flex flex-col items-center'>
                         <img alt='' className='mt-10 mb-6' src={images['officePlayer.png'].default} />
                         <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Immediate Solutions</h1>
@@ -41,9 +46,6 @@ const MobileHow = ({ showMobileMenu, toggleMobileMenu }) => {
                             who can be trusted to provide a high standard of work. Easy!
                             </p>
                         <img alt='' className='mb-6' src={images['carpenterPlayer.png'].default} />
-                        <Link to='/contact'>
-                            <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
-                        </Link>
                         <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Immediate Solutions</h1>
                         <p className='text-gray text-sm leading-5 font-medium'>
                             Get quality work, all year round. Choose where and when you want to work

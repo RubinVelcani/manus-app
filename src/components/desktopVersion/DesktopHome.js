@@ -55,7 +55,12 @@ const DesktopHome = () => {
                 </div>
                 <div className='w-full relative bg-white'>
                     <div className='w-4/5 max-w-screen-xl flex flex-col z-10 items-center text-center pt-20 mt-15 mx-auto lg:mt-30 xl:mt-40'>
+                        <div className='flex flex-row items-center'>
                         <img alt='' className='w-56' src={images['greenBlueLines.svg'].default} />
+                        <Link to='/contact'>
+                                        <img alt='' className='absolute right-1/4 cursor-pointer -mt-5' src={images['chatLogo.svg'].default} />
+                                    </Link>
+                                    </div>
                         <div className='flex flex-col items-center'>
                             <h1 className='mb-5 text-mediumBlue text-5xl font-semibold mt-14'>Well qualified &amp; Vetted Tradesmen</h1>
                             <p className='text-gray font-semibold leading-5 w-4/5'>
@@ -63,9 +68,6 @@ const DesktopHome = () => {
                                 Manus on-demand platform offers fully vetted tradesmen within your vocal vicinity,
                                 meanaing you can choose the right local person for your project with confidence.
                         </p>
-                        <Link to='/contact'>
-                                        <img alt='' className='absolute right-1/4 cursor-pointer' src={images['chatLogo.svg'].default} />
-                                    </Link>
                             <div className='w-full flex flex-row items-center'>
                                 <div className='w-1/2 '>
                                     <PhoneCarousel />

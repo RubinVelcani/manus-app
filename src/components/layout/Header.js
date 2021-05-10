@@ -39,10 +39,13 @@ const Header = ({ showMobileMenu, toggleMobileMenu }) => {
                     </div>
                     <div className='flex flex-row items-center text-lg font-semibold'>
                         <Link to='/vision'>
-                            <h4 className='mx-5'>Our vision</h4>
+                            <h4 className='mx-2 xl:mx-5'>Our vision</h4>
                         </Link>
                         <Link to='/how'>
-                            <h4 className='mx-5'>How it works</h4>
+                            <h4 className='mx-2 xl:mx-5'>How it works</h4>
+                        </Link>
+                        <Link to='/profile'>
+                            <img alt='' className='mx-2 xl:mx-5' src={MobileUser} />
                         </Link>
                         <Link to='/join'>
                             <div className='flex flex-row bg-white text-lightBlue text-base p-3 mx-5 rounded-full'>

@@ -56,9 +56,6 @@ const MobileContact = ({ showMobileMenu, toggleMobileMenu }) => {
                         {errors.email && <h3 className='text-red mb-10'>This field is required</h3>}
                         <input className=' w-3/5 rounded-3xl bg-lightBlue text-white ring-1 ring-mediumGray mx-auto p-3.5 px-4 cursor-pointer' type='submit' value='Send message' />
                     </form>
-                    <Link to='/contact'>
-                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
-                    </Link>
                     <div className='flex flex-col items-center text-center'>
                         <h1 className='mb-4 text-mediumBlue text-2xl font-bold'>Immediate Solutions</h1>
                         <p className='text-gray leading-5 font-medium mb-2.5'>

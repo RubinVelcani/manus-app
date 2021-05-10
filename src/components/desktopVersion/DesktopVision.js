@@ -51,16 +51,18 @@ const DesktopVision = () => {
                 <div className='w-4/5 max-w-screen-xl flex flex-col items-center text-center mx-auto mb-28 xl:w-full'>
                     <div className='flex flex-col items-center pb-1 mb-24'>
                         <div className='w-max'>
+                            <div className='flex flex-row'>
                             <img alt='' className='w-full h-2 mb-16' src={images['greenBlueLines.svg'].default} />
+                            <Link to='/contact'>
+                                        <img alt='' className='absolute right-1/4 cursor-pointer -mt-5' src={images['chatLogo.svg'].default} />
+                                    </Link>
+                                    </div>
                             <h1 className='mb-3 ml-3 -mt-1 text-deepBlue text-4xl font-semibold'>Our Vision</h1>
                         </div>
                         <h3 className='w-2/3 font-medium leading-5'>
                             Manus was founded by a construction specialist who understands first-hand the challenges
                             and limitations within the traditionals trades industry.
                         </h3>
-                        <Link to='/contact'>
-                                        <img alt='' className='absolute right-1/4 cursor-pointer' src={images['chatLogo.svg'].default} />
-                                    </Link>
                     </div>
                     <div className='flex flex-row items-center'>
                         <img alt='' className='w-1/2 mb-6 mr-5' src={images['visionPhone1.jpg'].default} />

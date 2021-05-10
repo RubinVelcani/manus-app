@@ -49,13 +49,15 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                         <button className='mt-20 mb-3
                             py-4 px-20 text-white bg-lightBlue font-bold rounded-full focus:outline-none'>Contact</button>
                     </Link>
+                    <div className='flex flex-row'>
                     <img alt='' src={images['smallOrangeLine.svg'].default} />
                     <Link to='/contact'>
-                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
+                        <img alt='' className='absolute right-10 cursor-pointer -mt-5' src={images['chatLogo.svg'].default} />
                     </Link>
+                    </div>
                     <div className='flex flex-col items-center'>
-                        <h1 className='mb-5 text-deepBlue text-4xl font-semibold mt-8'>Well qualified &amp; Vetted Tradesmen</h1>
-                        <p className='text-lightBlue font-bold leading-5'>
+                        <h1 className='w-4/5 mb-5 text-deepBlue text-4xl font-semibold mt-8'>Well qualified &amp; Vetted Tradesmen</h1>
+                        <p className='w-4/5 text-lightBlue font-bold leading-5'>
                             It’s difficult finding a tradesman you can trust.
                             Manus on-demand platform offers fully vetted tradesmen within your vocal vicinity,
                             meanaing you can choose the right local person for your project with confidence.
@@ -63,20 +65,20 @@ const MobileHome = ({ showMobileMenu, toggleMobileMenu }) => {
                         <PhoneCarousel />
                         <img alt='' className='mt-10 mb-6' src={images['magnifyingGlassLogo.svg'].default} />
                         <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Find a Tradesman</h1>
-                        <p className='mb-10 text-gray text-sm leading-5 font-medium'>
+                        <p className='w-4/5 mb-10 text-gray text-sm leading-5 font-medium'>
                             Find a tradesmen for every job. From light fittings and loft conversions,
                             to leaky taps and a lick of paint. Choose from local tradespeople available in your area.
                             Contact details are shared only when you send a request.
                             </p>
                         <img alt='' className='mb-6' src={images['starLogo.svg'].default} />
                         <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Rate and Review</h1>
-                        <p className='text-gray text-sm leading-5 font-medium'>
+                        <p className='w-4/5 text-gray text-sm leading-5 font-medium'>
                             After your project is successfully completed,
                             you can leave a review for your tradesmen to let others know the quality of work done by the trader.
                             This review helps you and future Manu’s users.
                             It also encourages a continued high standard and helps others to find tradespeople they can trust.
                             </p>
-                        <button className='w-full mt-16 mb-3
+                        <button className='w-4/5 max-w-xs mt-16 mb-3
                      py-4 text-white bg-mediumBlue rounded-full font-medium focus:outline-none'>Notify me when the app is ready!</button>
                         <img alt='' className='mb-6' src={images['orangeLine.svg'].default} />
                     </div>

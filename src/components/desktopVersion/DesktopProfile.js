@@ -51,9 +51,6 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                     
                     <div className='w-full flex flex-col items-center mx-auto lg:w-max lg:ml-auto lg:mr-0 lg:pr-5'>
                         <img alt='' src={images['userLogo.svg'].default} />
-                        <Link to='/contact'>
-                                        <img alt='' className='absolute right-1/4 cursor-pointer' src={images['chatLogo.svg'].default} />
-                                    </Link>
                         <h1 className='text-darkGray text-3xl mt-6 mb-7'><span className='font-bold'>Kristi</span> Kumria</h1>
                         <img alt='' src={images['reviewStars.svg'].default} />
                         
@@ -83,13 +80,24 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                         {/* A C C O U N T */}
                         <div className={showAccount ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
                             <div className='w-full flex flex-col mb-12'>
+                                
+                                <div className='flex flex-row items-center'>
                                 <h3 className='py-12'><strong>Account</strong> Details</h3>
+                        <Link to='/contact'>
+                                        <img alt='' className='absolute right-1/4 cursor-pointer -mt-5' src={images['chatLogo.svg'].default} />
+                                    </Link>
+                                    </div>
                             </div>
                         </div>
                         {/* P A Y M E N T */}
                         <div className={showPayment ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
                             <div className='w-full flex flex-col mb-12'>
+                            <div className='flex flex-row items-center'>
                                 <h3 className='py-12'><strong>Payment</strong> Information</h3>
+                        <Link to='/contact'>
+                                        <img alt='' className='absolute right-1/4 cursor-pointer -mt-5' src={images['chatLogo.svg'].default} />
+                                    </Link>
+                                    </div>
                                 <div className='w-4/5 text-white bg-lightBlue py-4 mx-auto'>
                                     <div className='w-4/5 flex flex-col items-center mx-auto'>
                                         <img alt='' src={images['creditCardWhite.svg'].default} />
@@ -105,7 +113,12 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                         {/* P R O F I L E */}
                         <div className={showProfile ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
                             <div className='w-full flex flex-col mb-12'>
+                            <div className='flex flex-row items-center'>
                                 <h3 className='py-12'><strong>Edit</strong> Profile</h3>
+                        <Link to='/contact'>
+                                        <img alt='' className='absolute right-1/4 cursor-pointer -mt-5' src={images['chatLogo.svg'].default} />
+                                    </Link>
+                                    </div>
                                 <form className='w-11/12 flex flex-col items-start' onSubmit={handleSubmit(onSubmit)}>
                                     Description
                                     <textarea className='w-full rounded-3xl bg-profileGray my-6 py-3 px-6 ring-1 ring-mediumGray outline-none focus-within:ring-mediumBlue' {...register("description")} rows='6'

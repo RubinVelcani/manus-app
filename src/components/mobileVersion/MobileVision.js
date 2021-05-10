@@ -40,7 +40,12 @@ const MobileVision = ({ showMobileMenu, toggleMobileMenu }) => {
                         </div>
                     </div>
                     <div className='flex flex-col w-4/5 items-center text-center mx-auto'>
+                        <div className='flex flex-row'>
                         <img alt='' src={images['greenBlueLines.svg'].default} />
+                        <Link to='/contact'>
+                            <img alt='' className='absolute right-10 cursor-pointer -mt-5' src={images['chatLogo.svg'].default} />
+                        </Link>
+                        </div>
                         <div className='mt-7 pb-1'>
                             <h1 className='mb-3 ml-3 -mt-1 text-deepBlue text-4xl font-semibold'>Our Vision</h1>
                             <h3 className='text-lightBlue font-bold leading-5'>
@@ -48,9 +53,6 @@ const MobileVision = ({ showMobileMenu, toggleMobileMenu }) => {
                                 and limitations within the traditionals trades industry.
                         </h3>
                         </div>
-                        <Link to='/contact'>
-                            <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
-                        </Link>
                         <div className='flex flex-col items-center'>
                             <img alt='' className='mt-10 mb-6' src={images['visionPhone1.jpg'].default} />
                             <h1 className='mb-4 text-mediumBlue text-lg font-bold'>Immediate Solutions</h1>

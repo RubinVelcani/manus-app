@@ -27,10 +27,12 @@ const DesktopHow = () => {
                             you want to find a trader you can trust to do a good job for fair price.
                         </h3>
                     </div>
-                    <Link to='/contact'>
-                                        <img alt='' className='absolute right-1/4 cursor-pointer' src={images['chatLogo.svg'].default} />
-                                    </Link>
+                    <div className='flex flex-row items-center'>
                     <img alt='' className='w-36' src={images['greenBlueLines.svg'].default} />
+                    <Link to='/contact'>
+                                        <img alt='' className='absolute right-1/4 cursor-pointer -mt-5' src={images['chatLogo.svg'].default} />
+                                    </Link>
+                                    </div>
                     <div className='flex flex-row items-start justify-between mb-10 mt-4'>
                         <div className='w-1/2 flex flex-col'>
                             <img alt='' className='mb-6' src={images['officePlayer.png'].default} />
