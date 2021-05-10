@@ -30,7 +30,6 @@ module.exports = {
       'smiler': '30rem'
     },
     maxHeight: {
-      'smiler': '32rem',
       'shape': '21.875rem',
       'how': '24rem'
     },
@@ -40,11 +39,7 @@ module.exports = {
       },
       height: {
         'sideway-phone': '31.25rem'
-      },
-      inset: {
-        '2/5': '40%',
-        '17/40': '42.5%'
-      },
+      }
     },
   },
   variants: {

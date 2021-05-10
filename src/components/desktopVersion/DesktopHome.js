@@ -124,7 +124,7 @@ const DesktopHome = () => {
                             </div>
                         </div>
                         <img alt='' className='w-auto min-w-max left-0 right-0 absolute h-sideway-phone z-40 mx-auto' src={images['sidewayPhone.png'].default} />
-                        <img alt='' className='w-7/12 min-h-smiler max-h-smiler z-20 xl:z-30 xl:w-1/2' src={images['smiler.jpg'].default} style={{ clipPath: "polygon(0 15%, 100% 0, 100% 92%, 0 85%)" }} />
+                        <img alt='' className='w-7/12 min-h-smiler z-20 xl:z-30 xl:w-1/2' src={images['smiler.jpg'].default} style={{ clipPath: "polygon(0 15%, 100% 0, 100% 92%, 0 85%)" }} />
                     </div>
                     <div className='w-10/12 max-w-screen-xl relative flex flex-col items-center text-center mx-auto mt-16'>
                         <h1 className='text-mediumBlue text-4xl font-semibold mb-8'>Make Money When You Want</h1>

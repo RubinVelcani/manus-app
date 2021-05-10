@@ -22,7 +22,7 @@ const DesktopVision = () => {
                     <div className='h-28 pb-1.5 bg-mediumBlue'></div>
                     <div className='w-full max-w-screen-2xl flex flex-row mx-auto'>
                         <img alt='' className='w-7/12 z-30 max-h-shape' style={{ clipPath: 'polygon(0 0, 100% 0, 90% 85%, 0% 100%)' }} src={images['visionCarpenter.jpg'].default} />
-                        <div className='w-3/5 max-h-shape z-20 bg-lightBlue p-4 pl-32 pb-16 -mt-px -ml-28' style={{ clipPath: 'polygon(5% 0, 100% 0, 100% 93%, 0 85%)' }}>
+                        <div className='w-3/5 z-20 bg-lightBlue p-4 pl-32 pb-16 -mt-px -ml-28' style={{ clipPath: 'polygon(5% 0, 100% 0, 100% 93%, 0 85%)' }}>
                             <div className='relative flex flex-col text-white xl:w-4/5'>
                                 <div className='flex xl:mt-4 2xl:w-1/2'>
                                     <img alt='' className='absolute h-10' src={images['smallGreenDiagonalLine.svg'].default} />
