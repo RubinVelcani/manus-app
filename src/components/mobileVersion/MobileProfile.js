@@ -56,7 +56,7 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
             </aside>
             <section className={showMobileMenu ? 'hidden' : 'block'}>
                 <div className='w-4/5 flex flex-col items-center mx-auto pt-16'>
-                    <h1 className='mb-3 text-mediumBlue text-2xl font-semibold'>Welcome back, Kristi</h1>
+                    <h1 className='mb-3 text-mediumBlue text-3xl font-bold'>Welcome back, Kristi</h1>
                     <h3 className='text-mediumBlue text-sm text-center font-medium mb-10'>
                         This is your personal space. Here you can edit your profile,
                         update your payment details and also review the details of your registration form.

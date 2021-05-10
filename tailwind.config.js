@@ -5,11 +5,12 @@ module.exports = {
     colors: {
       'white': '#ffffff',
       'black': '#000000',
+      'gray': '#A7A7A9',
+      'red': '#D71F27',
       'lightBlue': '#169CEF',
       'mediumBlue': '#1D91E3',
       'deepBlue': '#0C83D8',
       'menuBlue': '#3FACF9',
-      'gray': '#A7A7A9',
       'lightGray': '#F7F7F8',
       'mediumGray': '#C4C4C4',
       'formGray': '#8D8D92',
@@ -41,7 +42,8 @@ module.exports = {
         'sideway-phone': '31.25rem'
       },
       inset: {
-        '2/5': '40%'
+        '2/5': '40%',
+        '17/40': '42.5%'
       },
     },
   },

@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <footer>
             <div className='block md:hidden'>
-                <div className='pt-48 pb-11 -mt-24 text-white bg-mobile-footer bg-cover'>
+                <div className='relative z-50 pt-48 pb-11 -mt-24 text-white bg-mobile-footer bg-cover'>
                     <ul className='list-none px-11 text-xxs'>
                         <li className='w-full border-b border-lightBlue mt-2 pb-1.5'>
                             <Link to='/vision'>
@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='hidden md:block'>
-                <div className='w-full relative z-50 pt-5 pb-4 bg-desktop-footer bg-cover'>
+                <div className='w-full relative z-50 pt-20 pb-4 bg-desktop-footer bg-cover'>
                     <div className='max-w-screen-lg h-60 relative flex flex-col items-center justify-center text-white mx-auto'>
                         <img alt='' src={images['desktopFooterLogo.png'].default} />
                         <div className='w-11/12 flex flex-row items-center text-sm justify-between mt-9 2xl:text-base'>

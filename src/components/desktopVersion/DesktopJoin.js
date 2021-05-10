@@ -1,7 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import DesktopForm from './desktopForm/DesktopForm'
 
 const DesktopJoin = ({ showMobileMenu, toggleMobileMenu }) => {
+
+    function importAll(r) {
+        let images = {}
+        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
+        return images
+    }
+
+    const images = importAll(require.context('../../icons', false, /\.(png|jpe?g|svg)$/))
 
     return (
         <main className='bg-lightGray pb-32 -mb-32'>
@@ -14,9 +23,12 @@ const DesktopJoin = ({ showMobileMenu, toggleMobileMenu }) => {
                             Register online now providing the informations requested below.
                             We”ll get in touch with you shortly with the next steps
                         </h3>
+                        <Link to='/contact'>
+                                        <img alt='' className='absolute right-1/4 cursor-pointer' src={images['chatLogo.svg'].default} />
+                                    </Link>
                     </div>
                 </div>
-                <div className='w-2/3 flex flex-col items-center text-xs text-gray rounded-3xl bg-white py-8 mx-auto'>
+                <div className='w-4/5 max-w-screen-lg flex flex-col items-center text-xs text-gray rounded-3xl bg-white py-8 mx-auto 2xl:w-full'>
                     <DesktopForm />
                 </div>
             </section>

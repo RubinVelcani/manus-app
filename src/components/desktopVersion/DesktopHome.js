@@ -63,14 +63,14 @@ const DesktopHome = () => {
                                 Manus on-demand platform offers fully vetted tradesmen within your vocal vicinity,
                                 meanaing you can choose the right local person for your project with confidence.
                         </p>
+                        <Link to='/contact'>
+                                        <img alt='' className='absolute right-1/4 cursor-pointer' src={images['chatLogo.svg'].default} />
+                                    </Link>
                             <div className='w-full flex flex-row items-center'>
                                 <div className='w-1/2 '>
                                     <PhoneCarousel />
                                 </div>
                                 <div className='w-1/2 flex flex-col items-start text-left ml-10'>
-                                    <Link to='/contact'>
-                                        <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
-                                    </Link>
                                     <div className='mb-3.5'>
                                         <img alt='' className='w-7 inline-block' src={images['magnifyingGlassLogo.svg'].default} />
                                         <h1 className='inline-block text-mediumBlue text-2xl font-bold ml-4'>Find a Tradesman</h1>
@@ -99,30 +99,30 @@ const DesktopHome = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='w-full flex flex-row items-center mt-20'>
-                        <div className='w-4/5 h-sideway-phone z-30 flex flex-col items-center text-white text-center bg-mediumBlue pt-12 -mr-28 2xl:z-20' style={{ clipPath: "polygon(0 0, 92% 11%, 100% 83%, 0 100%)" }}>
+                    <div className='w-full max-w-screen-2xl flex flex-row items-center mx-auto mt-20'>
+                        <div className='w-4/5 h-sideway-phone z-30 flex flex-col items-center text-white text-center bg-mediumBlue pt-12 -mr-28 xl:z-20' style={{ clipPath: "polygon(0 0, 97% 11%, 100% 83%, 0 100%)" }}>
                             <div className='w-3/4 flex flex-col text-left xl:w-1/2'>
                                 <div className='flex flex-row items-start mt-7'>
                                     <img alt='' className='h-16' src={images['smallGreenDiagonalLine.svg'].default} />
-                                    <h1 className='text-4xl font-semibold mb-2 ml-2 mr-auto xl:mb-8'>Want extra work?</h1>
+                                    <h1 className='text-3xl font-semibold mb-2 ml-2 mr-auto lg:text-4xl xl:mb-8'>Want extra work?</h1>
                                 </div>
-                                <p className='mb-5 text-sm leading-5 font-medium ml-2 lg:mb-14'>
+                                <p className='w-4/5 mb-5 text-sm leading-5 font-medium ml-2 lg:mb-14'>
                                     Are you a tradesperson looking for a work?
                                     Let us connect you to clients in your area!
                                     Whether you’re plumber, an electrician,
                                     a painter, a carpenter or a roofer, we have jobs for you!
                     </p>
                                 <Link to='/join'>
-                                    <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7 mr-auto focus:outline-none'>Let's get started!</button>
+                                    <button className='bg-white rounded-full text-lightBlue font-semibold py-2 px-7 ml-2 mr-auto focus:outline-none'>Let's get started!</button>
                                 </Link>
                                 <div className='mr-auto'>
-                                    <h4 className='text-xs font-light mt-2'>Register now as a Tradesman on Manus</h4>
+                                    <h4 className='text-xs font-light ml-2 mt-2'>Register now as a Tradesman on Manus</h4>
                                     <img alt='' className='ml-auto' src={images['smallOrangeDiagonalLine.svg'].default} />
                                 </div>
                             </div>
                         </div>
-                        <img alt='' className='w-1/5 min-w-max absolute h-sideway-phone z-40 inset-x-1/3 xl:inset-x-2/5' src={images['sidewayPhone.png'].default} />
-                        <img alt='' className='w-7/12 min-h-smiler max-h-smiler z-20 2xl:z-30 2xl:w-3/4' src={images['smiler.jpg'].default} style={{ clipPath: "polygon(0 11%, 100% 0, 100% 89%, 0 82%)" }} />
+                        <img alt='' className='w-auto min-w-max absolute h-sideway-phone z-40 inset-x-1/3 xl:inset-x-2/5 2xl:inset-x-17/40' src={images['sidewayPhone.png'].default} />
+                        <img alt='' className='w-7/12 min-h-smiler max-h-smiler z-20 xl:z-30 xl:w-1/2' src={images['smiler.jpg'].default} style={{ clipPath: "polygon(0 15%, 100% 0, 100% 92%, 0 85%)" }} />
                     </div>
                     <div className='w-10/12 max-w-screen-xl relative flex flex-col items-center text-center mx-auto mt-16'>
                         <h1 className='text-mediumBlue text-4xl font-semibold mb-8'>Make Money When You Want</h1>
@@ -166,7 +166,7 @@ const DesktopHome = () => {
                         </Link>
                         <img alt='' src={images['orangeLine.svg'].default} />
                     </div>
-                    <div className='w-full bg-carousel-background bg-cover pt-10'>
+                    <div className='w-full max-w-screen-2xl bg-carousel-background bg-cover pt-10 mx-auto'>
                         <WorkerCarousel />
                     </div>
                     <div className='flex flex-col w-4/5 items-center text-center mx-auto mt-36 mb-20'>

@@ -1,19 +1,10 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import DesktopStep1 from './DesktopStep1'
 import DesktopStep2 from './DesktopStep2'
 import DesktopStep3 from './DesktopStep3'
 
 const DesktopForm = () => {
-
-    function importAll(r) {
-        let images = {}
-        r.keys().map((item, index) => images[item.replace('./', '')] = r(item))
-        return images
-    }
-
-    const images = importAll(require.context('../../../icons', false, /\.(png|jpe?g|svg)$/))
 
     const [pageOne, setPageOne] = useState(true)
     const [pageTwo, setPageTwo] = useState(false)
@@ -41,12 +32,10 @@ const DesktopForm = () => {
         <section>
             <div className='w-4/5 flex flex-row items-center justify-between font-medium tracking-tight mb-12 mx-auto 2xl:justify-around'>
                 <div onClick={togglePageOne} className='w-36 flex flex-col items-center'>
+                    
                     <h4 className={pageOne ? 'uppercase text-black font-bold mb-2.5' : 'uppercase mb-2.5'}>
                         Personal Information
                         </h4>
-                    <Link to='/contact'>
-                        <img alt='' className='absolute right-5' src={images['chatLogo.svg'].default} />
-                    </Link>
                     <span className={pageOne ? 'flex items-center justify-center w-4 h-4 rounded-full border-2 border-mediumGray cursor-pointer' : 'flex items-center justify-center w-4 h-4 border-2 rounded-full border-white cursor-pointer'}>
                         <span className={pageOne ? 'w-2 h-2 rounded-full bg-mediumBlue inline-block' : 'w-2 h-2 rounded-full bg-mediumGray inline-block'} />
                     </span>

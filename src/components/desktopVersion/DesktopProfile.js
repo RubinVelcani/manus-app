@@ -44,14 +44,19 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
     }
 
     return (
-        <main>
+        <main className='bg-lightGray'>
             <div className='h-28 pb-1.5 bg-mediumBlue'></div>
-            <div className='flex flex-row bg-lightGray -mb-32'>
+            <div className='w-4/5 max-w-screen-xl flex flex-row mx-auto -mb-32 2xl:w-full'>
                 <div className='w-2/5 pt-20'>
+                    
                     <div className='w-full flex flex-col items-center mx-auto lg:w-max lg:ml-auto lg:mr-0 lg:pr-5'>
                         <img alt='' src={images['userLogo.svg'].default} />
+                        <Link to='/contact'>
+                                        <img alt='' className='absolute right-1/4 cursor-pointer' src={images['chatLogo.svg'].default} />
+                                    </Link>
                         <h1 className='text-darkGray text-3xl mt-6 mb-7'><span className='font-bold'>Kristi</span> Kumria</h1>
                         <img alt='' src={images['reviewStars.svg'].default} />
+                        
                         <div className='w-full flex flex-col justify-around mt-10'>
                             <div onClick={toggleAccount} className={showAccount ? 'flex flex-row items-center bg-white p-3 cursor-pointer border-b border-t border-mediumGray' : 'flex flex-row items-center bg-lightGray p-3 cursor-pointer border-b border-t border-lightGray'}>
                                 <img alt='' src={showAccount ? images['homeActiveLogo.svg'].default : images['homeInactiveLogo.svg'].default} />
@@ -77,18 +82,12 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                         </h3>
                         {/* A C C O U N T */}
                         <div className={showAccount ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
-                            <Link to='/contact'>
-                                <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
-                            </Link>
                             <div className='w-full flex flex-col mb-12'>
                                 <h3 className='py-12'><strong>Account</strong> Details</h3>
                             </div>
                         </div>
                         {/* P A Y M E N T */}
                         <div className={showPayment ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
-                            <Link to='/contact'>
-                                <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
-                            </Link>
                             <div className='w-full flex flex-col mb-12'>
                                 <h3 className='py-12'><strong>Payment</strong> Information</h3>
                                 <div className='w-4/5 text-white bg-lightBlue py-4 mx-auto'>
@@ -105,9 +104,6 @@ const DesktopProfile = ({ showMobileMenu, toggleMobileMenu }) => {
                         </div>
                         {/* P R O F I L E */}
                         <div className={showProfile ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
-                            <Link to='/contact'>
-                                <img alt='' className='absolute right-20 cursor-pointer' src={images['chatLogo.svg'].default} />
-                            </Link>
                             <div className='w-full flex flex-col mb-12'>
                                 <h3 className='py-12'><strong>Edit</strong> Profile</h3>
                                 <form className='w-11/12 flex flex-col items-start' onSubmit={handleSubmit(onSubmit)}>
