@@ -98,7 +98,7 @@ const MobileProfile = ({ showMobileMenu, toggleMobileMenu, profileMenuSelect, se
                     </div>
                 </div>
                 {/* P R O F I L E */}
-                <div className={profileMenuSelect === 'profile' ? 'text-darkGray bg-white h-screen block' : 'h-screen hidden'}>
+                <div className={profileMenuSelect === 'profile' ? 'text-darkGray bg-white h-screen pb-20 block' : 'h-screen hidden'}>
                     <div className='w-full flex flex-col items-center mb-12'>
                         <h3 className='py-12'><strong>Edit</strong> Profile</h3>
                         <form className='w-11/12 flex flex-col items-start' onSubmit={handleSubmit(onSubmit)}>
